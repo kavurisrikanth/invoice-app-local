@@ -1,0 +1,36 @@
+(ComponentTestData PaymentsPageData35820 {
+    data [
+        (user {
+        })
+        (obj {
+        })
+        (company {
+        })
+        (payments {
+            structValue [
+                #Payments1678364518989000
+            ]
+        })
+    ]
+    page #PaymentsPage
+    values [
+        (build_children_1_children_1_value {
+        })
+    ]
+    structs [
+        (Payments1678364518989000 {
+            type #Payments
+            data [
+                (items {
+                })
+                (errors {
+                })
+                (status {
+                    primitiveValue [
+                        'Success'
+                    ]
+                })
+            ]
+        })
+    ]
+})

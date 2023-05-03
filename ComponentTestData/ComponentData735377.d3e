@@ -1,0 +1,109 @@
+(ComponentTestData ComponentData735377 {
+    data [
+        (text {
+            primitiveValue [
+                ''
+            ]
+        })
+        (status {
+            primitiveValue [
+                'fghfg'
+            ]
+        })
+        (bgColor {
+            structValue [
+                #ColorData
+            ]
+        })
+        (invoiceCount {
+            primitiveValue [
+                '200'
+            ]
+        })
+        (msg {
+            primitiveValue [
+                'ghf'
+            ]
+        })
+        (amount {
+            primitiveValue [
+                '2'
+            ]
+        })
+        (a {
+            primitiveValue [
+                '20'
+            ]
+        })
+    ]
+    component #CounterView
+    values [
+        (build_children_0_children_0_data {
+            primitiveValue [
+                '\$2'
+            ]
+        })
+        (build_children_1_data {
+            primitiveValue [
+                'fghfg'
+            ]
+        })
+        (build_children_2_children_0_children_0_data {
+            primitiveValue [
+                '200'
+            ]
+        })
+        (build_children_2_children_1_data {
+            primitiveValue [
+                'ghf'
+            ]
+        })
+        (build_children_2_children_0_data {
+            primitiveValue [
+                '20'
+            ]
+        })
+        (build_children_3_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_children_2_data {
+            primitiveValue [
+                'ghf'
+            ]
+        })
+        (build_children_2_children_0_child_data {
+            primitiveValue [
+                '200'
+            ]
+        })
+    ]
+    structs [
+        (ColorData {
+            type #Color
+            data [
+                (red {
+                    primitiveValue [
+                        '234'
+                    ]
+                })
+                (green {
+                    primitiveValue [
+                        '107'
+                    ]
+                })
+                (blue {
+                    primitiveValue [
+                        '24'
+                    ]
+                })
+                (alpha {
+                    primitiveValue [
+                        '255'
+                    ]
+                })
+            ]
+        })
+    ]
+})

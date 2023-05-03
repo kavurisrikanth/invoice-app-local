@@ -1,0 +1,56 @@
+(UserType AnonymousUserUser {
+    name 'AnonymousUserUser'
+    modelAccess [
+        ({
+            model #AnonymousUser
+        })
+        ({
+            model #ChangePasswordRequest
+        })
+        ({
+            model #EmailMessage
+        })
+        ({
+            model #OneTimePassword
+        })
+        ({
+            model #PushNotification
+        })
+        ({
+            model #SMSMessage
+        })
+        ({
+            model #VerificationData
+        })
+        ({
+            model #VerificationDataByTokenRequest
+        })
+        ({
+            model #Company
+        })
+        ({
+            model #Customer
+        })
+        ({
+            model #Invoice
+        })
+        ({
+            model #Item
+        })
+        ({
+            model #Payment
+        })
+        ({
+            model #SignupRequest
+            allowCreate true
+        })
+        ({
+            model #User
+            allowCreate true
+            allowUpdate true
+        })
+    ]
+    userModel #AnonymousUser
+    loginSettings ({
+    })
+})

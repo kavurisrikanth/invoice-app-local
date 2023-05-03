@@ -1,0 +1,248 @@
+(Widget SearchFilterView {
+    name 'SearchFilterView'
+    package 'invoice.com'
+    properties [
+        (value {
+            name 'Value'
+            type ({
+                var 'T'
+            })
+        })
+        (items {
+            name 'Items'
+            collection true
+            type ({
+                var 'T'
+            })
+        })
+        (itemColor {
+            name 'ItemColor'
+            type ({
+                struct #Color
+            })
+        })
+    ]
+    path 'Component'
+    build (CRef id {
+        name 'Id'
+        component #ListView
+        data [
+            ({
+                prop #shrinkWrap
+                value 'true'
+            })
+        ]
+        children [
+            (CFor item {
+                name 'Item'
+                var 'item'
+                items `this.items.toList()`
+                type ({
+                    var 'T'
+                })
+                item (CRef onItem {
+                    name 'OnItem'
+                    component #Container
+                    data [
+                        ({
+                            prop #decoration
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c2'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #cursor
+                            value 'click'
+                        })
+                    ]
+                    child (CRef id {
+                        name 'Id'
+                        component #TextView
+                        data [
+                            ({
+                                prop #data
+                                bind true
+                                bindTo `item != null ? item.toString() : 'None'`
+                            })
+                            ({
+                                prop #color
+                                bind true
+                                bindTo `this.itemColor`
+                            })
+                            ({
+                                prop #padding
+                                value '6 5'
+                            })
+                        ]
+                    })
+                    states [
+                        (hover {
+                            type ({
+                                primitive Boolean
+                            })
+                        })
+                    ]
+                    conditionals [
+                        ({
+                            condition `onItem.hover`
+                            values [
+                                ({
+                                    prop #decoration
+                                    values [
+                                        ({
+                                            prop #color
+                                            value '@c7'
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                    behaviours [
+                        #GestureDetector
+                    ]
+                })
+            })
+            (CIf errorRef {
+                name 'ErrorRef'
+                condition `value != null`
+                then (CRef noneOption {
+                    name 'noneOption'
+                    component #Container
+                    data [
+                        ({
+                            prop #decoration
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c2'
+                                })
+                                ({
+                                    prop #border
+                                    values [
+                                        ({
+                                            prop #color
+                                            value '00ff0000'
+                                        })
+                                        ({
+                                            prop #width
+                                            value '0.0'
+                                        })
+                                    ]
+                                })
+                                ({
+                                    prop #borderRadius
+                                    value '3'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #cursor
+                            value 'click'
+                        })
+                    ]
+                    child (CRef id {
+                        name 'Id'
+                        component #TextView
+                        data [
+                            ({
+                                prop #data
+                                value ' --None-- '
+                            })
+                            ({
+                                prop #color
+                                bind true
+                                bindTo `this.itemColor`
+                            })
+                            ({
+                                prop #padding
+                                value '6 5'
+                            })
+                        ]
+                    })
+                    states [
+                        (hover {
+                            type ({
+                                primitive Boolean
+                            })
+                        })
+                    ]
+                    conditionals [
+                        ({
+                            condition `noneOption.hover`
+                            values [
+                                ({
+                                    prop #decoration
+                                    values [
+                                        ({
+                                            prop #color
+                                            value '@c8'
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                    behaviours [
+                        #GestureDetector
+                    ]
+                })
+            })
+            (CIf errorRef {
+                name 'ErrorRef'
+                condition `items.isEmpty`
+                then (CRef dataRef {
+                    name 'DataRef'
+                    component #TextView
+                    data [
+                        ({
+                            prop #data
+                            value ' No Results Found '
+                        })
+                        ({
+                            prop #color
+                            value '@c2'
+                        })
+                    ]
+                })
+            })
+        ]
+    })
+    eventHandlers [
+        (onSelectListTile {
+            name 'OnSelectListTile'
+            type OnBehaviour
+            on #onItem
+            behaviour #GestureDetector
+            event #onTap
+            block ```
+                this.onSelectItem(item);
+            ```
+        })
+        (onPressedNone {
+            name 'OnPressedNone'
+            type OnBehaviour
+            on #noneOption
+            behaviour #GestureDetector
+            event #onTap
+            block ```
+                this.onSelectItem(null);
+            ```
+        })
+    ]
+    generic true
+    events [
+        (onSelectItem {
+            params [
+                (item {
+                    type ({
+                        var 'T'
+                    })
+                })
+            ]
+        })
+    ]
+})

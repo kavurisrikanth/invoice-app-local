@@ -1,0 +1,465 @@
+(ComponentTestData DashboardPageData7005 {
+    data [
+        (company {
+            modelValue [
+                #CompanyData
+            ]
+        })
+        (recentItem {
+        })
+        (recentInvoices {
+            structValue [
+                #RecentInvoices1677857385832000
+            ]
+        })
+    ]
+    page #DashboardPage
+    values [
+        (build_children_1_children_0_build_children_0_children_0_data {
+            primitiveValue [
+                '30.0'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_children_0_backgroundColor {
+            primitiveValue [
+                '@c1'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_children_0_data {
+            primitiveValue [
+                '20'
+            ]
+        })
+        (build_children_1_children_0_build_children_1_data {
+            primitiveValue [
+                'TOTAL INVOICES'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_children_1_data {
+            primitiveValue [
+                'Invoices sent'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_value {
+            modelValue [
+                #InvoiceData
+                #InvoiceData2
+            ]
+        })
+        (build_children_1_children_2_build_children_0_children_0_data {
+            primitiveValue [
+                '30'
+            ]
+        })
+        (build_children_1_children_1_build_children_0_children_0_data {
+            primitiveValue [
+                '20.0'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_data {
+            primitiveValue [
+                'PAID INVOICES'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_children_0_data {
+            primitiveValue [
+                '30'
+            ]
+        })
+        (build_children_1_children_1_build_children_2_children_0_data {
+            primitiveValue [
+                '25'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_data {
+            primitiveValue [
+                'UNPAID INVOICES'
+            ]
+        })
+        (build_children_1_children_1_build_children_2_children_1_data {
+            primitiveValue [
+                'Paid by clients'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_children_1_data {
+            primitiveValue [
+                'Unpaid by clients'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_1_children_4_child_then_data {
+            primitiveValue [
+                '100.0'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_0_children_1_child_data {
+            primitiveValue [
+                'Vaishnavi'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_1_children_5_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_1_children_2_child_data {
+            primitiveValue [
+                '2023-03-07'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_1_children_4_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_0_children_2_child_data {
+            primitiveValue [
+                '2023-03-17'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_1_children_3_child_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_build_children_0_children_1_1_children_0_child_data {
+            primitiveValue [
+                '1215'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_0_children_5_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_0_children_4_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_0_children_0_child_data {
+            primitiveValue [
+                '123'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_0_children_3_child_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_build_children_0_children_1_1_children_1_child_data {
+            primitiveValue [
+                'Vaishnavi'
+            ]
+        })
+        (build_children_3_build_children_0_children_1_0_children_4_child_then_data {
+            primitiveValue [
+                '3.0'
+            ]
+        })
+        (build_children_3_build_children_0_children_0_children_5_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_1_children_1_build_children_2_children_0_backgroundColor {
+            primitiveValue [
+                '@c3'
+            ]
+        })
+        (build_children_1_children_1_build_children_2_children_0_children_0_data {
+            primitiveValue [
+                '25'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_children_0_children_0_data {
+            primitiveValue [
+                '30'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_children_0_children_0_data {
+            primitiveValue [
+                '200'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_children_0_children_0_backgroundColor {
+            primitiveValue [
+                '@c1'
+            ]
+        })
+        (build_children_1_children_1_build_children_2_children_0_children_0_backgroundColor {
+            primitiveValue [
+                '@c3'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_children_0_children_0_backgroundColor {
+            primitiveValue [
+                '@c3'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_1_children_2_child_data {
+            primitiveValue [
+                '2023-03-07'
+            ]
+        })
+        (build_children_4_build_children_0_children_0_children_5_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_4_build_children_0_children_1_0_children_3_child_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_build_children_0_children_1_1_children_4_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_1_children_5_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_0_children_2_child_data {
+            primitiveValue [
+                '2023-03-17'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_1_children_0_child_data {
+            primitiveValue [
+                '1215'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_0_children_0_child_data {
+            primitiveValue [
+                '123'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_0_children_5_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_0_children_4_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_1_children_1_child_data {
+            primitiveValue [
+                'Vaishnavi'
+            ]
+        })
+        (build_children_4_build_children_0_children_1_value {
+            modelValue [
+                #InvoiceData
+                #InvoiceData2
+            ]
+        })
+        (build_children_4_build_children_0_children_1_1_children_3_child_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_build_children_0_children_1_0_children_1_child_data {
+            primitiveValue [
+                'Vaishnavi'
+            ]
+        })
+        (build_children_2_children_1_build_children_0_children_0_data {
+            primitiveValue [
+                '\$20.0'
+            ]
+        })
+        (build_children_2_children_2_build_children_0_children_0_data {
+            primitiveValue [
+                '\$30'
+            ]
+        })
+        (build_children_2_children_0_build_children_0_children_0_data {
+            primitiveValue [
+                '\$30.0'
+            ]
+        })
+        (build_children_2_children_0_build_children_2_children_0_children_0_data {
+            primitiveValue [
+                '200'
+            ]
+        })
+        (build_children_2_children_2_build_children_2_children_0_children_0_backgroundColor {
+            primitiveValue [
+                '@c3'
+            ]
+        })
+        (build_children_2_children_2_build_children_2_children_0_children_0_data {
+            primitiveValue [
+                '30'
+            ]
+        })
+        (build_children_2_children_0_build_children_1_data {
+            primitiveValue [
+                'TOTAL INVOICES'
+            ]
+        })
+        (build_children_2_children_0_build_children_2_children_0_children_0_backgroundColor {
+            primitiveValue [
+                '@c1'
+            ]
+        })
+        (build_children_2_children_1_build_children_1_data {
+            primitiveValue [
+                'PAID INVOICES'
+            ]
+        })
+        (build_children_2_children_1_build_children_2_children_0_children_0_backgroundColor {
+            primitiveValue [
+                '@c3'
+            ]
+        })
+        (build_children_2_children_2_build_children_1_data {
+            primitiveValue [
+                'UNPAID INVOICES'
+            ]
+        })
+        (build_children_2_children_2_build_children_2_children_1_data {
+            primitiveValue [
+                'Unpaid by clients'
+            ]
+        })
+        (build_children_2_children_0_build_children_2_children_1_data {
+            primitiveValue [
+                'Invoices sent'
+            ]
+        })
+        (build_children_2_children_1_build_children_2_children_0_children_0_data {
+            primitiveValue [
+                '25'
+            ]
+        })
+        (build_children_2_children_1_build_children_2_children_1_data {
+            primitiveValue [
+                'Paid by clients'
+            ]
+        })
+        (build_children_5_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_then_imageUrl {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_6_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_1_data {
+            primitiveValue [
+                'Nitya Software'
+            ]
+        })
+        (build_children_5_children_0_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_0_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_0_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_1_data {
+            primitiveValue [
+                'Nitya Software'
+            ]
+        })
+        (build_children_4_children_0_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_0_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_1_data {
+            primitiveValue [
+                'Nitya Software'
+            ]
+        })
+        (build_children_3_children_0_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_1_data {
+            primitiveValue [
+                'Nitya Software'
+            ]
+        })
+        (build_children_2_children_0_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_0_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_data {
+            primitiveValue [
+                'Nitya Software'
+            ]
+        })
+    ]
+    structs [
+        (RecentInvoices1677857385832000 {
+            type #RecentInvoices
+            data [
+                (items {
+                    modelValue [
+                        #InvoiceData
+                        #InvoiceData2
+                    ]
+                })
+                (errors {
+                })
+                (status {
+                    primitiveValue [
+                        'Success'
+                    ]
+                })
+            ]
+        })
+    ]
+    popups [
+        (_invoicePopup {
+        })
+    ]
+})

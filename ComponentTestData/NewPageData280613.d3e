@@ -1,0 +1,183 @@
+(ComponentTestData NewPageData280613 {
+    data [
+        (selected {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (selectedMenu {
+            primitiveValue [
+                '1'
+            ]
+        })
+        (company {
+        })
+        (user {
+            modelValue [
+                #UserData
+            ]
+        })
+        (activeMenu {
+            primitiveValue [
+                '2'
+            ]
+        })
+    ]
+    page #HomePage
+    values [
+        (build_children_0_children_2_children_1_data {
+            primitiveValue [
+                'Nitya Software'
+            ]
+        })
+        (build_children_0_children_2_children_0_child_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_2_children_0_child_children_1_child_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+    ]
+    states [
+        (build_children_0_children_0_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_children_0_children_2 {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_children_0_children_3 {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_children_1_children_1 {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_children_1_children_2 {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_children_1_children_3 {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_children_1_children_0 {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_then_build_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_then_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_then_then_build_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_then_then_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_children_1_children_1_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_children_1_children_0_child {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_children_1_children_2_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_children_1_children_3_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_children_1_children_4_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (_profile_build_children_1_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (_profile_build_children_0_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+    ]
+    popups [
+        (_profile {
+            model true
+        })
+        (_null {
+        })
+        (_companyDetails {
+        })
+    ]
+})

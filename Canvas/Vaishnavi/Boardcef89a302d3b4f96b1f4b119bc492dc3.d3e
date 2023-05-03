@@ -1,0 +1,14 @@
+(ArtBoard Boardcef89a302d3b4f96b1f4b119bc492dc3 {
+    title 'ArtBoard '
+    canvas #Vaishnavi
+    x 421
+    y 139
+    width 99
+    height 100
+    layoutColumns 1
+    layoutColumnWidth 43
+    layoutGutterWidth 0
+    layoutMargin 28
+    layoutMarginLeft 28
+    layoutMarginRight 28
+})

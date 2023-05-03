@@ -1,0 +1,16 @@
+Page {
+    package 'invoice.com'
+    name 'Welcome Page'
+    category 'UserDefined'
+    build Column {
+        name 'welcomeCol'
+        children [
+            TextView {
+                name 'welcomeText'
+                data {
+                    data 'Welcome'
+                }
+            }
+        ]
+    }
+}

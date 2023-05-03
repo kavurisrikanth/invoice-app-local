@@ -1,0 +1,43 @@
+QueryUsage {
+    query [
+        'Subscription'
+        'onRecentInvoicesChange'
+        'DashboardPage'
+        'recentInvoices_synchronise'
+    ]
+    struct RecentInvoices
+    usage [
+        '*'
+        'items.customer.*'
+        'items.items.item'
+        'items.total'
+        'items.paid'
+        'items.invoiceNo'
+        'items.invoiceDate'
+        'items.due'
+        'items.company.*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'getRecentInvoices'
+        'DashboardPage'
+        'properties_recentInvoices_computation'
+    ]
+    struct RecentInvoices
+    usage [
+        '*'
+        'items.customer.*'
+        'items.customer.company.*'
+        'items.items.*'
+        'items.total'
+        'items.paid'
+        'items.invoiceNo'
+        'items.invoiceDate'
+        'items.due'
+        'items.company'
+        'items.company.*'
+    ]
+}

@@ -1,0 +1,407 @@
+(Widget AddItemView {
+    name 'AddItemView'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (obj {
+            name 'Obj'
+            type ({
+                model #Item
+            })
+            required true
+            fetchData true
+        })
+        (errors {
+            name 'Errors'
+            collection true
+            type ({
+                primitive String
+            })
+            internal true
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #padding
+                value '15'
+            })
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c2'
+                    })
+                    ({
+                        prop #border
+                        values [
+                            ({
+                                prop #color
+                                value '00ff0000'
+                            })
+                            ({
+                                prop #width
+                                value '0.0'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #borderRadius
+                        value '3'
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                ]
+                children [
+                    (CRef textView {
+                        name 'TextView'
+                        component #TextView
+                        style #headlineThree
+                        data [
+                            ({
+                                prop #data
+                                value 'Add Item'
+                            })
+                        ]
+                        conditionals [
+                            ({
+                                condition `obj.saveStatus != DBSaveStatus.New`
+                                values [
+                                    ({
+                                        prop #data
+                                        value 'Edit Item'
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                    (CRef closeButton {
+                        name 'CloseButton'
+                        component #Button
+                        child (CRef iconView {
+                            name 'IconView'
+                            component #IconView
+                            data [
+                                ({
+                                    prop #icon
+                                    value 'MaterialIcons.clear'
+                                })
+                                ({
+                                    prop #size
+                                    value '20'
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+            (CRef row2 {
+                name 'Row2'
+                component #Row
+                data [
+                    ({
+                        prop #margin
+                        value '10 0'
+                    })
+                ]
+                children [
+                    (CRef inputFieldWithLabel {
+                        name 'InputFieldWithLabel'
+                        component #InputFieldWithLabel
+                        data [
+                            ({
+                                prop #name
+                                value 'Item Name'
+                            })
+                            ({
+                                prop #placeHolder
+                                value 'Enter Item Name'
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                            ({
+                                prop #margin
+                                value '0 10 0 0'
+                            })
+                            ({
+                                prop #value
+                                bind true
+                                bindTo `obj.name`
+                            })
+                            ({
+                                prop #errors
+                                bind true
+                                bindTo `nameErrors`
+                            })
+                        ]
+                        twoWayBinding true
+                    })
+                    (CRef column2 {
+                        name 'Column2'
+                        component #Column
+                        data [
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                            ({
+                                prop #crossAxisAlignment
+                                value 'start'
+                            })
+                        ]
+                        children [
+                            (CRef textView3 {
+                                name 'TextView3'
+                                component #TextView
+                                style #nameText
+                                data [
+                                    ({
+                                        prop #data
+                                        value 'Price'
+                                    })
+                                    ({
+                                        prop #padding
+                                        value '0 0 5'
+                                    })
+                                ]
+                            })
+                            (CRef doubleInputField {
+                                name 'DoubleInputField'
+                                component #DoubleInputField
+                                style #default
+                                data [
+                                    ({
+                                        prop #decoration
+                                        values [
+                                            ({
+                                                prop #color
+                                                value '@c15'
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #value
+                                        bind true
+                                        bindTo `obj.price`
+                                    })
+                                    ({
+                                        prop #height
+                                        value '40'
+                                    })
+                                    ({
+                                        prop #backgroundColor
+                                        value '@c15'
+                                    })
+                                ]
+                                twoWayBinding true
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef textView2 {
+                name 'TextView2'
+                component #TextView
+                style #nameText
+                data [
+                    ({
+                        prop #data
+                        value 'Description'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0 5'
+                    })
+                ]
+            })
+            (CRef inputField {
+                name 'InputField'
+                component #InputField
+                style #large
+                data [
+                    ({
+                        prop #value
+                        bind true
+                        bindTo `obj.description`
+                    })
+                    ({
+                        prop #maxLength
+                        value '3'
+                    })
+                    ({
+                        prop #cursorColor
+                        value '@c1'
+                    })
+                    ({
+                        prop #keyboardType
+                        value 'multiline'
+                    })
+                    ({
+                        prop #minLines
+                        value '1'
+                    })
+                    ({
+                        prop #maxLines
+                        value '4'
+                    })
+                    ({
+                        prop #style
+                        values [
+                            ({
+                                prop #fontSize
+                                value '14'
+                            })
+                            ({
+                                prop #fontWeight
+                                value 'w600'
+                            })
+                            ({
+                                prop #decoration
+                                value 'none'
+                            })
+                            ({
+                                prop #color
+                                value 'ff184b3e'
+                            })
+                            ({
+                                prop #decorationStyle
+                                value 'solid'
+                            })
+                        ]
+                    })
+                ]
+                twoWayBinding true
+            })
+            (CRef row3 {
+                name 'Row3'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'end'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0 0'
+                    })
+                ]
+                children [
+                    (CRef cancelBtn {
+                        name 'CancelBtn'
+                        component #Button
+                        style #secondary
+                        data [
+                            ({
+                                prop #margin
+                                value '0 5 0 0'
+                            })
+                        ]
+                        child (CRef buttonText {
+                            name 'ButtonText'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    value 'Cancel'
+                                })
+                            ]
+                        })
+                    })
+                    (CRef addItemBtn {
+                        name 'AddItemBtn'
+                        component #Button
+                        style #primary
+                        child (CRef buttonText {
+                            name 'ButtonText'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    value 'Save'
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+            (CIf iddd {
+                name 'Iddd'
+                condition `this.errors.isNotEmpty`
+                then (CRef textView4 {
+                    name 'TextView4'
+                    component #TextView
+                    data [
+                        ({
+                            prop #data
+                            bind true
+                            bindTo `this.errors.join(', ')`
+                        })
+                    ]
+                })
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedCancelBtnHandler {
+            name 'onPressedCancelBtnHandler'
+            type OnEvent
+            on #cancelBtn
+            event #onPressed
+            block ```
+                navigator.close();
+            ```
+        })
+        (onPressedAddItemBtnHandler {
+            name 'onPressedAddItemBtnHandler'
+            type OnEvent
+            on #addItemBtn
+            event #onPressed
+            block ```
+                List<String> err = this.validate();
+                if(err.isEmpty){
+                    addItemBtn.disable = true;
+                    Result res = obj.save().await;
+                    addItemBtn.disable = false;
+                    if(res.status == Success){
+                        navigator.close();
+                    }else {
+                        errors = res.errors;
+                    }
+                } else {
+                    errors = err;
+                }
+            ```
+        })
+        (onPressedCloseButtonHandler {
+            name 'onPressedCloseButtonHandler'
+            type OnEvent
+            on #closeButton
+            event #onPressed
+            block ```
+                navigator.close();
+            ```
+        })
+    ]
+    editorFor #Item
+    editorInput #obj
+})

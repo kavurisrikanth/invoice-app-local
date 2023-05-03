@@ -1,0 +1,520 @@
+(ComponentTestData AddInvoicePopupViewData9938 {
+    data [
+        (obj {
+            modelValue [
+                #InvoiceData
+            ]
+        })
+        (errors {
+        })
+        (customers {
+            modelValue [
+                #CustomerData
+            ]
+        })
+        (items {
+            modelValue [
+                #ItemData
+                #ItemData2
+                #ItemData3
+            ]
+        })
+        (company {
+            modelValue [
+                #CompanyData
+            ]
+        })
+    ]
+    component #AddInvoiceView
+    values [
+        (build_children_1_children_0_imageUrl {
+            primitiveValue [
+                'images/MicrosoftTeams-image21.png'
+            ]
+        })
+        (build_children_2_children_0_children_1_data {
+            primitiveValue [
+                'hyd'
+            ]
+        })
+        (build_children_5_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_6_children_0_data {
+            primitiveValue [
+                'Total: \$ -56.0'
+            ]
+        })
+        (build_children_5_children_1_value {
+            modelValue [
+                #InvoiceItemData4
+            ]
+        })
+        (build_children_7_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_children_1_children_1_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_children_0_placeHolder {
+            primitiveValue [
+                'Search'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_2_build_children_0_then_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_0_then_children_0_data {
+            primitiveValue [
+                'Customer'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_then_children_0_value {
+            primitiveValue [
+                'customerErrors'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_then_children_0_0_data {
+            primitiveValue [
+                'customerErrors'
+            ]
+        })
+        (build_children_5_children_1_0_children_0_child_build_children_1_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_1_0_children_2_child_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@69ae8f8b'
+            ]
+        })
+        (build_children_5_children_1_0_children_1_child_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_5_children_1_0_children_2_child_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_5_children_1_0_children_1_child_build_value {
+            primitiveValue [
+                '4'
+            ]
+        })
+        (build_children_5_children_1_0_children_2_child_build_value {
+            primitiveValue [
+                '60.0'
+            ]
+        })
+        (build_children_5_children_1_0_children_0_child_build_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_1_0_children_0_child_build_children_1_children_0_placeHolder {
+            primitiveValue [
+                'Search'
+            ]
+        })
+        (build_children_5_children_1_0_children_3_child_data {
+            primitiveValue [
+                '-56.0'
+            ]
+        })
+        (build_children_5_children_1_0_children_0_child_build_children_1_children_0_value {
+            primitiveValue [
+                '<Instance of type "Item">'
+            ]
+        })
+        (build_children_5_children_1_0_children_0_child_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_1_0_children_1_child_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@283eaa2b'
+            ]
+        })
+        (build_children_5_children_0_children_1_value {
+            modelValue [
+                #InvoiceItemData4
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_3_child_data {
+            primitiveValue [
+                '-56.0'
+            ]
+        })
+        (build_children_5_children_0_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_2_child_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_2_child_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@4a7e145'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_2_child_build_value {
+            primitiveValue [
+                '60.0'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_1_child_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_1_child_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@10944fea'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_1_child_build_value {
+            primitiveValue [
+                '4'
+            ]
+        })
+        (build_children_3_children_1_children_1_build_child_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_1_children_1_build_child_children_0_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_children_1_children_1_build_child_children_0_value {
+            primitiveValue [
+                '2023-03-17'
+            ]
+        })
+        (build_children_3_children_1_children_1_build_decoration_border_color {
+            primitiveValue [
+                '@c14'
+            ]
+        })
+        (build_children_3_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Invoice No'
+            ]
+        })
+        (build_children_3_children_0_build_children_1_value {
+            primitiveValue [
+                '123'
+            ]
+        })
+        (build_children_3_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_0_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_3_children_0_build_children_0_then_data {
+            primitiveValue [
+                'Invoice No'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_0_child_build_children_1_children_0_placeHolder {
+            primitiveValue [
+                'Search'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_0_child_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_0_child_build_children_0_then_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_0_child_build_children_1_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_0_child_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_0_child_build_children_1_children_0_value {
+            primitiveValue [
+                '<Instance of type "Item">'
+            ]
+        })
+        (build_children_5_children_0_children_1_0_children_0_child_build_children_0_then_children_0_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_8_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_7_children_0_data {
+            primitiveValue [
+                'Total: \$ 120.0'
+            ]
+        })
+        (build_children_6_children_0_children_1_value {
+            modelValue [
+                #InvoiceItemData
+            ]
+        })
+        (build_children_6_children_0_children_1_0_children_3_child_data {
+            primitiveValue [
+                '-37.0'
+            ]
+        })
+        (build_children_6_children_0_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_3_children_1_children_1_data {
+            primitiveValue [
+                '5 Temasek Boulevard\n#13-01, Suntec Tower 5\nSingapore, 038985\nMain: +65 6302 5700\nFax: +65 6302 5777'
+            ]
+        })
+        (build_children_3_children_0_children_1_data {
+            primitiveValue [
+                'hyd'
+            ]
+        })
+        (build_children_2_data {
+            primitiveValue [
+                'Nitya Software'
+            ]
+        })
+        (build_children_3_children_0_children_0_data {
+            primitiveValue [
+                '392 E Winchester St.,\nSuite 201 Salt Lake City,\nUT 84107\n+1(510)-378-8077'
+            ]
+        })
+        (build_children_6_children_0_children_1_1_children_3_child_data {
+            primitiveValue [
+                '-37.0'
+            ]
+        })
+        (build_children_6_children_0_children_1_0_children_2_child_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@281324e2'
+            ]
+        })
+        (build_children_6_children_0_children_1_0_children_2_child_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_6_children_0_children_1_0_children_2_child_build_value {
+            primitiveValue [
+                '40.0'
+            ]
+        })
+        (build_children_6_children_0_children_1_0_children_1_child_build_value {
+            primitiveValue [
+                '3'
+            ]
+        })
+        (build_children_6_children_0_children_1_0_children_1_child_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@8a04ad'
+            ]
+        })
+        (build_children_6_children_0_children_1_0_children_1_child_build_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_6_children_0_children_1_0_children_1_child_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_4_children_1_children_1_build_child_children_0_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_children_1_children_1_build_child_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_1_children_1_build_child_children_0_value {
+            primitiveValue [
+                '2023-03-17'
+            ]
+        })
+        (build_children_4_children_1_children_1_build_decoration_border_color {
+            primitiveValue [
+                '@c14'
+            ]
+        })
+        (build_children_4_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_0_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_4_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Invoice No'
+            ]
+        })
+        (build_children_4_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_0_build_children_1_value {
+            primitiveValue [
+                '123'
+            ]
+        })
+        (build_children_4_children_0_build_children_0_then_data {
+            primitiveValue [
+                'Invoice No'
+            ]
+        })
+        (build_children_1_children_1_build_children_0_then_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_children_0_value {
+            primitiveValue [
+                '<Instance of type "Customer">'
+            ]
+        })
+        (build_children_1_children_1_build_children_0_then_children_0_data {
+            primitiveValue [
+                'Customer'
+            ]
+        })
+        (build_children_1_children_1_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_children_0_placeHolder {
+            primitiveValue [
+                'Search'
+            ]
+        })
+        (build_children_1_children_1_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+    ]
+    states [
+        (build_children_3_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_1_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_2_build {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_4_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+                ({
+                })
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+    popups [
+        (_successMsg {
+            model true
+        })
+    ]
+})

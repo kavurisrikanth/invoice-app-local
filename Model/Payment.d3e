@@ -1,0 +1,57 @@
+(Model Payment {
+    name 'Payment'
+    package 'invoice.com'
+    path 'Model'
+    master #Company
+    properties [
+        (invoice {
+            name 'Invoice'
+            type ({
+                model #Invoice
+            })
+        })
+        (customer {
+            name 'Customer'
+            type ({
+                model #Customer
+            })
+        })
+        (amount {
+            name 'Amount'
+            type ({
+                primitive Double
+            })
+            validations [
+                ({
+                    expression `this.invoice.paid <= this.invoice.total`
+                    errorMsg 'Amount should not be more than Invoice Balance'
+                    serverOnly true
+                })
+            ]
+        })
+    ]
+    actions [
+        (OnCreate {
+            name 'On Create'
+            block ```
+                this.invoice.paid += this.amount;
+            ```
+        })
+        (OnUpdate {
+            runOn OnUpdate
+            name 'On Update'
+            block ```
+                this.invoice.paid -= this.old.amount;
+                this.invoice.paid += this.amount;
+            ```
+        })
+        (OnDelete {
+            runOn OnDelete
+            name 'On Delete'
+            block ```
+                this.invoice.paid -= this.amount;
+            ```
+        })
+    ]
+    needCreatedDate true
+})

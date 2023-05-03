@@ -1,0 +1,14 @@
+(ComponentBoard Boarda53ae8b06cb749188a9a5c5f62a09f50 {
+    title 'AddCustomerView Board'
+    canvas #Vaishnavi
+    x 27075
+    y 25585
+    width 523
+    height 285
+    component #AddCustomerView
+    theme #invoiceTheme
+    views [
+        #Component2Data1471030
+    ]
+    data #Component2Data1471030
+})

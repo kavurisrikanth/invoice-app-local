@@ -1,0 +1,14 @@
+QueryUsage {
+    query [
+        'Query'
+        'loginUserUserWithEmailAndPassword'
+        'LoginV'
+        'eventHandlers_onPressedLoginButtonHandler_block'
+    ]
+    struct LoginResult
+    usage [
+        '*'
+        'userObject.*'
+        'userObject.company.*'
+    ]
+}

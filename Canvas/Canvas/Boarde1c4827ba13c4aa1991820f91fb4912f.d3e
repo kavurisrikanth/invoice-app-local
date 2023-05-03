@@ -1,0 +1,14 @@
+WidgetBoard {
+    title 'Welcome Page Board'
+    canvas Canvas
+    x 24500
+    y 24500
+    width 100
+    height 200
+    theme InvoiceTheme
+    page WelcomePage
+    views [
+        WelcomePageData12586
+    ]
+    data WelcomePageData12586
+}

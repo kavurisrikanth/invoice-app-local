@@ -1,0 +1,14 @@
+(ComponentBoard Board560a7f6e120c40b4988b87b13a60ead3 {
+    title 'FailureMsgBoard'
+    canvas #Vaishnavi
+    x 32217
+    y 21566
+    width 318
+    height 129
+    component #FailureMsgView
+    theme #invoiceTheme
+    views [
+        #ComponentData3336171
+    ]
+    data #ComponentData3336171
+})

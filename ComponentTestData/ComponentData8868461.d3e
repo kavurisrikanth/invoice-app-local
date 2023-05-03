@@ -1,0 +1,87 @@
+(ComponentTestData ComponentData8868461 {
+    data [
+        (name {
+            primitiveValue [
+                ''
+            ]
+        })
+        (placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (errors {
+        })
+        (focusNode {
+        })
+        (active {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (fieldColor {
+        })
+        (error {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+    component #InputFieldWithLabel
+    values [
+        (build_children_1_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+    ]
+    states [
+        (build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+})

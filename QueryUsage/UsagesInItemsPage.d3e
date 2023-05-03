@@ -1,0 +1,27 @@
+QueryUsage {
+    query [
+        'Subscription'
+        'onItemsChange'
+        'ItemsPage'
+        'items_synchronise'
+    ]
+    struct Items
+    usage [
+        '*'
+        'items.*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'getItems'
+        'ItemsPage'
+        'properties_items_computation'
+    ]
+    struct Items
+    usage [
+        '*'
+        'items.*'
+    ]
+}

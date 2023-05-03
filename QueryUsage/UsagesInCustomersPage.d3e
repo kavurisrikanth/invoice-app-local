@@ -1,0 +1,27 @@
+QueryUsage {
+    query [
+        'Subscription'
+        'onCustomersChange'
+        'CustomersPage'
+        'customers_synchronise'
+    ]
+    struct Customers
+    usage [
+        '*'
+        'items.*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'getCustomers'
+        'CustomersPage'
+        'properties_customers_computation'
+    ]
+    struct Customers
+    usage [
+        '*'
+        'items.*'
+    ]
+}

@@ -1,0 +1,93 @@
+(ComponentTestData SearchableViewData2346407 {
+    data [
+        (value {
+        })
+        (isRequired {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (name {
+            primitiveValue [
+                'dasdsa'
+            ]
+        })
+        (items {
+        })
+        (data {
+        })
+        (placeHolder {
+            primitiveValue [
+                'Search'
+            ]
+        })
+        (searchValue {
+            primitiveValue [
+                ''
+            ]
+        })
+        (popUpWidth {
+            primitiveValue [
+                '150.0'
+            ]
+        })
+        (errors {
+        })
+        (disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (focusNode {
+        })
+        (active {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (itemsInternal {
+        })
+    ]
+    component #SearchableView
+    values [
+        (build_children_0_then_children_0_data {
+            primitiveValue [
+                'dasdsa'
+            ]
+        })
+        (build_children_1_children_0_placeHolder {
+            primitiveValue [
+                'Search'
+            ]
+        })
+        (build_children_1_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_then_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+    ]
+    popups [
+        (_results {
+        })
+    ]
+})

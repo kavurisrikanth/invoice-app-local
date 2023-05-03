@@ -1,0 +1,14 @@
+(ComponentBoard Board1aa677b8d8704991816f9d62974cd2dd {
+    title 'ReceivePaymentView'
+    canvas #Vaishnavi
+    x 27146
+    y 24939
+    width 624
+    height 370
+    component #ReceivePaymentView
+    theme #invoiceTheme
+    views [
+        #ComponentData511302
+    ]
+    data #ComponentData511302
+})

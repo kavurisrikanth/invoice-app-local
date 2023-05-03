@@ -1,0 +1,466 @@
+(Widget SearchableView {
+    name 'SearchableView'
+    package 'invoice.com'
+    properties [
+        (value {
+            name 'Value'
+            type ({
+                var 'T'
+            })
+        })
+        (isRequired {
+            name 'Is Required'
+            type ({
+                primitive Boolean
+            })
+            defaultValue `false`
+        })
+        (name {
+            name 'Name'
+            type ({
+                primitive String
+            })
+        })
+        (items {
+            name 'Items'
+            collection true
+            type ({
+                var 'T'
+            })
+        })
+        (itemsInternal {
+            name 'Items Internal'
+            collection true
+            type ({
+                var 'T'
+            })
+            computed true
+            computation `[...items]`
+            internal true
+        })
+        (data {
+            name 'Data'
+            collection true
+            type ({
+                var 'T'
+            })
+            internal true
+        })
+        (placeHolder {
+            name 'PlaceHolder'
+            type ({
+                primitive String
+            })
+            defaultValue `'Search'`
+        })
+        (searchValue {
+            name 'SearchValue'
+            type ({
+                primitive String
+            })
+            internal true
+        })
+        (popUpWidth {
+            name 'PopUpWidth'
+            type ({
+                primitive Double
+            })
+            defaultValue `150.0`
+            internal true
+        })
+        (errors {
+            name 'Errors'
+            collection true
+            type ({
+                primitive String
+            })
+        })
+        (disable {
+            name 'disable'
+            type ({
+                primitive Boolean
+            })
+            defaultValue `false`
+        })
+        (focusNode {
+            name 'FocusNode'
+            type ({
+                cls #FocusNode
+            })
+            internal true
+        })
+        (active {
+            name 'Active'
+            type ({
+                primitive Boolean
+            })
+            internal true
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+        ]
+        children [
+            (CIf ifItem {
+                name 'IfItem'
+                condition `this.name != null`
+                then (CRef id {
+                    name 'Id'
+                    component #Row
+                    children [
+                        (CRef nameview {
+                            name 'Nameview'
+                            component #TextView
+                            style #nameText
+                            data [
+                                ({
+                                    prop #data
+                                    bind true
+                                    bindTo `this.name`
+                                })
+                                ({
+                                    prop #margin
+                                    value '0 0 5'
+                                })
+                            ]
+                        })
+                        (CIf id {
+                            name 'Id'
+                            condition `isRequired`
+                            then (CRef id {
+                                name 'Id'
+                                component #TextView
+                                style #nameText
+                                data [
+                                    ({
+                                        prop #data
+                                        value '*'
+                                    })
+                                ]
+                            })
+                        })
+                    ]
+                })
+            })
+            (CRef empty {
+                name 'Empty'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                ]
+                children [
+                    (CRef searchableEmplty {
+                        name 'SearchableEmplty'
+                        component #InputField
+                        style #default
+                        data [
+                            ({
+                                prop #focusNode
+                                bind true
+                                bindTo `focusNode`
+                            })
+                            ({
+                                prop #padding
+                                value '6 5'
+                            })
+                            ({
+                                prop #disable
+                                bind true
+                                bindTo `disable`
+                            })
+                            ({
+                                prop #placeHolder
+                                bind true
+                                bindTo `(searchableEmpltyController.text == null || searchableEmpltyController.text.isEmpty) ? placeHolder : null`
+                            })
+                            ({
+                                prop #value
+                                bind true
+                                bindTo `searchValue`
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                            ({
+                                prop #activeColor
+                                value '@c1'
+                            })
+                            ({
+                                prop #decoration
+                                values [
+                                    ({
+                                        prop #border
+                                        values [
+                                            ({
+                                                prop #color
+                                                value '@c12'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '0.3'
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                            ({
+                                prop #placeHolderColor
+                                value 'ff000000'
+                            })
+                            ({
+                                prop #backgroundColor
+                                value '00000000'
+                            })
+                            ({
+                                prop #style
+                                values [
+                                    ({
+                                        prop #fontSize
+                                        value '14'
+                                    })
+                                    ({
+                                        prop #fontWeight
+                                        value 'w400'
+                                    })
+                                    ({
+                                        prop #decoration
+                                        value 'none'
+                                    })
+                                    ({
+                                        prop #color
+                                        value 'ff184b3e'
+                                    })
+                                    ({
+                                        prop #decorationStyle
+                                        value 'solid'
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+                behaviours [
+                    #LayoutAware
+                ]
+            })
+            (CIf id {
+                name 'Id'
+                condition `this.errors.isNotEmpty`
+                then (CRef id {
+                    name 'Id'
+                    component #Column
+                    data [
+                        ({
+                            prop #crossAxisAlignment
+                            value 'start'
+                        })
+                    ]
+                    children [
+                        (CFor item {
+                            name 'Item'
+                            var 'item'
+                            items `this.errors`
+                            type ({
+                                primitive String
+                            })
+                            item (CRef id {
+                                name 'Id'
+                                component #TextView
+                                style #error
+                                data [
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `item`
+                                    })
+                                ]
+                            })
+                        })
+                    ]
+                })
+            })
+        ]
+    })
+    eventHandlers [
+        (onEmptyClick {
+            name 'OnEmptyClick'
+            type OnEvent
+            on #searchableEmplty
+            event #onTap
+            block ```
+                if(!disable){
+                    data = [...itemsInternal];
+                    showResults(
+                        autoClose: true,
+                        takeFocus : false
+                    );
+                    searchValue = '';
+                    active = true;
+                }
+            ```
+        })
+        (onSelectListTile {
+            name 'OnSelectListTile'
+            type OnEvent
+            popup #results
+            event #onSelectItem
+            block ```
+                this.onChanged(item);
+                if(item != null){
+                    searchableEmpltyController.text = item.toString();
+                    searchValue = item.toString();
+                }else {
+                    searchableEmpltyController.text = '';
+                    searchValue = '';
+                }
+                hideResults();
+                active = false;
+            ```
+        })
+        (onDropDownBoundsChanges {
+            name 'OnDropDownBoundsChanges'
+            type OnBehaviour
+            on #empty
+            behaviour #LayoutAware
+            event #onBoundsChange
+            block ```
+                this.popUpWidth = bounds.width - 12;
+            ```
+        })
+        (onInit {
+            name 'OnInit'
+            block ```
+                focusNode = FocusNode();
+                focusNode.addListener(onChangeFocus);
+                searchValue = value != null ? value.toString() : '';
+                data = itemsInternal;
+            ```
+        })
+        (onChangeFocus {
+            name 'OnChangeFocus'
+            block ```
+                active = focusNode.hasFocus;
+            ```
+        })
+        (onClosePopUp {
+            name 'OnClosePopUp'
+            type OnPopupClose
+            popup #results
+            block ```
+                if(searchValue.isEmpty){
+                    searchValue = value != null ? value.toString() : '';
+                }
+            ```
+        })
+        (onChangeText {
+            name 'OnChangeText'
+            type OnEvent
+            on #searchableEmplty
+            event #onChanged
+            block ```
+                String val = text != null ? text : '';
+                searchValue = val;
+                List<T> l = itemsInternal.where((i) => i.toString().toLowerCase().startsWith(val.toLowerCase())).toList();
+                List<T> l2 = itemsInternal.where((x) => !l.contains(x)).toList();
+                l.addAll(l2.where((i) => i.toString().toLowerCase().contains(val.toLowerCase())).toList());
+                data = l;
+                showResults(
+                    autoClose: true,
+                    takeFocus : false
+                );
+            ```
+        })
+    ]
+    popups [
+        (results {
+            name 'Results'
+            component #SearchFilterView
+            side Bottom
+            data [
+                ({
+                    prop #width
+                    bind true
+                    bindTo `popUpWidth + 2`
+                })
+                ({
+                    prop #constraints
+                    values [
+                        ({
+                            prop #maxHeight
+                            value '250'
+                        })
+                    ]
+                })
+                ({
+                    prop #value
+                    bind true
+                    bindTo `this.value`
+                })
+                ({
+                    prop #decoration
+                    values [
+                        ({
+                            prop #color
+                            value '@c2'
+                        })
+                        ({
+                            prop #borderRadius
+                            value '0'
+                        })
+                        ({
+                            prop #boxShadow
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c14'
+                                })
+                                ({
+                                    prop #blurRadius
+                                    value '1'
+                                })
+                                ({
+                                    prop #spreadRadius
+                                    value '2'
+                                })
+                            ]
+                        })
+                    ]
+                })
+                ({
+                    prop #items
+                    bind true
+                    bindTo `this.data`
+                })
+                ({
+                    prop #margin
+                    value '2 1 0 1'
+                })
+            ]
+            target #empty
+        })
+    ]
+    generic true
+    events [
+        (onChanged {
+            params [
+                (item {
+                    type ({
+                        var 'T'
+                    })
+                })
+            ]
+        })
+    ]
+    twoWayBinding true
+})

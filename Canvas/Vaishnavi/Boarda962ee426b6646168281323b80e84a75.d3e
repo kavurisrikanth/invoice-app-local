@@ -1,0 +1,14 @@
+(ComponentBoard Boarda962ee426b6646168281323b80e84a75 {
+    title 'CounterView'
+    canvas #Vaishnavi
+    x 28611
+    y 21855
+    width 114
+    height 101
+    component #CounterView
+    theme #invoiceTheme
+    views [
+        #ComponentData735377
+    ]
+    data #ComponentData735377
+})

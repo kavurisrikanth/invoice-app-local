@@ -1,0 +1,14 @@
+(ComponentBoard Boarda786a5d909254769a3abf6e63ef30487 {
+    title 'CustomersPage'
+    canvas #Vaishnavi
+    x 26188
+    y 25600
+    width 727
+    height 272
+    theme #invoiceTheme
+    page #CustomersPage
+    views [
+        #NewPageData1460332
+    ]
+    data #NewPageData1460332
+})

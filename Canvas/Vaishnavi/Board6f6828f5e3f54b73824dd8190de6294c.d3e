@@ -1,0 +1,14 @@
+(ComponentBoard Board6f6828f5e3f54b73824dd8190de6294c {
+    title 'SearchFilterView Board'
+    canvas #Vaishnavi
+    x 29040
+    y 25262
+    width 764
+    height 1024
+    component #SearchFilterView
+    theme #invoiceTheme
+    views [
+        #SearchFilterViewData1558296
+    ]
+    data #SearchFilterViewData1558296
+})

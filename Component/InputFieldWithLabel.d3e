@@ -1,0 +1,396 @@
+(Widget InputFieldWithLabel {
+    name 'InputFieldWithLabel'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (name {
+            name 'Name'
+            type ({
+                primitive String
+            })
+        })
+        (placeHolder {
+            name 'PlaceHolder'
+            type ({
+                primitive String
+            })
+        })
+        (value {
+            name 'Value'
+            type ({
+                primitive String
+            })
+        })
+        (errors {
+            name 'Errors'
+            collection true
+            type ({
+                primitive String
+            })
+        })
+        (focusNode {
+            name 'FocusNode'
+            type ({
+                cls #FocusNode
+            })
+            internal true
+        })
+        (active {
+            name 'Active'
+            type ({
+                primitive Boolean
+            })
+            internal true
+        })
+        (obscureText {
+            name 'ObscureText'
+            type ({
+                primitive Boolean
+            })
+            defaultValue `false`
+            stylable true
+        })
+        (disable {
+            name 'disable'
+            type ({
+                primitive Boolean
+            })
+            defaultValue `false`
+        })
+        (fieldColor {
+            name 'Field Color'
+            type ({
+                struct #Color
+            })
+        })
+    ]
+    path 'Component'
+    build (CRef id {
+        name 'Id'
+        component #Column
+        data [
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+            ({
+                prop #margin
+                value '4 0 0'
+            })
+        ]
+        children [
+            (CIf id {
+                name 'Id'
+                condition `this.name != null && this.name.isNotEmpty`
+                then (CRef nameview {
+                    name 'Nameview'
+                    component #TextView
+                    style #nameText
+                    data [
+                        ({
+                            prop #data
+                            bind true
+                            bindTo `this.name`
+                        })
+                        ({
+                            prop #margin
+                            value '0'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                        ({
+                            prop #color
+                            value '@c12'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'w100'
+                        })
+                        ({
+                            prop #fontSize
+                            value '12'
+                        })
+                    ]
+                })
+            })
+            (CRef field {
+                name 'Field'
+                component #InputField
+                data [
+                    ({
+                        prop #value
+                        bind true
+                        bindTo `value`
+                    })
+                    ({
+                        prop #activeColor
+                        value '@c1'
+                    })
+                    ({
+                        prop #inActiveColor
+                        value '00000000'
+                    })
+                    ({
+                        prop #focusNode
+                        bind true
+                        bindTo `focusNode`
+                    })
+                    ({
+                        prop #padding
+                        value '7 5'
+                    })
+                    ({
+                        prop #obscureText
+                        bind true
+                        bindTo `obscureText`
+                    })
+                    ({
+                        prop #disable
+                        bind true
+                        bindTo `disable`
+                    })
+                    ({
+                        prop #backgroundColor
+                        bind true
+                        bindTo `this.fieldColor`
+                    })
+                    ({
+                        prop #placeHolder
+                        bind true
+                        bindTo `placeHolder`
+                    })
+                    ({
+                        prop #margin
+                        value '5 0 0'
+                    })
+                    ({
+                        prop #scrollPadding
+                        value '8'
+                    })
+                    ({
+                        prop #style
+                        values [
+                            ({
+                                prop #fontSize
+                                value '14'
+                            })
+                            ({
+                                prop #fontWeight
+                                value 'w600'
+                            })
+                            ({
+                                prop #decoration
+                                value 'none'
+                            })
+                            ({
+                                prop #color
+                                value 'ff184b3e'
+                            })
+                            ({
+                                prop #decorationStyle
+                                value 'solid'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #decoration
+                        values [
+                            ({
+                                prop #border
+                                values [
+                                    ({
+                                        prop #color
+                                        value '00000000'
+                                    })
+                                    ({
+                                        prop #width
+                                        value '1'
+                                    })
+                                    ({
+                                        prop #style
+                                        value 'none'
+                                    })
+                                ]
+                            })
+                            ({
+                                prop #borderRadius
+                                value '2'
+                            })
+                        ]
+                    })
+                ]
+                conditionals [
+                    ({
+                        condition `this.fieldColor == null`
+                        values [
+                            ({
+                                prop #backgroundColor
+                                value '@c15'
+                            })
+                        ]
+                    })
+                    ({
+                        condition `this.active`
+                        values [
+                            ({
+                                prop #decoration
+                                values [
+                                    ({
+                                        prop #border
+                                        values [
+                                            ({
+                                                prop #color
+                                                value '@c1'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '1'
+                                            })
+                                            ({
+                                                prop #style
+                                                value 'solid'
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #borderRadius
+                                        value '2'
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                    ({
+                        condition `!this.active`
+                        values [
+                            ({
+                                prop #decoration
+                                values [
+                                    ({
+                                        prop #border
+                                        values [
+                                            ({
+                                                prop #color
+                                                value 'ffdbdbdb'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '1'
+                                            })
+                                            ({
+                                                prop #style
+                                                value 'solid'
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #borderRadius
+                                        value '2'
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CIf id {
+                name 'Id'
+                condition `this.errors.isNotEmpty`
+                then (CRef id {
+                    name 'Id'
+                    component #Column
+                    data [
+                        ({
+                            prop #crossAxisAlignment
+                            value 'start'
+                        })
+                        ({
+                            prop #decoration
+                            values [
+                                ({
+                                    prop #border
+                                    values [
+                                        ({
+                                            prop #color
+                                            value '00ff0000'
+                                        })
+                                        ({
+                                            prop #width
+                                            value '0.0'
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                    children [
+                        (CRef textView {
+                            name 'TextView'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    bind true
+                                    bindTo `this.errors.join(',')`
+                                })
+                                ({
+                                    prop #color
+                                    value '@c8'
+                                })
+                                ({
+                                    prop #fontFamily
+                                    value 'Nunito'
+                                })
+                            ]
+                        })
+                    ]
+                })
+            })
+        ]
+    })
+    eventHandlers [
+        (onInit {
+            name 'OnInit'
+            block ```
+                focusNode = FocusNode();
+                focusNode.addListener(onChangeFocus);
+            ```
+        })
+        (onChangeFocus {
+            name 'OnChangeFocus'
+            block ```
+                active = focusNode.hasFocus;
+                if(active && onTap != null){
+                    this.onTap();
+                }
+            ```
+        })
+        (onChangeText {
+            name 'OnChangeText'
+            type OnEvent
+            on #field
+            event #onChanged
+            block ```
+                if(onChanged != null){
+                    onChanged(text);
+                }
+            ```
+        })
+    ]
+    events [
+        (onChanged {
+            params [
+                (value {
+                    type ({
+                        primitive String
+                    })
+                })
+            ]
+        })
+        (onTap {
+        })
+    ]
+    twoWayBinding true
+})

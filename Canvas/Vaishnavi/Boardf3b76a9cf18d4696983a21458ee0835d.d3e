@@ -1,0 +1,14 @@
+(ComponentBoard Boardf3b76a9cf18d4696983a21458ee0835d {
+    title 'LoginPage Board'
+    canvas #Vaishnavi
+    x 23377
+    y 22591
+    width 602
+    height 563
+    theme #invoiceTheme
+    page #LoginPage
+    views [
+        #LoginPageData1877970
+    ]
+    data #LoginPageData1877970
+})

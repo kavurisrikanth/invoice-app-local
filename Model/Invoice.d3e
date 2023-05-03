@@ -1,0 +1,112 @@
+(Model Invoice {
+    name 'Invoice'
+    package 'invoice.com'
+    path 'Model'
+    master #Company
+    properties [
+        (customer {
+            name 'Customer'
+            type ({
+                model #Customer
+            })
+            required true
+        })
+        (items {
+            name 'Items'
+            collection true
+            type ({
+                model #InvoiceItem
+            })
+            child true
+        })
+        (total {
+            name 'Total'
+            type ({
+                primitive Double
+            })
+            computed true
+            computation `this.items.fold(0.0, (v, i) => v + i.total) `
+            readType ReadOnly
+        })
+        (paid {
+            name 'Paid'
+            type ({
+                primitive Double
+            })
+            readType ReadOnly
+        })
+        (invoiceNo {
+            name 'Invoice No'
+            type ({
+                primitive String
+            })
+            required true
+        })
+        (invoiceDate {
+            name 'Invoice Date'
+            type ({
+                primitive Date
+            })
+            required true
+        })
+        (due {
+            name 'Due'
+            type ({
+                primitive Boolean
+            })
+        })
+    ]
+    actions [
+        (OnCreate {
+            name 'On Create'
+            block ```
+                this.company.invoiceTotal += this.total;
+                this.company.invoiceUnpaid += this.total;
+                this.company.totalInvoices += 1;
+                this.company.unpaidInvoices += 1;
+                this.due = true;
+                
+                this.customer.balance += this.total;
+            ```
+        })
+        (OnDelete {
+            runOn OnDelete
+            name 'On Delete'
+            block ```
+                this.company.invoiceTotal -= this.total;
+                this.company.invoiceUnpaid -= (this.total - this.paid);
+                this.company.invoicePaid -= this.paid;
+                this.company.totalInvoices -= 1;
+                this.company.unpaidInvoices -= 1;
+                
+                this.customer.balance -= (this.total - this.paid);
+            ```
+        })
+        (OnUpdate {
+            runOn OnUpdate
+            name 'On Update'
+            block ```
+                this.company.invoiceTotal -= this.old.total;
+                this.company.invoiceTotal += this.total;
+                
+                this.company.invoiceUnpaid -= (this.old.total - this.old.paid);
+                this.company.invoiceUnpaid += (this.total - this.paid);
+                
+                this.company.invoicePaid -= this.old.paid;
+                this.company.invoicePaid += this.paid;
+                
+                this.customer.balance += this.old.paid;
+                this.customer.balance -= this.paid;
+                
+                if(this.paid == this.total) {
+                    this.due = false;
+                }
+                
+                if(this.old.due  && !this.due) {
+                    this.company.unpaidInvoices -= 1;
+                    this.company.paidInvoices += 1;
+                }
+            ```
+        })
+    ]
+})

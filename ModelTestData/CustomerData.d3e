@@ -1,0 +1,28 @@
+(ModelTestData CustomerData {
+    type #Customer
+    aliasName 'Salesforce'
+    data [
+        (name {
+            primitiveValue [
+                'Salesforce'
+            ]
+        })
+        (address {
+            primitiveValue [
+                '5 Temasek Boulevard\n#13-01, Suntec Tower 5\nSingapore, 038985\nMain: +65 6302 5700\nFax: +65 6302 5777'
+            ]
+        })
+        (balance {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (company {
+            modelValue [
+                #CompanyData
+            ]
+        })
+        (createdDate {
+        })
+    ]
+})

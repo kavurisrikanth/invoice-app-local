@@ -1,0 +1,103 @@
+(ComponentTestData ComponentData9581532 {
+    data [
+        (password {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+    component #ResendPasswordView
+    values [
+        (build_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_build_children_2_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_2_build_children_0_then_data {
+            primitiveValue [
+                'New Password'
+            ]
+        })
+        (build_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter New Password'
+            ]
+        })
+        (build_children_2_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_3_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Confirm Password'
+            ]
+        })
+        (build_children_3_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_build_children_0_then_data {
+            primitiveValue [
+                'Confirm Password'
+            ]
+        })
+        (build_children_2_build_children_2_then_children_0_data {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+    states [
+        (build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+})

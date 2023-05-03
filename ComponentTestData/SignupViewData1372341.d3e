@@ -1,0 +1,407 @@
+(ComponentTestData SignupViewData1372341 {
+    data [
+        (obj {
+        })
+        (signupError {
+            primitiveValue [
+                ''
+            ]
+        })
+        (confirmPassword {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+    page #SignupPage
+    values [
+        (build_children_1_children_6_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_10_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Full Name'
+            ]
+        })
+        (build_children_1_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Full Name'
+            ]
+        })
+        (build_children_1_children_7_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_4_build_children_0_then_data {
+            primitiveValue [
+                'Password'
+            ]
+        })
+        (build_children_1_children_5_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Password'
+            ]
+        })
+        (build_children_1_children_7_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_7_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_4_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_3_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_5_build_children_0_then_data {
+            primitiveValue [
+                'Confirm Password'
+            ]
+        })
+        (build_children_1_children_5_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_4_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_4_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_3_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_7_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Company Name'
+            ]
+        })
+        (build_children_1_children_4_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_3_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_5_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_5_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_5_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_3_build_children_0_then_data {
+            primitiveValue [
+                'Email'
+            ]
+        })
+        (build_children_1_children_3_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Email Address'
+            ]
+        })
+        (build_children_1_children_7_build_children_0_then_data {
+            primitiveValue [
+                'Company Name'
+            ]
+        })
+        (build_children_1_children_7_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_3_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_4_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Password'
+            ]
+        })
+        (build_children_1_children_5_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+    ]
+    states [
+        (build_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_build_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_build_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_build_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_build_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_build_children_5_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_build_children_6_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_5_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_6_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_7_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_11_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_11_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_2_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_2_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+                ({
+                })
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+                ({
+                })
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_11_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_11_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_7_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+                ({
+                })
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_5_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+                ({
+                })
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+                ({
+                })
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+})

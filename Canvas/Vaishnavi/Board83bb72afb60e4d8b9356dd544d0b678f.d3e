@@ -1,0 +1,14 @@
+(ComponentBoard Board83bb72afb60e4d8b9356dd544d0b678f {
+    title 'PaymentsPageBoard'
+    canvas #Vaishnavi
+    x 25791
+    y 24866
+    width 907
+    height 356
+    theme #invoiceTheme
+    page #PaymentsPage
+    views [
+        #PaymentsPageData35820
+    ]
+    data #PaymentsPageData35820
+})

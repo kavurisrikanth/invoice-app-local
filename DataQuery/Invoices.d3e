@@ -1,0 +1,16 @@
+(DataQuery Invoices {
+    name 'Invoices'
+    package 'invoice.com'
+    query `Invoice.all.where(i => i.company == inputs.company)
+.orderBy(i => i.invoiceDate, asc: false)`
+    inputs [
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+    ]
+    enableSync true
+})

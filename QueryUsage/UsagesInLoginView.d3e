@@ -1,0 +1,17 @@
+QueryUsage {
+    query [
+        'Query'
+        'loginUserUserWithEmailAndPassword'
+        'LoginView'
+        'eventHandlers_onPressedLoginButtonHandler_block'
+    ]
+    deleted true
+    struct LoginResult
+    usage [
+        '*'
+        'userObject.isActive'
+        'userObject.deviceToken'
+        'userObject.*'
+        'userObject.company.*'
+    ]
+}

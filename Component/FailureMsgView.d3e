@@ -1,0 +1,112 @@
+(Widget FailureMsgView {
+    name 'FailureMsgView'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (message {
+            name 'Message'
+            type ({
+                primitive String
+            })
+            required true
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #mainAxisAlignment
+                value 'center'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c8'
+                    })
+                ]
+            })
+            ({
+                prop #margin
+                value '0'
+            })
+            ({
+                prop #padding
+                value '0 15'
+            })
+        ]
+        children [
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'end'
+                    })
+                ]
+                children [
+                    (CRef button {
+                        name 'Button'
+                        component #Button
+                        child (CRef iconView {
+                            name 'IconView'
+                            component #IconView
+                            data [
+                                ({
+                                    prop #icon
+                                    value 'MaterialIcons.clear'
+                                })
+                                ({
+                                    prop #color
+                                    value '@c2'
+                                })
+                                ({
+                                    prop #size
+                                    value '20'
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+            (CRef textView {
+                name 'TextView'
+                component #TextView
+                data [
+                    ({
+                        prop #data
+                        bind true
+                        bindTo `this.message`
+                    })
+                    ({
+                        prop #color
+                        value '@c2'
+                    })
+                    ({
+                        prop #softWrap
+                        value 'true'
+                    })
+                    ({
+                        prop #margin
+                        value '0 15'
+                    })
+                ]
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedButtonHandler {
+            name 'onPressedButtonHandler'
+            type OnEvent
+            on #button
+            event #onPressed
+            block ```
+                navigator.close();
+            ```
+        })
+    ]
+})

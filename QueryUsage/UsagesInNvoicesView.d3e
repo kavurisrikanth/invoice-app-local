@@ -1,0 +1,29 @@
+QueryUsage {
+    query [
+        'Subscription'
+        'onRecentInvoicesChange'
+        'NvoicesView'
+        'recentInvoices_synchronise'
+    ]
+    struct RecentInvoices
+    usage [
+        '*'
+        'items.*'
+        'items.customer.name'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'getRecentInvoices'
+        'NvoicesView'
+        'properties_recentInvoices_computation'
+    ]
+    struct RecentInvoices
+    usage [
+        '*'
+        'items.*'
+        'items.customer.name'
+    ]
+}

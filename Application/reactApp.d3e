@@ -1,0 +1,6 @@
+(Application reactApp {
+    name 'React App'
+    target ReactFrontEnd
+    root #LoginPage
+    defaultTheme #invoiceTheme
+})

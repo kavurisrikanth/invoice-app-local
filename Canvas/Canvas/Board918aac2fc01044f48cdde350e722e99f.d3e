@@ -1,0 +1,9 @@
+ThemeBoard {
+    title 'Invoice Theme'
+    canvas Canvas
+    x 25000
+    y 25000
+    width 1000
+    height 2000
+    theme InvoiceTheme
+}

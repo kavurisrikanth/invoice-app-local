@@ -1,0 +1,26 @@
+QueryUsage {
+    query [
+        'Query'
+        'getUserById'
+        'HomePage'
+        'user_fetchData'
+    ]
+    model User
+    usage [
+        '*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'getCompanyById'
+        'HomePage'
+        'company_fetchData'
+    ]
+    model Company
+    usage [
+        '*'
+        'logo.*'
+    ]
+}

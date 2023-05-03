@@ -1,0 +1,162 @@
+(ComponentTestData ComponentData9912041 {
+    data [
+        (obj {
+            modelValue [
+                #ItemData
+            ]
+        })
+        (errors {
+        })
+    ]
+    component #AddItemView
+    values [
+        (build_children_3_value {
+            primitiveValue [
+                'sed'
+            ]
+        })
+        (build_children_1_children_1_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_value {
+            primitiveValue [
+                '40.0'
+            ]
+        })
+        (build_children_1_children_1_build_children_0_then_data {
+            primitiveValue [
+                'Price'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Customer Name'
+            ]
+        })
+        (build_children_1_children_1_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_build_children_2_then_children_0_data {
+            primitiveValue [
+                'null'
+            ]
+        })
+        (build_children_1_children_2_children_1_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_1_children_2_children_1_build_value {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_1_children_2_children_1_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@1383ff3c'
+            ]
+        })
+        (build_children_5_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_5_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_children_1_build_value {
+            primitiveValue [
+                '50.0'
+            ]
+        })
+        (build_children_1_children_1_children_1_build_backgroundColor {
+            primitiveValue [
+                '@c15'
+            ]
+        })
+        (build_children_1_children_1_children_1_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@328c82a8'
+            ]
+        })
+        (build_children_1_children_1_children_1_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_1_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Item Name'
+            ]
+        })
+        (build_children_1_children_0_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_build_children_0_then_data {
+            primitiveValue [
+                'Item Name'
+            ]
+        })
+        (build_children_1_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_build_children_1_value {
+            primitiveValue [
+                'item3'
+            ]
+        })
+    ]
+    states [
+        (build_children_1_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_1_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_children_0 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+})

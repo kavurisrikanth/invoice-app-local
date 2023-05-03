@@ -1,0 +1,12 @@
+QueryUsage {
+    query [
+        'Query'
+        'getItemById'
+        'AddItemPopupView'
+        'obj_fetchData'
+    ]
+    model Item
+    usage [
+        '*'
+    ]
+}

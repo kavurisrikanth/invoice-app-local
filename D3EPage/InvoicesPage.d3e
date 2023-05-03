@@ -1,0 +1,158 @@
+(D3EPage InvoicesPage {
+    name 'InvoicesPage'
+    package 'invoice.com'
+    properties [
+        (invoices {
+            name 'Invoices'
+            type ({
+                struct #Invoices
+            })
+            computed true
+            computation `Query.getInvoices(InvoicesRequest(company: this.company)).await`
+            internal true
+            synchronise true
+        })
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+        (recentItem {
+            name 'RecentItem'
+            type ({
+                model #Invoice
+            })
+            internal true
+        })
+    ]
+    path 'D3EPage'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #padding
+                value '20'
+            })
+        ]
+        children [
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                    ({
+                        prop #margin
+                        value '0 0 10'
+                    })
+                ]
+                children [
+                    (CRef textView {
+                        name 'TextView'
+                        component #TextView
+                        style #displayHeadingFour
+                        data [
+                            ({
+                                prop #data
+                                value 'Invoices'
+                            })
+                        ]
+                    })
+                    (CRef addInvoiceBtn {
+                        name 'AddInvoiceBtn'
+                        component #Button
+                        style #primary
+                        child (CRef row2 {
+                            name 'Row2'
+                            component #Row
+                            children [
+                                (CRef iconView {
+                                    name 'IconView'
+                                    component #IconView
+                                    data [
+                                        ({
+                                            prop #icon
+                                            value 'MaterialIcons.add'
+                                        })
+                                        ({
+                                            prop #size
+                                            value '10'
+                                        })
+                                        ({
+                                            prop #margin
+                                            value '0 5 0 0'
+                                        })
+                                    ]
+                                })
+                                (CRef textView2 {
+                                    name 'TextView2'
+                                    component #TextView
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Add Invoice'
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+            (CRef invoicesView {
+                name 'InvoicesView'
+                component #InvoicesView
+                data [
+                    ({
+                        prop #invoices
+                        bind true
+                        bindTo `this.invoices?.items??[]`
+                    })
+                ]
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedaAInvoiceBtnHandler {
+            name 'onPressedaAInvoiceBtnHandler'
+            type OnEvent
+            on #addInvoiceBtn
+            event #onPressed
+            block ```
+                recentItem = Invoice(company : company);
+                    showInvoicePopup();
+            ```
+        })
+    ]
+    popups [
+        (invoicePopup {
+            name 'InvoicePopup'
+            component #AddInvoiceView
+            data [
+                ({
+                    prop #obj
+                    bind true
+                    bindTo `recentItem`
+                })
+                ({
+                    prop #width
+                    value '600'
+                })
+                ({
+                    prop #height
+                    value '500'
+                })
+                ({
+                    prop #company
+                    bind true
+                    bindTo `this.company`
+                })
+            ]
+        })
+    ]
+})

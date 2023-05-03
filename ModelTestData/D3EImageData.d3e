@@ -1,0 +1,26 @@
+(ModelTestData D3EImageData {
+    type #D3EImage
+    aliasName 'D3EImageData'
+    data [
+        (size {
+            primitiveValue [
+                '0'
+            ]
+        })
+        (width {
+            primitiveValue [
+                '0'
+            ]
+        })
+        (height {
+            primitiveValue [
+                '0'
+            ]
+        })
+        (file {
+            primitiveValue [
+                'images/MicrosoftTeams-image21.png'
+            ]
+        })
+    ]
+})

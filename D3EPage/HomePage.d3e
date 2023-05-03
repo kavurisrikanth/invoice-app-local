@@ -1,0 +1,610 @@
+(D3EPage HomePage {
+    name 'HomePage'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (selectedMenu {
+            name 'Selected Menu'
+            type ({
+                primitive Integer
+            })
+            defaultValue `1`
+            internal true
+        })
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+            fetchData true
+        })
+        (user {
+            name 'User'
+            type ({
+                model #User
+            })
+            required true
+            fetchData true
+        })
+    ]
+    path 'D3EPage'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #padding
+                value '0'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c15'
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #decoration
+                        values [
+                            ({
+                                prop #color
+                                value '@c2'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #padding
+                        value '20'
+                    })
+                ]
+                children [
+                    (CRef imageView2 {
+                        name 'ImageView2'
+                        component #ImageView
+                        data [
+                            ({
+                                prop #imageType
+                                value 'Asset'
+                            })
+                            ({
+                                prop #imageUrl
+                                value 'images/MicrosoftTeams-image1.png'
+                            })
+                            ({
+                                prop #cornerRadius
+                                value '5'
+                            })
+                            ({
+                                prop #width
+                                value '129'
+                            })
+                            ({
+                                prop #height
+                                value '30'
+                            })
+                        ]
+                    })
+                    (CRef row3 {
+                        name 'Row3'
+                        component #Row
+                        data [
+                            ({
+                                prop #mainAxisAlignment
+                                value 'spaceAround'
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                        ]
+                        children [
+                            (CRef dashboardBtn {
+                                name 'DashboardBtn'
+                                component #Button
+                                child (CRef buttonText {
+                                    name 'ButtonText'
+                                    component #TextView
+                                    style #nameText
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Dashboard'
+                                        })
+                                    ]
+                                    conditionals [
+                                        ({
+                                            condition `selectedMenu == 1`
+                                            values [
+                                                ({
+                                                    prop #color
+                                                    value '@c1'
+                                                })
+                                                ({
+                                                    prop #textDecoration
+                                                    value 'underline'
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            })
+                            (CRef invoicesBtn {
+                                name 'InvoicesBtn'
+                                component #Button
+                                child (CRef buttonText2 {
+                                    name 'ButtonText2'
+                                    component #TextView
+                                    style #nameText
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Invoices'
+                                        })
+                                    ]
+                                    conditionals [
+                                        ({
+                                            condition `selectedMenu == 2`
+                                            values [
+                                                ({
+                                                    prop #color
+                                                    value '@c1'
+                                                })
+                                                ({
+                                                    prop #textDecoration
+                                                    value 'underline'
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                                conditionals [
+                                    ({
+                                        condition `selectedMenu == 2`
+                                        values [
+                                            ({
+                                                prop #textStyle
+                                                values [
+                                                    ({
+                                                        prop #color
+                                                        value '@c1'
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                            (CRef itemsBtn {
+                                name 'ItemsBtn'
+                                component #Button
+                                child (CRef buttonText3 {
+                                    name 'ButtonText3'
+                                    component #TextView
+                                    style #nameText
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Items'
+                                        })
+                                    ]
+                                    conditionals [
+                                        ({
+                                            condition `selectedMenu == 3`
+                                            values [
+                                                ({
+                                                    prop #color
+                                                    value '@c1'
+                                                })
+                                                ({
+                                                    prop #textDecoration
+                                                    value 'underline'
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            })
+                            (CRef paymentsBtn {
+                                name 'PaymentsBtn'
+                                component #Button
+                                child (CRef buttonText {
+                                    name 'ButtonText'
+                                    component #TextView
+                                    style #nameText
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Payments'
+                                        })
+                                    ]
+                                    conditionals [
+                                        ({
+                                            condition `selectedMenu == 4`
+                                            values [
+                                                ({
+                                                    prop #color
+                                                    value '@c1'
+                                                })
+                                                ({
+                                                    prop #textDecoration
+                                                    value 'underline'
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            })
+                            (CRef customerBtn {
+                                name 'CustomerBtn'
+                                component #Button
+                                child (CRef buttonText {
+                                    name 'ButtonText'
+                                    component #TextView
+                                    style #nameText
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Customers'
+                                        })
+                                    ]
+                                    conditionals [
+                                        ({
+                                            condition `selectedMenu == 5`
+                                            values [
+                                                ({
+                                                    prop #color
+                                                    value '@c1'
+                                                })
+                                                ({
+                                                    prop #textDecoration
+                                                    value 'underline'
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
+                    })
+                    (CRef row2 {
+                        name 'Row2'
+                        component #Row
+                        data [
+                            ({
+                                prop #mainAxisAlignment
+                                value 'end'
+                            })
+                        ]
+                        children [
+                            (CRef button2 {
+                                name 'Button2'
+                                component #Button
+                                child (CRef stack {
+                                    name 'Stack'
+                                    component #Stack
+                                    data [
+                                        ({
+                                            prop #alignment
+                                            value 'center'
+                                        })
+                                    ]
+                                    children [
+                                        (CIf ifItem {
+                                            name 'IfItem'
+                                            condition `company!= null && company.logo != null && company.logo.file != null`
+                                            then (CRef container {
+                                                name 'Container'
+                                                component #Container
+                                                data [
+                                                    ({
+                                                        prop #width
+                                                        value '50'
+                                                    })
+                                                    ({
+                                                        prop #height
+                                                        value '50'
+                                                    })
+                                                    ({
+                                                        prop #alignment
+                                                        value 'center'
+                                                    })
+                                                ]
+                                                child (CRef imageView {
+                                                    name 'ImageView'
+                                                    component #ImageView
+                                                    data [
+                                                        ({
+                                                            prop #imageType
+                                                            value 'Network'
+                                                        })
+                                                        ({
+                                                            prop #imageUrl
+                                                            bind true
+                                                            bindTo `company.logo.file.downloadUrl`
+                                                        })
+                                                        ({
+                                                            prop #width
+                                                            value '50'
+                                                        })
+                                                        ({
+                                                            prop #height
+                                                            value '50'
+                                                        })
+                                                    ]
+                                                    states [
+                                                        (hover {
+                                                            type ({
+                                                                primitive Boolean
+                                                            })
+                                                        })
+                                                    ]
+                                                })
+                                            })
+                                            else (CRef imageView3 {
+                                                name 'ImageView3'
+                                                component #ImageView
+                                                data [
+                                                    ({
+                                                        prop #imageType
+                                                        value 'Asset'
+                                                    })
+                                                    ({
+                                                        prop #imageUrl
+                                                        value 'images/Logo1.png'
+                                                    })
+                                                    ({
+                                                        prop #width
+                                                        value '40'
+                                                    })
+                                                    ({
+                                                        prop #height
+                                                        value '40'
+                                                    })
+                                                ]
+                                                states [
+                                                    (hover {
+                                                        type ({
+                                                            primitive Boolean
+                                                        })
+                                                    })
+                                                ]
+                                            })
+                                        })
+                                        (CRef button {
+                                            name 'Button'
+                                            component #Button
+                                            child (CIf ifItem {
+                                                name 'IfItem'
+                                                condition `imageView.hover || imageView3.hover || iconView.hover`
+                                                then (CRef iconView {
+                                                    name 'IconView'
+                                                    component #IconView
+                                                    data [
+                                                        ({
+                                                            prop #icon
+                                                            value 'MaterialIcons.mode_edit'
+                                                        })
+                                                        ({
+                                                            prop #size
+                                                            value '20'
+                                                        })
+                                                        ({
+                                                            prop #color
+                                                            value '@c3'
+                                                        })
+                                                    ]
+                                                    states [
+                                                        (hover {
+                                                            type ({
+                                                                primitive Boolean
+                                                            })
+                                                        })
+                                                    ]
+                                                    behaviours [
+                                                        #GestureDetector
+                                                    ]
+                                                })
+                                            })
+                                        })
+                                    ]
+                                })
+                            })
+                            (CRef textView3 {
+                                name 'TextView3'
+                                component #TextView
+                                data [
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `this.company?.name??''`
+                                    })
+                                    ({
+                                        prop #margin
+                                        value '0 5'
+                                    })
+                                    ({
+                                        prop #softWrap
+                                        value 'true'
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef id3434 {
+                name 'Id3434'
+                component #Container
+                data [
+                    ({
+                        prop #expand
+                        value 'true'
+                    })
+                    ({
+                        prop #decoration
+                        values [
+                            ({
+                                prop #color
+                                value '@c15'
+                            })
+                        ]
+                    })
+                ]
+                child (CRef pageRouter {
+                    name 'PageRouter'
+                    component #PageRouter
+                    data [
+                        ({
+                            prop #target
+                            value 'Main'
+                        })
+                    ]
+                })
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedDashboardBtnHandler {
+            name 'onPressedDashboardBtnHandler'
+            type OnEvent
+            on #dashboardBtn
+            event #onPressed
+            block ```
+                this.selectedMenu = 1;
+                navigator.pushDashboardPage(target:'Main', company: this.company, replace: false);
+            ```
+        })
+        (onPressedInvoicesBtnHandler {
+            name 'onPressedInvoicesBtnHandler'
+            type OnEvent
+            on #invoicesBtn
+            event #onPressed
+            block ```
+                this.selectedMenu = 2;
+                navigator.pushInvoicesPage(target:'Main',company:this.company, replace: false);
+            ```
+        })
+        (onPressedItemsBtn3Handler {
+            name 'onPressedItemsBtn3Handler'
+            type OnEvent
+            on #itemsBtn
+            event #onPressed
+            block ```
+                this.selectedMenu = 3;
+                navigator.pushItemsPage(target:'Main',company:this.company, replace: false);
+            ```
+        })
+        (onPressedPaymentsBtn4Handler {
+            name 'onPressedPaymentsBtn4Handler'
+            type OnEvent
+            on #paymentsBtn
+            event #onPressed
+            block ```
+                this.selectedMenu = 4;
+                navigator.pushPaymentsPage(company:this.company,target:'Main', replace: false);
+            ```
+        })
+        (onInit {
+            name 'OnInit'
+            block ```
+                Timer(Duration(seconds: 1), () {
+                    this.selectedMenu = 1;
+                    navigator.pushDashboardPage(target:'Main', company: this.company, replace: false);
+                });
+            ```
+        })
+        (onPressedCustomerBtnHandler {
+            name 'onPressedCustomerBtnHandler'
+            type OnEvent
+            on #customerBtn
+            event #onPressed
+            block ```
+                selectedMenu = 5;
+                navigator.pushCustomersPage(company:this.company,target:'Main');
+            ```
+        })
+        (onPressedButtonHandler {
+            name 'onPressedButtonHandler'
+            type OnEvent
+            on #button
+            event #onPressed
+            block ```
+                showProfile(autoClose:true);
+            ```
+        })
+        (onEditProfile {
+            name 'on Edit Profile'
+            type OnEvent
+            popup #profile
+            event #onEditProfile
+            block ```
+                showCompanyDetails(autoClose:false);
+            ```
+        })
+    ]
+    popups [
+        (profile {
+            name 'Profile'
+            component #ProfileView
+            side Left
+            data [
+                ({
+                    prop #company
+                    bind true
+                    bindTo `this.company`
+                })
+                ({
+                    prop #width
+                    value '90'
+                })
+                ({
+                    prop #height
+                    value '100'
+                })
+                ({
+                    prop #user
+                    bind true
+                    bindTo `user`
+                })
+                ({
+                    prop #margin
+                    value '10 10 0 0'
+                })
+            ]
+            target #button
+        })
+        (companyDetails {
+            name 'Company Details'
+            component #CompanyDetailsView
+            data [
+                ({
+                    prop #obj
+                    bind true
+                    bindTo `this.company`
+                })
+                ({
+                    prop #user
+                    bind true
+                    bindTo `this.user`
+                })
+                ({
+                    prop #width
+                    value '350'
+                })
+                ({
+                    prop #height
+                    value '400'
+                })
+            ]
+        })
+    ]
+})

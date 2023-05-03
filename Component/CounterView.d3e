@@ -1,0 +1,293 @@
+(Widget CounterView {
+    name 'CounterView'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (amount {
+            name 'Amount'
+            type ({
+                primitive String
+            })
+        })
+        (status {
+            name 'Status'
+            type ({
+                primitive String
+            })
+        })
+        (bgColor {
+            name 'BgColor'
+            type ({
+                struct #Color
+            })
+            required true
+        })
+        (invoiceCount {
+            name 'Invoice Count'
+            type ({
+                primitive String
+            })
+        })
+        (msg {
+            name 'Msg'
+            type ({
+                primitive String
+            })
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #padding
+                value '15'
+            })
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c2'
+                    })
+                    ({
+                        prop #border
+                        values [
+                            ({
+                                prop #color
+                                value '@c14'
+                            })
+                            ({
+                                prop #width
+                                value '0.0'
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                ]
+                children [
+                    (CRef textView {
+                        name 'TextView'
+                        component #TextView
+                        style #headlineFour
+                        data [
+                            ({
+                                prop #data
+                                bind true
+                                bindTo `'$'+ amount`
+                            })
+                        ]
+                    })
+                    (CRef stack {
+                        name 'Stack'
+                        component #Stack
+                        data [
+                            ({
+                                prop #alignment
+                                value 'center'
+                            })
+                            ({
+                                prop #width
+                                value '20'
+                            })
+                            ({
+                                prop #height
+                                value '20'
+                            })
+                            ({
+                                prop #decoration
+                                values [
+                                    ({
+                                        prop #color
+                                        value '@c13'
+                                    })
+                                    ({
+                                        prop #border
+                                        values [
+                                            ({
+                                                prop #color
+                                                value '00ff0000'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '0'
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #borderRadius
+                                        value '30'
+                                    })
+                                ]
+                            })
+                        ]
+                        children [
+                            (CRef iconView {
+                                name 'IconView'
+                                component #IconView
+                                data [
+                                    ({
+                                        prop #icon
+                                        value 'MaterialIcons.folder_open'
+                                    })
+                                    ({
+                                        prop #color
+                                        value '@c1'
+                                    })
+                                    ({
+                                        prop #decoration
+                                        values [
+                                            ({
+                                                prop #border
+                                                values [
+                                                    ({
+                                                        prop #color
+                                                        value '00ff0000'
+                                                    })
+                                                    ({
+                                                        prop #width
+                                                        value '0.0'
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #size
+                                        value '15'
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef textView2 {
+                name 'TextView2'
+                component #TextView
+                style #subText
+                data [
+                    ({
+                        prop #data
+                        bind true
+                        bindTo `status`
+                    })
+                ]
+            })
+            (CRef row2 {
+                name 'Row2'
+                component #Row
+                children [
+                    (CRef container {
+                        name 'Container'
+                        component #Container
+                        data [
+                            ({
+                                prop #decoration
+                                values [
+                                    ({
+                                        prop #color
+                                        bind true
+                                        bindTo `this.bgColor`
+                                    })
+                                    ({
+                                        prop #border
+                                        values [
+                                            ({
+                                                prop #color
+                                                value '00ff0000'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '0.0'
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #borderRadius
+                                        value '3'
+                                    })
+                                ]
+                            })
+                            ({
+                                prop #width
+                                value '50'
+                            })
+                            ({
+                                prop #height
+                                value '20'
+                            })
+                            ({
+                                prop #padding
+                                value '5 0'
+                            })
+                        ]
+                        child (CRef textView5 {
+                            name 'TextView5'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    bind true
+                                    bindTo `invoiceCount`
+                                })
+                                ({
+                                    prop #textAlign
+                                    value 'center'
+                                })
+                                ({
+                                    prop #color
+                                    value '@c2'
+                                })
+                                ({
+                                    prop #padding
+                                    value '0'
+                                })
+                                ({
+                                    prop #fontSize
+                                    value '8'
+                                })
+                            ]
+                        })
+                    })
+                    (CRef textView4 {
+                        name 'TextView4'
+                        component #TextView
+                        style #nameText
+                        data [
+                            ({
+                                prop #margin
+                                value '0 0 0 10'
+                            })
+                            ({
+                                prop #data
+                                bind true
+                                bindTo `msg`
+                            })
+                            ({
+                                prop #textAlign
+                                value 'center'
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    })
+})

@@ -1,0 +1,173 @@
+(ComponentTestData ComponentData432987 {
+    data [
+        (obj {
+        })
+        (company {
+        })
+        (recentInvoices {
+        })
+        (invoices {
+            modelValue [
+                #InvoiceData2
+            ]
+        })
+        (payment {
+            modelValue [
+                #PaymentData
+            ]
+        })
+    ]
+    component #InvoicesView
+    values [
+        (build_children_0_children_1_value {
+            modelValue [
+                #InvoiceData2
+            ]
+        })
+        (build_children_0_children_0_children_5_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_0_children_1_0_children_4_child_then_data {
+            primitiveValue [
+                '100.0'
+            ]
+        })
+        (build_children_0_children_1_0_children_4_child_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_1_0_children_1_child_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_0_children_1_0_children_5_child_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_1_0_children_2_child_data {
+            primitiveValue [
+                '2023-03-07'
+            ]
+        })
+        (build_children_0_children_1_0_children_3_child_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_0_children_1_0_children_0_child_data {
+            primitiveValue [
+                '1215'
+            ]
+        })
+        (build_children_0_children_1_0_children_4_child_else_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_0_children_0_children_6_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_0_children_0_children_7_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_0_children_1_0_children_6_child_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_1_0_children_4_child_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_0_children_1_0_children_3_child_data {
+            primitiveValue [
+                '100.0'
+            ]
+        })
+        (build_children_0_children_1_0_children_7_child_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_0_children_1_0_children_5_child_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_0_children_1_0_children_4_child_data {
+            primitiveValue [
+                '-100.0'
+            ]
+        })
+        (build_children_0_children_1_0_children_5_child_data {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (_makePayment_build_children_1_children_1_children_3_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_makePayment_build_children_1_children_0_children_5_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_makePayment_build_children_1_children_0_children_3_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_makePayment_build_children_1_children_0_children_1_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_makePayment_build_children_2_children_0_children_1_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (_makePayment_build_children_3_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_makePayment_build_children_1_children_1_children_1_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_makePayment_build_children_1_children_1_children_5_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_makePayment_build_children_2_children_0_children_1_build_value {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (_makePayment_build_children_2_children_0_children_1_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@4bece031'
+            ]
+        })
+    ]
+    popups [
+        (_makePayment {
+            model true
+        })
+    ]
+})

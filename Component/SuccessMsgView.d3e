@@ -1,0 +1,40 @@
+(Widget SuccessMsgView {
+    name 'SuccessMsgView'
+    package 'invoice.com'
+    category 'UserDefined'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #mainAxisAlignment
+                value 'center'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value 'ff85ff7a'
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef textView {
+                name 'TextView'
+                component #TextView
+                data [
+                    ({
+                        prop #data
+                        value 'Successfully Saved'
+                    })
+                    ({
+                        prop #color
+                        value '@c2'
+                    })
+                ]
+            })
+        ]
+    })
+})

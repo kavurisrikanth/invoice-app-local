@@ -1,0 +1,23 @@
+QueryUsage {
+    query [
+        'Query'
+        'logout'
+        'ProfileView'
+        'eventHandlers_onPressedLogoutButtonHandler_block'
+    ]
+    usage [
+        '*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'logout'
+        'ProfileView'
+        '_actions'
+    ]
+    usage [
+        '*'
+    ]
+}

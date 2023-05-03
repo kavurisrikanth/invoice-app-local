@@ -1,0 +1,63 @@
+(Model Company {
+    name 'Company'
+    package 'invoice.com'
+    path 'Model'
+    properties [
+        (name {
+            name 'Name'
+            type ({
+                primitive String
+            })
+            required true
+        })
+        (logo {
+            name 'Logo'
+            type ({
+                model #D3EImage
+            })
+        })
+        (address {
+            name 'Address'
+            type ({
+                primitive String
+            })
+            longText true
+        })
+        (invoiceTotal {
+            name 'Invoice Total'
+            type ({
+                primitive Double
+            })
+        })
+        (invoicePaid {
+            name 'Invoice Paid'
+            type ({
+                primitive Double
+            })
+        })
+        (invoiceUnpaid {
+            name 'Invoice Unpaid'
+            type ({
+                primitive Double
+            })
+        })
+        (totalInvoices {
+            name 'Total Invoices'
+            type ({
+                primitive Integer
+            })
+        })
+        (paidInvoices {
+            name 'Paid Invoices'
+            type ({
+                primitive Integer
+            })
+        })
+        (unpaidInvoices {
+            name 'Unpaid Invoices'
+            type ({
+                primitive Integer
+            })
+        })
+    ]
+})

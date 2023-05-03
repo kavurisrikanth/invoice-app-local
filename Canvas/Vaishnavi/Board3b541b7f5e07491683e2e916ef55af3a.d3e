@@ -1,0 +1,14 @@
+(ComponentBoard Board3b541b7f5e07491683e2e916ef55af3a {
+    title 'InputFieldWithLabelBoard'
+    canvas #Vaishnavi
+    x 25082
+    y 25159
+    width 329
+    height 137
+    component #InputFieldWithLabel
+    theme #invoiceTheme
+    views [
+        #ComponentData8868461
+    ]
+    data #ComponentData8868461
+})

@@ -1,0 +1,14 @@
+(ComponentBoard Board4827d6217cfc48a6bc02f1b8ef47590d {
+    title 'SuccessMsgBoard'
+    canvas #Vaishnavi
+    x 30868
+    y 20621
+    width 402
+    height 72
+    component #SuccessMsgView
+    theme #invoiceTheme
+    views [
+        #ComponentData3482292
+    ]
+    data #ComponentData3482292
+})

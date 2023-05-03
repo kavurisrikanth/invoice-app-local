@@ -1,0 +1,28 @@
+(ModelTestData PaymentData {
+    type #Payment
+    aliasName 'PaymentData'
+    data [
+        (invoice {
+            modelValue [
+                #InvoiceData
+            ]
+        })
+        (customer {
+            modelValue [
+                #CustomerData
+            ]
+        })
+        (amount {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (company {
+            modelValue [
+                #CompanyData
+            ]
+        })
+        (createdDate {
+        })
+    ]
+})

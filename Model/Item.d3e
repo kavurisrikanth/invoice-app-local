@@ -1,0 +1,30 @@
+(Model Item {
+    name 'Item'
+    package 'invoice.com'
+    path 'Model'
+    master #Company
+    properties [
+        (name {
+            name 'Name'
+            type ({
+                primitive String
+            })
+            required true
+        })
+        (price {
+            name 'Price'
+            type ({
+                primitive Double
+            })
+            required true
+        })
+        (description {
+            name 'Description'
+            type ({
+                primitive String
+            })
+        })
+    ]
+    display `this.name`
+    needCreatedDate true
+})

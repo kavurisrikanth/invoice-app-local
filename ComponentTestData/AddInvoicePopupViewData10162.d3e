@@ -1,0 +1,322 @@
+(ComponentTestData AddInvoicePopupViewData10162 {
+    data [
+        (obj {
+        })
+        (errors {
+        })
+        (customers {
+        })
+        (items {
+        })
+        (company {
+        })
+    ]
+    component #AddInvoiceView
+    values [
+        (build_children_1_children_0_imageUrl {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_children_0_children_1_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_5_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_6_children_0_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_5_children_1_value {
+        })
+        (build_children_2_children_1_children_1_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_7_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_2_build_children_1_children_0_placeHolder {
+            primitiveValue [
+                'Search'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_2_build_children_0_then_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_0_then_children_0_data {
+            primitiveValue [
+                'Customer'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_then_children_0_value {
+            primitiveValue [
+                'customerErrors'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_then_children_0_0_data {
+            primitiveValue [
+                'customerErrors'
+            ]
+        })
+        (build_children_5_children_0_children_1_value {
+        })
+        (build_children_5_children_0_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_3_children_1_children_1_build_child_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_1_children_1_build_child_children_0_placeHolder {
+            primitiveValue [
+                'yyyy-MM-dd'
+            ]
+        })
+        (build_children_3_children_1_children_1_build_child_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_children_1_children_1_build_decoration_border_color {
+            primitiveValue [
+                '@c14'
+            ]
+        })
+        (build_children_3_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Invoice No'
+            ]
+        })
+        (build_children_3_children_0_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_children_0_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_3_children_0_build_children_0_then_data {
+            primitiveValue [
+                'Invoice No'
+            ]
+        })
+        (build_children_8_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_7_children_0_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_6_children_0_children_1_value {
+        })
+        (build_children_6_children_0_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_3_children_1_children_1_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_children_0_children_1_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_children_0_children_0_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_children_1_children_1_build_child_children_0_placeHolder {
+            primitiveValue [
+                'yyyy-MM-dd'
+            ]
+        })
+        (build_children_4_children_1_children_1_build_child_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_1_children_1_build_child_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_children_1_children_1_build_decoration_border_color {
+            primitiveValue [
+                '@c14'
+            ]
+        })
+        (build_children_4_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_0_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_4_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Invoice No'
+            ]
+        })
+        (build_children_4_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_children_0_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_children_0_build_children_0_then_data {
+            primitiveValue [
+                'Invoice No'
+            ]
+        })
+        (build_children_1_children_1_build_children_0_then_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_1_build_children_0_then_children_0_data {
+            primitiveValue [
+                'Customer'
+            ]
+        })
+        (build_children_1_children_1_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_build_children_1_children_0_placeHolder {
+            primitiveValue [
+                'Search'
+            ]
+        })
+        (build_children_1_children_1_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+    ]
+    states [
+        (build_children_3_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_1_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_2_build {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_4_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+                ({
+                })
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+    popups [
+        (_successMsg {
+            model true
+        })
+    ]
+})

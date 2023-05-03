@@ -1,0 +1,548 @@
+(ComponentTestData ComponentData511302 {
+    data [
+        (obj {
+            modelValue [
+                #PaymentData
+            ]
+        })
+        (errors {
+        })
+        (invoice {
+        })
+    ]
+    component #ReceivePaymentView
+    values [
+        (build_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Amount to Pay'
+            ]
+        })
+        (build_children_2_children_1_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_2_children_1_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Amount'
+            ]
+        })
+        (build_children_2_children_1_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_1_build_children_0_then_data {
+            primitiveValue [
+                'Amount to Pay'
+            ]
+        })
+        (build_children_2_children_1_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_1_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_1_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_0_children_1_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_children_0_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_2_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Amount'
+            ]
+        })
+        (build_children_2_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_0_build_children_0_then_data {
+            primitiveValue [
+                'Amount to Pay'
+            ]
+        })
+        (build_children_2_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_0_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_0_children_5_build_child_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_0_children_5_build_child_children_0_placeHolder {
+            primitiveValue [
+                'yyyy-MM-dd'
+            ]
+        })
+        (build_children_1_children_0_children_5_build_child_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_children_5_build_decoration_border_color {
+            primitiveValue [
+                'ffbfbfbf'
+            ]
+        })
+        (build_children_1_children_0_children_4_build_child_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_children_4_build_decoration_border_color {
+            primitiveValue [
+                'ffbfbfbf'
+            ]
+        })
+        (build_children_1_children_0_children_4_build_child_children_0_placeHolder {
+            primitiveValue [
+                'yyyy-MM-dd'
+            ]
+        })
+        (build_children_1_children_0_children_4_build_child_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_0_children_3_build_decoration_border_color {
+            primitiveValue [
+                'ffbfbfbf'
+            ]
+        })
+        (build_children_1_children_0_children_3_build_child_children_0_placeHolder {
+            primitiveValue [
+                'yyyy-MM-dd'
+            ]
+        })
+        (build_children_1_children_0_children_3_build_child_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_0_children_3_build_child_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_children_5_data {
+            primitiveValue [
+                '3.0'
+            ]
+        })
+        (build_children_1_children_1_children_1_data {
+            primitiveValue [
+                '123'
+            ]
+        })
+        (build_children_1_children_1_children_3_data {
+            primitiveValue [
+                '-56.0'
+            ]
+        })
+        (build_children_1_children_1_children_5_data {
+            primitiveValue [
+                '-59.0'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Amount'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_children_0_then_data {
+            primitiveValue [
+                'Amount to Pay'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_children_0_children_2_build_value {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_2_children_0_children_2_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@6717aaf7'
+            ]
+        })
+        (build_children_2_children_0_children_2_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_2_children_0_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_value {
+        })
+        (build_children_1_children_0_children_6_build_child_children_0_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_0_children_6_build_child_children_0_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_children_6_build_child_children_0_placeHolder {
+            primitiveValue [
+                'yyyy-MM-dd'
+            ]
+        })
+        (build_children_1_children_0_children_6_build_decoration_border_color {
+            primitiveValue [
+                'ffbfbfbf'
+            ]
+        })
+        (build_children_2_children_0_children_1_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@1313dc3'
+            ]
+        })
+        (build_children_2_children_0_children_1_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_2_children_0_children_1_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_1_children_0_children_3_data {
+            primitiveValue [
+                '2023-03-17'
+            ]
+        })
+        (build_children_3_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_children_0_children_0_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@171879ba'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_2_children_0_children_0_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_6_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@76e0a0eb'
+            ]
+        })
+        (build_children_6_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_6_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_5_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_5_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@32322f4d'
+            ]
+        })
+        (build_children_5_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_5_children_0_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_5_children_0_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@582af208'
+            ]
+        })
+        (build_children_5_children_0_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_7_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_7_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@282e6041'
+            ]
+        })
+        (build_children_7_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_7_children_0_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@c445d5a'
+            ]
+        })
+        (build_children_7_children_0_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_7_children_0_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_8_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@3caa0a5b'
+            ]
+        })
+        (build_children_8_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_8_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_8_children_0_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_8_children_0_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_8_children_0_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@4bb6a1eb'
+            ]
+        })
+        (build_children_4_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@110d644'
+            ]
+        })
+        (build_children_4_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_4_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_2_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_children_0_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_4_children_0_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@18ed788d'
+            ]
+        })
+        (build_children_4_children_0_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_4_children_1_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_4_children_1_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@16ee894a'
+            ]
+        })
+        (build_children_4_children_1_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_3_children_1_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@12007b5c'
+            ]
+        })
+        (build_children_3_children_1_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (build_children_3_children_1_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_3_children_2_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_3_children_1_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_3_children_2_build_inputFormatter {
+            primitiveValue [
+                'd3e.core.RegExp@13868b52'
+            ]
+        })
+        (build_children_3_children_2_build_value {
+            primitiveValue [
+                '200.0'
+            ]
+        })
+        (build_children_3_children_2_build_cornerRadius {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+    ]
+    states [
+        (build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_2_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_2_children_1_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_2_children_0_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+})

@@ -1,0 +1,12 @@
+QueryUsage {
+    query [
+        'Query'
+        'getCustomerById'
+        'AddCustomerView'
+        'obj_fetchData'
+    ]
+    model Customer
+    usage [
+        '*'
+    ]
+}

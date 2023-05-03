@@ -1,0 +1,27 @@
+(Model User {
+    name 'User'
+    package 'invoice.com'
+    master #Company
+    parent #BaseUser
+    properties [
+        (fullName {
+            name 'Full Name'
+            type ({
+                primitive String
+            })
+        })
+        (email {
+            name 'Email'
+            type ({
+                primitive String
+            })
+            unique true
+        })
+        (password {
+            name 'Password'
+            type ({
+                primitive String
+            })
+        })
+    ]
+})

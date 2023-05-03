@@ -1,0 +1,26 @@
+(ModelTestData SignupRequestData {
+    type #SignupRequest
+    aliasName 'SignupRequestData'
+    data [
+        (fullName {
+            primitiveValue [
+                ''
+            ]
+        })
+        (email {
+            primitiveValue [
+                'vaishnavi@gmail.com'
+            ]
+        })
+        (password {
+            primitiveValue [
+                '123456'
+            ]
+        })
+        (companyName {
+            primitiveValue [
+                '4sTR33JOJy'
+            ]
+        })
+    ]
+})

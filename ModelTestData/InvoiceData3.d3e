@@ -1,0 +1,46 @@
+(ModelTestData InvoiceData3 {
+    type #Invoice
+    aliasName 'InvoiceData3'
+    data [
+        (customer {
+            modelValue [
+                #CustomerData
+            ]
+        })
+        (items {
+            modelValue [
+                #InvoiceItemData5
+            ]
+        })
+        (total {
+            primitiveValue [
+                '4.0'
+            ]
+        })
+        (paid {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (invoiceNo {
+            primitiveValue [
+                'SDHEvV6z3U'
+            ]
+        })
+        (invoiceDate {
+            primitiveValue [
+                '1911-08-27'
+            ]
+        })
+        (due {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (company {
+            modelValue [
+                #CompanyData
+            ]
+        })
+    ]
+})

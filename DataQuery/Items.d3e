@@ -1,0 +1,15 @@
+(DataQuery Items {
+    name 'Items'
+    package 'invoice.com'
+    query `Item.all.where(i => i.company == inputs.company)`
+    inputs [
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+    ]
+    enableSync true
+})

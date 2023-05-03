@@ -1,0 +1,144 @@
+(Widget ProfileView {
+    name 'ProfileView'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (selected {
+            name 'Selected'
+            type ({
+                primitive Integer
+            })
+            internal true
+        })
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+        (user {
+            name 'User'
+            type ({
+                model #User
+            })
+            required true
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #mainAxisAlignment
+                value 'spaceEvenly'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c7'
+                    })
+                    ({
+                        prop #border
+                        values [
+                            ({
+                                prop #color
+                                value '00ff0000'
+                            })
+                            ({
+                                prop #width
+                                value '0.0'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #borderRadius
+                        value '3'
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef editButton {
+                name 'EditButton'
+                component #Button
+                child (CRef buttonText {
+                    name 'ButtonText'
+                    component #TextView
+                    data [
+                        ({
+                            prop #data
+                            value 'Edit Profile'
+                        })
+                    ]
+                    conditionals [
+                        ({
+                            condition `selected == 1`
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c1'
+                                })
+                            ]
+                        })
+                    ]
+                })
+            })
+            (CRef logoutButton {
+                name 'LogoutButton'
+                component #Button
+                child (CRef buttonText2 {
+                    name 'ButtonText2'
+                    component #TextView
+                    data [
+                        ({
+                            prop #data
+                            value 'Log Out'
+                        })
+                    ]
+                    conditionals [
+                        ({
+                            condition `selected == 2`
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c1'
+                                })
+                            ]
+                        })
+                    ]
+                })
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedEditButtonHandler {
+            name 'onPressedEditButtonHandler'
+            type OnEvent
+            on #editButton
+            event #onPressed
+            block ```
+                navigator.close();
+                onEditProfile();
+            ```
+        })
+        (onPressedLogoutButtonHandler {
+            name 'onPressedLogoutButtonHandler'
+            type OnEvent
+            on #logoutButton
+            event #onPressed
+            block ```
+                Boolean result = Query.logout().await;
+                navigator.pushLoginPage();
+            ```
+        })
+    ]
+    events [
+        (onEditProfile {
+            required true
+        })
+    ]
+})

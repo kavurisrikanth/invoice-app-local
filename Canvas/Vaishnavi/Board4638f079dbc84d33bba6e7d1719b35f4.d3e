@@ -1,0 +1,14 @@
+(ComponentBoard Board4638f079dbc84d33bba6e7d1719b35f4 {
+    title 'SignupPageBoard'
+    canvas #Vaishnavi
+    x 23458
+    y 23311
+    width 474
+    height 616
+    theme #invoiceTheme
+    page #SignupPage
+    views [
+        #SignupViewData1372341
+    ]
+    data #SignupViewData1372341
+})

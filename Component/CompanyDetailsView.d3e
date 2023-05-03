@@ -1,0 +1,422 @@
+(Widget CompanyDetailsView {
+    name 'CompanyDetailsView'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (obj {
+            name 'Obj'
+            type ({
+                model #Company
+            })
+            required true
+        })
+        (user {
+            name 'User'
+            type ({
+                model #User
+            })
+            required true
+        })
+        (errors {
+            name 'Errors'
+            collection true
+            type ({
+                primitive String
+            })
+            internal true
+        })
+        (companyName {
+            name 'Company Name'
+            type ({
+                primitive String
+            })
+            internal true
+        })
+        (address {
+            name 'Address'
+            type ({
+                primitive String
+            })
+            internal true
+        })
+        (file {
+            name 'File'
+            type ({
+                primitive DFile
+            })
+            internal true
+        })
+        (nameError {
+            name 'Name Error'
+            type ({
+                primitive String
+            })
+            internal true
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+            ({
+                prop #padding
+                value '15'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c2'
+                    })
+                    ({
+                        prop #border
+                        values [
+                            ({
+                                prop #color
+                                value '00ff0000'
+                            })
+                            ({
+                                prop #width
+                                value '0.0'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #borderRadius
+                        value '3'
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef row2 {
+                name 'Row2'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                ]
+                children [
+                    (CRef textView {
+                        name 'TextView'
+                        component #TextView
+                        style #headlineThree
+                        data [
+                            ({
+                                prop #data
+                                value 'Edit Your Company'
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef inputFieldWithLabel {
+                name 'InputFieldWithLabel'
+                component #InputFieldWithLabel
+                data [
+                    ({
+                        prop #name
+                        value 'Company Name'
+                    })
+                    ({
+                        prop #value
+                        bind true
+                        bindTo `companyName`
+                    })
+                    ({
+                        prop #placeHolder
+                        value 'Enter Company Name'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0'
+                    })
+                    ({
+                        prop #errors
+                        bind true
+                        bindTo `[nameError]`
+                    })
+                ]
+                twoWayBinding true
+            })
+            (CRef textView2 {
+                name 'TextView2'
+                component #TextView
+                data [
+                    ({
+                        prop #data
+                        value 'Address'
+                    })
+                    ({
+                        prop #margin
+                        value '0 0 5'
+                    })
+                ]
+            })
+            (CRef inputField {
+                name 'InputField'
+                component #InputField
+                style #default
+                data [
+                    ({
+                        prop #placeHolder
+                        value 'Enter Company Address'
+                    })
+                    ({
+                        prop #value
+                        bind true
+                        bindTo `address`
+                    })
+                    ({
+                        prop #minLines
+                        value '1'
+                    })
+                    ({
+                        prop #maxLines
+                        value '3'
+                    })
+                    ({
+                        prop #maxLength
+                        value '1'
+                    })
+                    ({
+                        prop #style
+                        values [
+                            ({
+                                prop #fontSize
+                                value '14'
+                            })
+                            ({
+                                prop #fontWeight
+                                value 'w600'
+                            })
+                            ({
+                                prop #decoration
+                                value 'none'
+                            })
+                            ({
+                                prop #color
+                                value 'ff184b3e'
+                            })
+                            ({
+                                prop #decorationStyle
+                                value 'solid'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #activeColor
+                        value '@c1'
+                    })
+                    ({
+                        prop #margin
+                        value '0 0 10'
+                    })
+                ]
+                twoWayBinding true
+            })
+            (CRef textView3 {
+                name 'TextView3'
+                component #TextView
+                data [
+                    ({
+                        prop #data
+                        value 'Company Profile'
+                    })
+                ]
+            })
+            (CRef row3 {
+                name 'Row3'
+                component #Row
+                children [
+                    (CRef button {
+                        name 'Button'
+                        component #Button
+                        data [
+                            ({
+                                prop #margin
+                                value '0'
+                            })
+                        ]
+                        child (CRef stack {
+                            name 'Stack'
+                            component #Stack
+                            children [
+                                (CIf ifItem {
+                                    name 'IfItem'
+                                    condition `file != null`
+                                    then (CRef imageView {
+                                        name 'ImageView'
+                                        component #ImageView
+                                        data [
+                                            ({
+                                                prop #imageType
+                                                value 'Network'
+                                            })
+                                            ({
+                                                prop #imageUrl
+                                                bind true
+                                                bindTo `file.downloadUrl`
+                                            })
+                                            ({
+                                                prop #height
+                                                value '30'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '130'
+                                            })
+                                        ]
+                                    })
+                                    else (CRef iconView {
+                                        name 'IconView'
+                                        component #IconView
+                                        data [
+                                            ({
+                                                prop #icon
+                                                value 'MaterialIcons.person'
+                                            })
+                                            ({
+                                                prop #size
+                                                value '50'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '130'
+                                            })
+                                            ({
+                                                prop #height
+                                                value '30'
+                                            })
+                                        ]
+                                    })
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'end'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0 0'
+                    })
+                    ({
+                        prop #crossAxisAlignment
+                        value 'end'
+                    })
+                ]
+                children [
+                    (CRef cancelBtn {
+                        name 'CancelBtn'
+                        component #Button
+                        style #secondary
+                        data [
+                            ({
+                                prop #margin
+                                value '0 5 0 0'
+                            })
+                        ]
+                        child (CRef buttonText {
+                            name 'ButtonText'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    value 'Cancel'
+                                })
+                            ]
+                        })
+                    })
+                    (CRef saveBtn {
+                        name 'SaveBtn'
+                        component #Button
+                        style #primary
+                        child (CRef buttonText2 {
+                            name 'ButtonText2'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    value 'Save'
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+        ]
+    })
+    eventHandlers [
+        (onInit {
+            name 'OnInit'
+            block ```
+                this.companyName= obj.name;
+                this.address = obj.address;
+                this.file= obj.logo?.file;
+            ```
+        })
+        (onPressedCancelBtnHandler {
+            name 'onPressedCancelBtnHandler'
+            type OnEvent
+            on #cancelBtn
+            event #onPressed
+            block ```
+                navigator.close();
+            ```
+        })
+        (onPressedSaveBtnHandler {
+            name 'onPressedSaveBtnHandler'
+            type OnEvent
+            on #saveBtn
+            event #onPressed
+            block ```
+                if(this.companyName.isEmpty) {
+                    this.nameError = 'Company Name is required';
+                    return;
+                }
+                saveBtn.disable = true;
+                obj.name = this.companyName;
+                obj.address =this.address;
+                obj.logo = D3EImage(file: this.file);
+                Result res = obj.save().await;
+                saveBtn.disable = false;
+                if(res.status == Success){
+                    navigator.close();
+                }else {
+                    errors = res.errors;
+                }
+            ```
+        })
+        (onPressedButtonHandler {
+            name 'onPressedButtonHandler'
+            type OnEvent
+            on #button
+            event #onPressed
+            block ```
+                FileToUpload fileToUpload = Browser.selectFile([], (){}).await;
+                if(fileToUpload != null){ 
+                    FileUploadResult res =  PlatformClient.upload(fileToUpload).await; 
+                    if(res.success){
+                        file = res.file;
+                    }
+                }
+            ```
+        })
+    ]
+})

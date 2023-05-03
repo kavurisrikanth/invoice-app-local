@@ -1,0 +1,61 @@
+(Model SignupRequest {
+    name 'Signup Request'
+    package 'invoice.com'
+    path 'Model'
+    properties [
+        (fullName {
+            name 'Full Name'
+            type ({
+                primitive String
+            })
+            required true
+        })
+        (email {
+            name 'Email'
+            type ({
+                primitive String
+            })
+            required true
+        })
+        (password {
+            name 'Password'
+            type ({
+                primitive String
+            })
+            required true
+            validations [
+                ({
+                    expression `it.length >= 6`
+                    errorMsg 'Password should be atleast 6 characters.'
+                })
+            ]
+        })
+        (companyName {
+            name 'Company Name'
+            type ({
+                primitive String
+            })
+            required true
+        })
+    ]
+    actions [
+        (OnCreate {
+            name 'On Create'
+            block ```
+                Company c = Company(
+                    name: this.companyName
+                );
+                Database.save(c);
+                
+                User u = User(
+                    fullName: this.fullName,
+                    email: this.email,
+                    password: this.password,
+                    company: c
+                );
+                Database.save(u);
+            ```
+        })
+    ]
+    transient true
+})

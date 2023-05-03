@@ -1,0 +1,9 @@
+(ThemeBoard Board2d86a0e51447478e8574bb317a55746f {
+    title 'Invoice Theme'
+    canvas #Canvas
+    x 26030
+    y 25000
+    width 1000
+    height 2000
+    theme #invoiceTheme
+})

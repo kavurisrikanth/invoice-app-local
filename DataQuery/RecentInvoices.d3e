@@ -1,0 +1,16 @@
+(DataQuery RecentInvoices {
+    name 'Recent Invoices'
+    package 'invoice.com'
+    query `Invoice.all.where(i => i.company == inputs.company)
+.orderBy(i => i.invoiceDate, asc: false).slice(0, 15)`
+    inputs [
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+    ]
+    enableSync true
+})

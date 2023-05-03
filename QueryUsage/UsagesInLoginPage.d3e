@@ -1,0 +1,28 @@
+QueryUsage {
+    query [
+        'Query'
+        'currentUser'
+        'LoginPage'
+        'eventHandlers_onInit_block'
+    ]
+    model BaseUser
+    usage [
+        '*'
+        'company.*'
+        'company.logo.*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'loginUserUserWithEmailAndPassword'
+        'LoginPage'
+        'eventHandlers_onPressedLoginBtn2Handler_block'
+    ]
+    struct LoginResult
+    usage [
+        '*'
+        'userObject.*'
+    ]
+}

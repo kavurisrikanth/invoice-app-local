@@ -1,0 +1,14 @@
+(ComponentBoard Boardc814513e741748ed9388bb2715a6e017 {
+    title 'ForgotPasswordPageBoard'
+    canvas #Vaishnavi
+    x 23534
+    y 24739
+    width 388
+    height 316
+    theme #invoiceTheme
+    page #ForgotPasswordPage
+    views [
+        #NewPageData1404296
+    ]
+    data #NewPageData1404296
+})

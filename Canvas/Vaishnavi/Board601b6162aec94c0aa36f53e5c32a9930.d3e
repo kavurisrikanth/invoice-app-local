@@ -1,0 +1,14 @@
+(ComponentBoard Board601b6162aec94c0aa36f53e5c32a9930 {
+    title 'AddItemView'
+    canvas #Vaishnavi
+    x 26655
+    y 24110
+    width 630
+    height 345
+    component #AddItemView
+    theme #invoiceTheme
+    views [
+        #ComponentData9912041
+    ]
+    data #ComponentData9912041
+})

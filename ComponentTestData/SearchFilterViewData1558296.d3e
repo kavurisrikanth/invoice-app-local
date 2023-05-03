@@ -1,0 +1,55 @@
+(ComponentTestData SearchFilterViewData1558296 {
+    data [
+        (value {
+        })
+        (items {
+        })
+        (itemColor {
+            structValue [
+                #ColorData
+            ]
+        })
+    ]
+    component #SearchFilterView
+    values [
+        (build_children_1_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_0_value {
+        })
+    ]
+    structs [
+        (ColorData {
+            type #Color
+            data [
+                (red {
+                    primitiveValue [
+                        '0'
+                    ]
+                })
+                (green {
+                    primitiveValue [
+                        '0'
+                    ]
+                })
+                (blue {
+                    primitiveValue [
+                        '0'
+                    ]
+                })
+                (alpha {
+                    primitiveValue [
+                        '0'
+                    ]
+                })
+            ]
+        })
+    ]
+})

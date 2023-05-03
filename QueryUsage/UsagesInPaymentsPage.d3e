@@ -1,0 +1,27 @@
+QueryUsage {
+    query [
+        'Subscription'
+        'onPaymentsChange'
+        'PaymentsPage'
+        'payments_synchronise'
+    ]
+    struct Payments
+    usage [
+        '*'
+        'items.*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'getPayments'
+        'PaymentsPage'
+        'properties_payments_computation'
+    ]
+    struct Payments
+    usage [
+        '*'
+        'items.*'
+    ]
+}

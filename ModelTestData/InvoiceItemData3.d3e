@@ -1,0 +1,17 @@
+(ModelTestData InvoiceItemData3 {
+    type #InvoiceItem
+    aliasName 'InvoiceItemData3'
+    data [
+        (item {
+            modelValue [
+                #ItemData
+            ]
+        })
+        (qty {
+        })
+        (price {
+        })
+        (total {
+        })
+    ]
+})

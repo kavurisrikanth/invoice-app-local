@@ -1,0 +1,470 @@
+(Widget ReceivePaymentView {
+    name 'ReceivePaymentView'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (obj {
+            name 'Obj'
+            type ({
+                model #Payment
+            })
+            required true
+        })
+        (errors {
+            name 'Errors'
+            collection true
+            type ({
+                primitive String
+            })
+            internal true
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+            ({
+                prop #padding
+                value '15'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c2'
+                    })
+                    ({
+                        prop #border
+                        values [
+                            ({
+                                prop #color
+                                value '00ff0000'
+                            })
+                            ({
+                                prop #width
+                                value '0.0'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #borderRadius
+                        value '3'
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef row2 {
+                name 'Row2'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                ]
+                children [
+                    (CRef textView3 {
+                        name 'TextView3'
+                        component #TextView
+                        style #headlineThree
+                        data [
+                            ({
+                                prop #data
+                                value 'Payment Method'
+                            })
+                        ]
+                    })
+                    (CRef button {
+                        name 'Button'
+                        component #Button
+                        child (CRef iconView {
+                            name 'IconView'
+                            component #IconView
+                            data [
+                                ({
+                                    prop #icon
+                                    value 'MaterialIcons.clear'
+                                })
+                                ({
+                                    prop #size
+                                    value '20'
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0'
+                    })
+                ]
+                children [
+                    (CRef column2 {
+                        name 'Column2'
+                        component #Column
+                        data [
+                            ({
+                                prop #crossAxisAlignment
+                                value 'start'
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                        ]
+                        children [
+                            (CRef textView {
+                                name 'TextView'
+                                component #TextView
+                                style #subText
+                                data [
+                                    ({
+                                        prop #data
+                                        value 'Customer Name'
+                                    })
+                                ]
+                            })
+                            (CRef textView2 {
+                                name 'TextView2'
+                                component #TextView
+                                style #headlineSix
+                                data [
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `obj.customer.name`
+                                    })
+                                ]
+                            })
+                            (CRef textView4 {
+                                name 'TextView4'
+                                component #TextView
+                                style #subText
+                                data [
+                                    ({
+                                        prop #margin
+                                        value '10 0 5'
+                                    })
+                                    ({
+                                        prop #data
+                                        value 'Invoice Date'
+                                    })
+                                ]
+                            })
+                            (CRef textView15 {
+                                name 'TextView15'
+                                component #TextView
+                                style #headlineSix
+                                data [
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `obj.invoice.invoiceDate.toString()`
+                                    })
+                                ]
+                            })
+                            (CRef textView6 {
+                                name 'TextView6'
+                                component #TextView
+                                style #subText
+                                data [
+                                    ({
+                                        prop #data
+                                        value 'Paid Amount'
+                                    })
+                                    ({
+                                        prop #margin
+                                        value '10 0 5'
+                                    })
+                                ]
+                            })
+                            (CRef textView7 {
+                                name 'TextView7'
+                                component #TextView
+                                style #headlineSix
+                                data [
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `obj.invoice.paid.toString()`
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                    (CRef column3 {
+                        name 'Column3'
+                        component #Column
+                        data [
+                            ({
+                                prop #crossAxisAlignment
+                                value 'start'
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                        ]
+                        children [
+                            (CRef textView8 {
+                                name 'TextView8'
+                                component #TextView
+                                style #subText
+                                data [
+                                    ({
+                                        prop #data
+                                        value 'Invoice Number'
+                                    })
+                                ]
+                            })
+                            (CRef textView9 {
+                                name 'TextView9'
+                                component #TextView
+                                style #headlineSix
+                                data [
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `obj.invoice.invoiceNo`
+                                    })
+                                ]
+                            })
+                            (CRef textView10 {
+                                name 'TextView10'
+                                component #TextView
+                                style #subText
+                                data [
+                                    ({
+                                        prop #margin
+                                        value '10 0 5'
+                                    })
+                                    ({
+                                        prop #data
+                                        value 'Invoice Total'
+                                    })
+                                ]
+                            })
+                            (CRef textView11 {
+                                name 'TextView11'
+                                component #TextView
+                                style #headlineSix
+                                data [
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `obj.invoice.total.toString()`
+                                    })
+                                ]
+                            })
+                            (CRef textView12 {
+                                name 'TextView12'
+                                component #TextView
+                                style #subText
+                                data [
+                                    ({
+                                        prop #data
+                                        value 'Invoice Balance'
+                                    })
+                                    ({
+                                        prop #margin
+                                        value '10 0 5'
+                                    })
+                                ]
+                            })
+                            (CRef textView13 {
+                                name 'TextView13'
+                                component #TextView
+                                style #headlineSix
+                                data [
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `(obj.invoice.total - obj.invoice.paid).toString()`
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef textView14 {
+                name 'TextView14'
+                component #TextView
+                data [
+                    ({
+                        prop #data
+                        bind true
+                        bindTo `this.errors.join(', ')`
+                    })
+                ]
+            })
+            (CRef column4 {
+                name 'Column4'
+                component #Column
+                data [
+                    ({
+                        prop #padding
+                        value '0'
+                    })
+                    ({
+                        prop #crossAxisAlignment
+                        value 'start'
+                    })
+                    ({
+                        prop #margin
+                        value '0'
+                    })
+                ]
+                children [
+                    (CRef textView16 {
+                        name 'TextView16'
+                        component #TextView
+                        style #nameText
+                        data [
+                            ({
+                                prop #margin
+                                value '0 0 5'
+                            })
+                            ({
+                                prop #data
+                                value 'Recieved Amount'
+                            })
+                        ]
+                    })
+                    (CRef doubleInputField {
+                        name 'DoubleInputField'
+                        component #DoubleInputField
+                        data [
+                            ({
+                                prop #value
+                                bind true
+                                bindTo `obj.amount`
+                            })
+                            ({
+                                prop #width
+                                value '100'
+                            })
+                        ]
+                        twoWayBinding true
+                    })
+                ]
+            })
+            (CRef row4 {
+                name 'Row4'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'end'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0 0'
+                    })
+                ]
+                children [
+                    (CRef cancelBtn {
+                        name 'CancelBtn'
+                        component #Button
+                        style #secondary
+                        data [
+                            ({
+                                prop #margin
+                                value '0 5 0 0'
+                            })
+                            ({
+                                prop #width
+                                value '70'
+                            })
+                        ]
+                        child (CRef buttonText {
+                            name 'ButtonText'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    value 'Cancel'
+                                })
+                            ]
+                        })
+                    })
+                    (CRef makePaymentBtn {
+                        name 'MakePaymentBtn'
+                        component #Button
+                        style #primary
+                        data [
+                            ({
+                                prop #width
+                                value '70'
+                            })
+                        ]
+                        child (CRef buttonText {
+                            name 'ButtonText'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    value 'Pay'
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedButtonHandler {
+            name 'onPressedButtonHandler'
+            type OnEvent
+            on #button
+            event #onPressed
+            block ```
+                navigator.close();
+            ```
+        })
+        (onPressedMakePaymentBtnHandler {
+            name 'onPressedMakePaymentBtnHandler'
+            type OnEvent
+            on #makePaymentBtn
+            event #onPressed
+            block ```
+                makePaymentBtn.disable = true;
+                    Result res = obj.save().await;
+                    makePaymentBtn.disable = false;
+                    if(res.status == Success){
+                        navigator.close();
+                    }else {
+                        errors = res.errors;
+                    }
+            ```
+        })
+        (onPressedCancelBtnHandler {
+            name 'onPressedCancelBtnHandler'
+            type OnEvent
+            on #cancelBtn
+            event #onPressed
+            block ```
+                navigator.close();
+            ```
+        })
+    ]
+    editorFor #Payment
+    editorInput #obj
+})

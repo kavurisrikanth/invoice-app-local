@@ -1,0 +1,26 @@
+(ModelTestData InvoiceItemData5 {
+    type #InvoiceItem
+    aliasName 'InvoiceItemData5'
+    data [
+        (item {
+            modelValue [
+                #ItemData3
+            ]
+        })
+        (qty {
+            primitiveValue [
+                '4'
+            ]
+        })
+        (price {
+            primitiveValue [
+                '0.0'
+            ]
+        })
+        (total {
+            primitiveValue [
+                '4.0'
+            ]
+        })
+    ]
+})

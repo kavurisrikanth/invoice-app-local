@@ -1,0 +1,15 @@
+(DataQuery Customers {
+    name 'Customers'
+    package 'invoice.com'
+    query `Customer.all.where(c => c.company == inputs.company)`
+    inputs [
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+    ]
+    enableSync true
+})

@@ -1,0 +1,28 @@
+(ModelTestData ItemData3 {
+    type #Item
+    aliasName 'book'
+    data [
+        (name {
+            primitiveValue [
+                'book'
+            ]
+        })
+        (price {
+            primitiveValue [
+                '100.0'
+            ]
+        })
+        (description {
+            primitiveValue [
+                ''
+            ]
+        })
+        (company {
+            modelValue [
+                #CompanyData
+            ]
+        })
+        (createdDate {
+        })
+    ]
+})

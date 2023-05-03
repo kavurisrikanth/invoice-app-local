@@ -1,0 +1,14 @@
+(ComponentBoard Boarde08d4bacb4bd42df9302cf3b086c9613 {
+    title 'ProfileView'
+    canvas #Vaishnavi
+    x 26370
+    y 22286
+    width 477
+    height 342
+    component #ProfileView
+    theme #invoiceTheme
+    views [
+        #ComponentData2914215
+    ]
+    data #ComponentData2914215
+})

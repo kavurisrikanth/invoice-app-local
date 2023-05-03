@@ -1,0 +1,1060 @@
+(Widget AddInvoiceView {
+    name 'AddInvoiceView'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (obj {
+            name 'Obj'
+            type ({
+                model #Invoice
+            })
+            required true
+            fetchData true
+        })
+        (errors {
+            name 'Errors'
+            collection true
+            type ({
+                primitive String
+            })
+            internal true
+        })
+        (customers {
+            name 'Customers'
+            collection true
+            type ({
+                model #Customer
+            })
+            computed true
+            computation `Query.getCustomers(CustomersRequest(company: this.company)).await.items`
+            internal true
+        })
+        (items {
+            name 'Items'
+            collection true
+            type ({
+                model #Item
+            })
+            computed true
+            computation `Query.getItems(ItemsRequest(company: this.company)).await.items`
+            internal true
+        })
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+            ({
+                prop #padding
+                value '15'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c2'
+                    })
+                    ({
+                        prop #border
+                        values [
+                            ({
+                                prop #color
+                                value '00ff0000'
+                            })
+                            ({
+                                prop #width
+                                value '0.0'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #borderRadius
+                        value '3'
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef textView {
+                name 'TextView'
+                component #TextView
+                style #headlineThree
+                data [
+                    ({
+                        prop #data
+                        value 'Add New Invoice'
+                    })
+                ]
+            })
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0'
+                    })
+                ]
+                children [
+                    (CRef imageView {
+                        name 'ImageView'
+                        component #ImageView
+                        data [
+                            ({
+                                prop #imageType
+                                value 'Network'
+                            })
+                            ({
+                                prop #imageUrl
+                                bind true
+                                bindTo `obj.company.logo?.file?.downloadUrl??''`
+                            })
+                            ({
+                                prop #decoration
+                                values [
+                                    ({
+                                        prop #color
+                                        value '@c15'
+                                    })
+                                    ({
+                                        prop #border
+                                        values [
+                                            ({
+                                                prop #color
+                                                value '@c14'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '0.0'
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                            ({
+                                prop #height
+                                value '60'
+                            })
+                            ({
+                                prop #margin
+                                value '0 10 0 0'
+                            })
+                            ({
+                                prop #padding
+                                value '20'
+                            })
+                            ({
+                                prop #cornerRadius
+                                value '6'
+                            })
+                        ]
+                    })
+                    (CRef searchableView {
+                        name 'SearchableView'
+                        type ({
+                            model #Customer
+                        })
+                        component #SearchableView
+                        data [
+                            ({
+                                prop #value
+                                bind true
+                                bindTo `obj.customer`
+                            })
+                            ({
+                                prop #isRequired
+                                value 'true'
+                            })
+                            ({
+                                prop #name
+                                value 'Customer'
+                            })
+                            ({
+                                prop #items
+                                bind true
+                                bindTo `this.customers`
+                            })
+                            ({
+                                prop #placeHolder
+                                value 'Search Customer'
+                            })
+                            ({
+                                prop #errors
+                                bind true
+                                bindTo `customerErrors`
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                        ]
+                        twoWayBinding true
+                    })
+                ]
+            })
+            (CRef companyName {
+                name 'CompanyName'
+                component #TextView
+                style #headlineThree
+                data [
+                    ({
+                        prop #data
+                        bind true
+                        bindTo `this.company.name`
+                    })
+                    ({
+                        prop #fontWeight
+                        value 'w600'
+                    })
+                ]
+            })
+            (CRef row2 {
+                name 'Row2'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                    ({
+                        prop #margin
+                        value '0'
+                    })
+                    ({
+                        prop #crossAxisAlignment
+                        value 'start'
+                    })
+                ]
+                children [
+                    (CRef column2 {
+                        name 'Column2'
+                        component #Column
+                        children [
+                            (CRef textView3 {
+                                name 'TextView3'
+                                component #TextView
+                                style #nameText
+                                data [
+                                    ({
+                                        prop #margin
+                                        value '5 0 0'
+                                    })
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `obj.company?.address??''`
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                    (CRef column3 {
+                        name 'Column3'
+                        component #Column
+                        children [
+                            (CRef textView4 {
+                                name 'TextView4'
+                                component #TextView
+                                style #headlineFour
+                                data [
+                                    ({
+                                        prop #data
+                                        value 'Bill To'
+                                    })
+                                ]
+                            })
+                            (CRef textView5 {
+                                name 'TextView5'
+                                component #TextView
+                                style #nameText
+                                data [
+                                    ({
+                                        prop #margin
+                                        value '5 0 0'
+                                    })
+                                    ({
+                                        prop #data
+                                        bind true
+                                        bindTo `obj.customer?.address??''`
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef row3 {
+                name 'Row3'
+                component #Row
+                data [
+                    ({
+                        prop #margin
+                        value '10 0'
+                    })
+                ]
+                children [
+                    (CRef inputFieldWithLabel2 {
+                        name 'InputFieldWithLabel2'
+                        component #InputFieldWithLabel
+                        data [
+                            ({
+                                prop #name
+                                value 'Invoice No'
+                            })
+                            ({
+                                prop #placeHolder
+                                value 'Enter Invoice No'
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                            ({
+                                prop #margin
+                                value '0 10 0 0'
+                            })
+                            ({
+                                prop #value
+                                bind true
+                                bindTo `obj.invoiceNo`
+                            })
+                            ({
+                                prop #errors
+                                bind true
+                                bindTo `invoiceNoErrors`
+                            })
+                        ]
+                        twoWayBinding true
+                    })
+                    (CRef column4 {
+                        name 'Column4'
+                        component #Column
+                        data [
+                            ({
+                                prop #crossAxisAlignment
+                                value 'start'
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                        ]
+                        children [
+                            (CRef textView7 {
+                                name 'TextView7'
+                                component #TextView
+                                style #nameText
+                                data [
+                                    ({
+                                        prop #data
+                                        value 'Date'
+                                    })
+                                    ({
+                                        prop #margin
+                                        value '0 0 5'
+                                    })
+                                ]
+                            })
+                            (CRef dateField {
+                                name 'DateField'
+                                component #DateField
+                                data [
+                                    ({
+                                        prop #value
+                                        bind true
+                                        bindTo `obj.invoiceDate`
+                                    })
+                                    ({
+                                        prop #placeHolder
+                                        value 'Enter Date'
+                                    })
+                                    ({
+                                        prop #activeColor
+                                        value '@c1'
+                                    })
+                                    ({
+                                        prop #inActiveColor
+                                        value '@c14'
+                                    })
+                                    ({
+                                        prop #decoration
+                                        values [
+                                            ({
+                                                prop #color
+                                                value '@c15'
+                                            })
+                                            ({
+                                                prop #border
+                                                values [
+                                                    ({
+                                                        prop #color
+                                                        value '@c14'
+                                                    })
+                                                    ({
+                                                        prop #width
+                                                        value '0.0'
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #height
+                                        value '40'
+                                    })
+                                ]
+                                twoWayBinding true
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef addButton {
+                name 'AddButton'
+                component #Button
+                style #primary
+                data [
+                    ({
+                        prop #margin
+                        value '0 0 10'
+                    })
+                ]
+                child (CRef iconView {
+                    name 'IconView'
+                    component #IconView
+                    data [
+                        ({
+                            prop #icon
+                            value 'MaterialIcons.add'
+                        })
+                        ({
+                            prop #size
+                            value '20'
+                        })
+                    ]
+                })
+            })
+            (CRef column5 {
+                name 'Column5'
+                component #Column
+                children [
+                    (CRef table {
+                        name 'Table'
+                        component #Table
+                        data [
+                            ({
+                                prop #defaultColumnWidth
+                                value '1.flex'
+                            })
+                            ({
+                                prop #columnWidths
+                                values [
+                                    ({
+                                        prop #columnWidth
+                                        value '1.flex'
+                                    })
+                                    ({
+                                        prop #columnWidth
+                                        value '1.flex'
+                                    })
+                                    ({
+                                        prop #columnWidth
+                                        value '1.flex'
+                                    })
+                                    ({
+                                        prop #columnWidth
+                                        value '1.flex'
+                                    })
+                                    ({
+                                        prop #columnWidth
+                                        value '1.flex'
+                                    })
+                                    ({
+                                        prop #columnWidth
+                                        value '1.flex'
+                                    })
+                                ]
+                            })
+                            ({
+                                prop #decoration
+                                values [
+                                    ({
+                                        prop #border
+                                        values [
+                                            ({
+                                                prop #color
+                                                value 'ffdbdbdb'
+                                            })
+                                            ({
+                                                prop #width
+                                                value '2'
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #borderRadius
+                                        value '3'
+                                    })
+                                ]
+                            })
+                            ({
+                                prop #vscroll
+                                value 'true'
+                            })
+                            ({
+                                prop #height
+                                value '120'
+                            })
+                        ]
+                        children [
+                            (CRef tableRow1 {
+                                name 'tableRow1'
+                                tags [
+                                    'table-row'
+                                ]
+                                component #TableRow
+                                data [
+                                    ({
+                                        prop #decoration
+                                        values [
+                                            ({
+                                                prop #color
+                                                value '@c13'
+                                            })
+                                            ({
+                                                prop #border
+                                                values [
+                                                    ({
+                                                        prop #color
+                                                        value '00000000'
+                                                    })
+                                                    ({
+                                                        prop #width
+                                                        value '0.0'
+                                                    })
+                                                ]
+                                            })
+                                            ({
+                                                prop #borderRadius
+                                                value '3'
+                                            })
+                                        ]
+                                    })
+                                    ({
+                                        prop #height
+                                        value '60'
+                                    })
+                                    ({
+                                        prop #padding
+                                        value '17 0 5'
+                                    })
+                                ]
+                                children [
+                                    (CRef tableCell {
+                                        name 'tableCell'
+                                        tags [
+                                            'table-column'
+                                        ]
+                                        component #TableCell
+                                        child (CRef cell {
+                                            name 'Cell'
+                                            component #TextView
+                                            style #headlineFour
+                                            data [
+                                                ({
+                                                    prop #textAlign
+                                                    value 'center'
+                                                })
+                                                ({
+                                                    prop #data
+                                                    value 'Items'
+                                                })
+                                            ]
+                                        })
+                                    })
+                                    (CRef tableCell2 {
+                                        name 'tableCell2'
+                                        tags [
+                                            'table-column'
+                                        ]
+                                        component #TableCell
+                                        child (CRef cell2 {
+                                            name 'Cell2'
+                                            component #TextView
+                                            style #headlineFour
+                                            data [
+                                                ({
+                                                    prop #textAlign
+                                                    value 'center'
+                                                })
+                                                ({
+                                                    prop #data
+                                                    value 'Quantity'
+                                                })
+                                            ]
+                                        })
+                                    })
+                                    (CRef tableCell3 {
+                                        name 'tableCell3'
+                                        tags [
+                                            'table-column'
+                                        ]
+                                        component #TableCell
+                                        child (CRef cell3 {
+                                            name 'Cell3'
+                                            component #TextView
+                                            style #headlineFour
+                                            data [
+                                                ({
+                                                    prop #textAlign
+                                                    value 'center'
+                                                })
+                                                ({
+                                                    prop #data
+                                                    value 'Price (\$)'
+                                                })
+                                            ]
+                                        })
+                                    })
+                                    (CRef tableCell4 {
+                                        name 'tableCell4'
+                                        tags [
+                                            'table-column'
+                                        ]
+                                        component #TableCell
+                                        child (CRef cell4 {
+                                            name 'Cell4'
+                                            component #TextView
+                                            style #headlineFour
+                                            data [
+                                                ({
+                                                    prop #textAlign
+                                                    value 'center'
+                                                })
+                                                ({
+                                                    prop #data
+                                                    value 'Total'
+                                                })
+                                            ]
+                                        })
+                                    })
+                                    (CRef tableCell5 {
+                                        name 'tableCell5'
+                                        tags [
+                                            'table-column'
+                                        ]
+                                        component #TableCell
+                                        child (CRef cell5 {
+                                            name 'Cell5'
+                                            component #TextView
+                                            style #headlineFour
+                                            data [
+                                                ({
+                                                    prop #textAlign
+                                                    value 'center'
+                                                })
+                                                ({
+                                                    prop #data
+                                                    bind true
+                                                    bindTo `' '`
+                                                })
+                                            ]
+                                        })
+                                    })
+                                ]
+                            })
+                            (CFor forItem {
+                                name 'ForItem'
+                                var 'invItem'
+                                items `obj.items`
+                                type ({
+                                    model #InvoiceItem
+                                })
+                                item (CRef tableRow2 {
+                                    name 'tableRow2'
+                                    tags [
+                                        'table-row'
+                                    ]
+                                    component #TableRow
+                                    data [
+                                        ({
+                                            prop #padding
+                                            value '5'
+                                        })
+                                        ({
+                                            prop #decoration
+                                            values [
+                                                ({
+                                                    prop #color
+                                                    value '@c2'
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                    children [
+                                        (CRef tableCell7 {
+                                            name 'tableCell7'
+                                            tags [
+                                                'table-column'
+                                            ]
+                                            component #TableCell
+                                            data [
+                                                ({
+                                                    prop #verticalAlignment
+                                                    value 'middle'
+                                                })
+                                            ]
+                                            child (CRef searchableView2 {
+                                                name 'SearchableView2'
+                                                type ({
+                                                    model #Item
+                                                })
+                                                component #SearchableView
+                                                data [
+                                                    ({
+                                                        prop #value
+                                                        bind true
+                                                        bindTo `invItem.item`
+                                                    })
+                                                    ({
+                                                        prop #items
+                                                        bind true
+                                                        bindTo `this.items`
+                                                    })
+                                                    ({
+                                                        prop #placeHolder
+                                                        value 'Search Item'
+                                                    })
+                                                ]
+                                                twoWayBinding true
+                                            })
+                                        })
+                                        (CRef tableCell8 {
+                                            name 'tableCell8'
+                                            tags [
+                                                'table-column'
+                                            ]
+                                            component #TableCell
+                                            data [
+                                                ({
+                                                    prop #verticalAlignment
+                                                    value 'middle'
+                                                })
+                                            ]
+                                            child (CRef integerInputField {
+                                                name 'IntegerInputField'
+                                                component #IntegerInputField
+                                                data [
+                                                    ({
+                                                        prop #value
+                                                        bind true
+                                                        bindTo `invItem.qty`
+                                                    })
+                                                ]
+                                                twoWayBinding true
+                                            })
+                                        })
+                                        (CRef tableCell9 {
+                                            name 'tableCell9'
+                                            tags [
+                                                'table-column'
+                                            ]
+                                            component #TableCell
+                                            data [
+                                                ({
+                                                    prop #verticalAlignment
+                                                    value 'middle'
+                                                })
+                                            ]
+                                            child (CRef doubleInputField2 {
+                                                name 'DoubleInputField2'
+                                                component #DoubleInputField
+                                                data [
+                                                    ({
+                                                        prop #value
+                                                        bind true
+                                                        bindTo `invItem.price`
+                                                    })
+                                                ]
+                                                twoWayBinding true
+                                            })
+                                        })
+                                        (CRef tableCell10 {
+                                            name 'tableCell10'
+                                            tags [
+                                                'table-column'
+                                            ]
+                                            component #TableCell
+                                            data [
+                                                ({
+                                                    prop #verticalAlignment
+                                                    value 'middle'
+                                                })
+                                            ]
+                                            child (CRef textView9 {
+                                                name 'TextView9'
+                                                component #TextView
+                                                data [
+                                                    ({
+                                                        prop #data
+                                                        bind true
+                                                        bindTo `invItem.total.toString()`
+                                                    })
+                                                    ({
+                                                        prop #textAlign
+                                                        value 'center'
+                                                    })
+                                                ]
+                                            })
+                                        })
+                                        (CRef tableCell11 {
+                                            name 'tableCell11'
+                                            tags [
+                                                'table-column'
+                                            ]
+                                            component #TableCell
+                                            data [
+                                                ({
+                                                    prop #verticalAlignment
+                                                    value 'middle'
+                                                })
+                                            ]
+                                            child (CRef deleteButton {
+                                                name 'DeleteButton'
+                                                component #Button
+                                                child (CRef iconView2 {
+                                                    name 'IconView2'
+                                                    component #IconView
+                                                    data [
+                                                        ({
+                                                            prop #icon
+                                                            value 'MaterialIcons.delete_outline'
+                                                        })
+                                                        ({
+                                                            prop #size
+                                                            value '20'
+                                                        })
+                                                    ]
+                                                })
+                                            })
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef row4 {
+                name 'Row4'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0'
+                    })
+                    ({
+                        prop #crossAxisAlignment
+                        value 'end'
+                    })
+                ]
+                children [
+                    (CRef textView6 {
+                        name 'TextView6'
+                        component #TextView
+                        style #headlineThree
+                        data [
+                            ({
+                                prop #data
+                                bind true
+                                bindTo `'Total: $ ' + this.obj.total.toString()`
+                            })
+                        ]
+                    })
+                    (CRef row5 {
+                        name 'Row5'
+                        component #Row
+                        children [
+                            (CRef cancelButton {
+                                name 'CancelButton'
+                                component #Button
+                                style #secondary
+                                data [
+                                    ({
+                                        prop #margin
+                                        value '0 10 0 0'
+                                    })
+                                ]
+                                child (CRef buttonText {
+                                    name 'ButtonText'
+                                    component #TextView
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Cancel'
+                                        })
+                                    ]
+                                })
+                            })
+                            (CRef addNewInvoiceBtn {
+                                name 'AddNewInvoiceBtn'
+                                component #Button
+                                style #primary
+                                child (CRef buttonText {
+                                    name 'ButtonText'
+                                    component #TextView
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Add New Invoice'
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef textView8 {
+                name 'TextView8'
+                component #TextView
+                data [
+                    ({
+                        prop #data
+                        bind true
+                        bindTo `this.errors.join('')`
+                    })
+                    ({
+                        prop #softWrap
+                        value 'true'
+                    })
+                ]
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedAddNewInvoiceBtnHandler {
+            name 'OnPressedAddNewInvoiceBtnHandler'
+            type OnEvent
+            on #addNewInvoiceBtn
+            event #onPressed
+            block ```
+                if(this.obj.total <= 0.0) {
+                    this.errors = ['Invalid invoice. Total should not be 0.'];
+                    return;
+                }
+                if(this.validate().isEmpty){
+                    addNewInvoiceBtn.disable = true;
+                    Result res = obj.save().await;
+                    addNewInvoiceBtn.disable = false;
+                    if(res.status == Success){
+                        showSuccessMsg(autoClose : true);
+                        navigator.close();
+                    }else {
+                        this.errors = res.errors;
+                    }
+                }
+            ```
+        })
+        (onPressedAddButtonHandler {
+            name 'onPressedAddButtonHandler'
+            type OnEvent
+            on #addButton
+            event #onPressed
+            block ```
+                InvoiceItem item = InvoiceItem();
+                this.obj.addToItems(item);
+            ```
+        })
+        (onPressedCancelButtonHandler {
+            name 'onPressedCancelButtonHandler'
+            type OnEvent
+            on #cancelButton
+            event #onPressed
+            block ```
+                navigator.close();
+            ```
+        })
+        (onPressedButtonHandler {
+            name 'onPressedButtonHandler'
+            type OnEvent
+            on #deleteButton
+            event #onPressed
+            block ```
+                this.obj.removeFromItems(invItem);
+            ```
+        })
+        (onChangedDoubleInputField2Handler {
+            name 'onChangedDoubleInputField2Handler'
+            type OnEvent
+            on #doubleInputField2
+            event #onChanged
+            block ```
+                invItem.total = invItem.qty * invItem.price;
+            ```
+        })
+        (onChangedIntegerInputFieldHandler {
+            name 'onChangedIntegerInputFieldHandler'
+            type OnEvent
+            on #integerInputField
+            event #onChanged
+            block ```
+                invItem.total = invItem.qty * invItem.price;
+            ```
+        })
+        (onChangedSearchableView2Handler {
+            name 'onChangedSearchableView2Handler'
+            type OnEvent
+            on #searchableView2
+            event #onChanged
+            block ```
+                invItem.price = invItem.item.price;
+                invItem.qty = 1;
+                invItem.total = invItem.qty * invItem.price;
+            ```
+        })
+    ]
+    editorFor #Invoice
+    editorInput #obj
+    popups [
+        (successMsg {
+            name 'SuccessMsg'
+            component #SuccessMsgView
+            data [
+                ({
+                    prop #width
+                    value '200'
+                })
+                ({
+                    prop #height
+                    value '30'
+                })
+            ]
+        })
+    ]
+})

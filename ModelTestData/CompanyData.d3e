@@ -1,0 +1,66 @@
+(ModelTestData CompanyData {
+    type #Company
+    aliasName 'CompanyData'
+    data [
+        (name {
+            primitiveValue [
+                'Nitya Software'
+            ]
+        })
+        (logo {
+            modelValue [
+                #D3EImageData
+            ]
+        })
+        (address {
+            primitiveValue [
+                '392 E Winchester St.,\nSuite 201 Salt Lake City,\nUT 84107\n+1(510)-378-8077'
+            ]
+        })
+        (invoiceTotal {
+            primitiveValue [
+                '30.0'
+            ]
+        })
+        (invoicePaid {
+            primitiveValue [
+                '20.0'
+            ]
+        })
+        (invoiceUnpaid {
+            primitiveValue [
+                '500.0'
+            ]
+        })
+        (totalInvoices {
+            primitiveValue [
+                '200'
+            ]
+        })
+        (paidInvioces {
+            primitiveValue [
+                '0'
+            ]
+        })
+        (unpaidInvoices {
+            primitiveValue [
+                '30'
+            ]
+        })
+        (paidInioces {
+            primitiveValue [
+                '0'
+            ]
+        })
+        (paidInoces {
+            primitiveValue [
+                '0'
+            ]
+        })
+        (paidInvoices {
+            primitiveValue [
+                '25'
+            ]
+        })
+    ]
+})

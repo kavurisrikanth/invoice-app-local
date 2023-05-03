@@ -1,0 +1,14 @@
+(ComponentBoard Board48f32905bb4940d093ca4b27f1643c97 {
+    title 'HomePageBoard'
+    canvas #Vaishnavi
+    x 25205
+    y 21618
+    width 977
+    height 550
+    theme #invoiceTheme
+    page #HomePage
+    views [
+        #NewPageData280613
+    ]
+    data #NewPageData280613
+})

@@ -1,0 +1,677 @@
+(StyleTheme InvoiceTheme{
+    name 'Invoice Theme'
+    font 'Nunito'
+    styles[
+        (primary {
+            name 'Primary'
+            component #Button
+            states [
+                ({
+                    values [
+                        ({
+                            prop #decoration
+                            values [
+                                ({
+                                    prop #border
+                                    values [
+                                        ({
+                                            prop #color
+                                            value '@c1'
+                                        })
+                                        ({
+                                            prop #width
+                                            value '1.0'
+                                        })
+                                    ]
+                                })
+                                ({
+                                    prop #borderRadius
+                                    value '3'
+                                })
+                                ({
+                                    prop #color
+                                    value '@c1'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #padding
+                            value '7'
+                        })
+                        ({
+                            prop #textStyle
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c2'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #constraints
+                            values [
+                                ({
+                                    prop #minHeight
+                                    value '30'
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+        (secondary {
+            name 'Secondary'
+            component #Button
+            states [
+                ({
+                    values [
+                        ({
+                            prop #decoration
+                            values [
+                                ({
+                                    prop #border
+                                    values [
+                                        ({
+                                            prop #color
+                                            value '@c1'
+                                        })
+                                        ({
+                                            prop #width
+                                            value '1.0'
+                                        })
+                                    ]
+                                })
+                                ({
+                                    prop #borderRadius
+                                    value '3'
+                                })
+                                ({
+                                    prop #color
+                                    value '@c2'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #padding
+                            value '7'
+                        })
+                        ({
+                            prop #constraints
+                            values [
+                                ({
+                                    prop #minHeight
+                                    value '30'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #textStyle
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c1'
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+        (orange {
+            name 'Success'
+            component #Button
+            states [
+                ({
+                    values [
+                        ({
+                            prop #textStyle
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c3'
+                                })
+                                ({
+                                    prop #fontFamily
+                                    value 'Nunito'
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+        (headlineOne {
+            name 'Headline One'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '32.0'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'bold'
+                        })
+                        ({
+                           prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (headlineTwo {
+            name 'Headline Two'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '24.0'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'bold'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (headlineThree {
+            name 'Headline Three'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '18.0'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'bold'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (headlineFour {
+            name 'headline Four'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '16.0'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'bold'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (headlineFive {
+            name 'Headline Five'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '13.0'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'bold'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (headlineSix {
+            name 'Headline Six'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '10.0'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'bold'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (displayHeadingOne {
+            name 'Display Heading One'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '60.0'
+                        })
+                        ({
+                            prop #margin
+                            value '10 0 10 0'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (displayHeadingTwo {
+            name 'Display Heading Two'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '50.0'
+                        })
+                        ({
+                            prop #margin
+                            value '10 0 10 0'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (displayHeadingThree {
+            name 'Display Heading Three'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '40.0'
+                        })
+                        ({
+                            prop #margin
+                            value '10 0 10 0'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (displayHeadingFour {
+            name 'Display Heading Four'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #fontSize
+                            value '30.0'
+                        })
+                        ({
+                            prop #margin
+                            value '10 0 10 0'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (error {
+            name 'Error'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #color
+                            value '@c8'
+                        })
+                        ({
+                            prop #textAlign
+                            value 'start'
+                        })
+                        ({
+                            prop #margin
+                            value '5 0 5 0'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+        (subText {
+            name 'SubText'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #color
+                            value '@c4'
+                        })
+                        ({
+                            prop #textAlign
+                            value 'start'
+                        })
+                        ({
+                            prop #margin
+                            value '5 0 5 0'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'bold'
+                        })
+                    ]
+                })
+            ]
+        })
+        (default {
+            name 'Default'
+            component #DoubleInputField
+            states [
+                ({
+                    values [
+                        ({
+                            prop #height
+                            value '40.0'
+                        })
+                        ({
+                            prop #backgroundColor
+                            value '@c2'
+                        })
+                        ({
+                            prop #cornerRadius
+                            value '3'
+                        })
+                        ({
+                        prop #decoration
+                        values [
+                            ({
+                                prop #border
+                                values [
+                                    ({
+                                        prop #color
+                                        value 'ffdbdbdb'
+                                    })
+                                    ({
+                                        prop #width
+                                        value '0.3'
+                                    })
+                                ]
+                            })
+                            ({
+                                prop #borderRadius
+                                value '2'
+                            })
+                        ]
+                    })
+                    ]
+                })
+            ]
+        })
+        (large {
+            name 'Large'
+            component #InputField
+            states [
+                ({
+                    values [
+                        ({
+                            prop #height
+                            value '60.0'
+                        })
+                        ({
+                            prop #backgroundColor
+                            value '@c15'
+                        })
+                        ({
+                            prop #cornerRadius
+                            value '2'
+                        })
+                        ({
+                            prop #activeColor
+                            value '@c1'
+                        })
+                        ({
+                            prop #style
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c12'
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+        (disabled {
+            name 'Disabled'
+            component #InputField
+            states [
+                ({
+                    values [
+                        ({
+                            prop #height
+                            value '30.0'
+                        })
+                        ({
+                            prop #backgroundColor
+                            value '@c14'
+                        })
+                        ({
+                            prop #cornerRadius
+                            value '2'
+                        })
+                        ({
+                            prop #style
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c13'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #disable
+                            value 'true'
+                        })
+                    ]
+                })
+            ]
+        })
+        (screenBgColor {
+            name 'ScreenBgColor'
+            states [
+                ({
+                    values [
+                        ({
+                            prop #margin
+                            value '0 8 8 8'
+                        })
+                    ]
+                })
+            ]
+        })
+        (listViewBgColor {
+            name 'List View Bg Color'
+            states [
+                ({
+                    values [
+                        ({
+                            prop #decoration
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c17'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #margin
+                            value '0 8 8 8'
+                        })
+                    ]
+                })
+            ]
+        })
+        (lightColorWithMargin {
+            name 'Light Color With Margin'
+            states [
+                ({
+                    values [
+                        ({
+                            prop #decoration
+                            values [
+                                ({
+                                    prop #color
+                                    value '@c17'
+                                })
+                            ]
+                        })
+                        ({
+                            prop #margin
+                            value '0 8 8 8'
+                        })
+                    ]
+                })
+            ]
+        })
+        (nameText {
+            name 'Name Text'
+            component #TextView
+            states [
+                ({
+                    values [
+                        ({
+                            prop #color
+                            value '@c12'
+                        })
+                        ({
+                            prop #fontWeight
+                            value 'bold'
+                        })
+                        ({
+                            prop #fontFamily
+                            value 'Nunito'
+                        })
+                    ]
+                })
+            ]
+        })
+    ]
+    colors [
+        ({
+            color '@c1'
+            hexCode 'ff184B3E'
+        })
+        ({
+            color '@c2'
+            hexCode 'ffffffff'
+        })
+        ({
+            color '@c3'
+            hexCode 'ffEA6B14'
+        })
+        ({
+            color '@c4'
+            hexCode 'ff7B7979'
+        })
+        ({
+            color '@c5'
+            hexCode 'ffF4EDF7'
+        })
+        ({
+            color '@c6'
+            hexCode 'ff934FB0'
+        })
+        ({
+            color '@c7'
+            hexCode 'ffF6EFE3'
+        })
+        ({
+            color '@c8'
+            hexCode 'ffe71306'
+        })
+        ({
+            color '@c9'
+            hexCode 'ffFDBD49'
+        })
+        ({
+            color '@c10'
+            hexCode 'ffdec150'
+        })
+        ({
+            color '@c11'
+            hexCode 'fff1dd91'
+        })
+        ({
+            color '@c12'
+            hexCode 'ff000000'
+        })
+        ({
+            color '@c13'
+            hexCode 'ffF3F3F3'
+        })
+        ({
+            color '@c14'
+            hexCode 'ffDBDBDB'
+        })
+        ({
+            color '@c15'
+            hexCode 'ffF1F5F9'
+        })
+    ]
+
+})

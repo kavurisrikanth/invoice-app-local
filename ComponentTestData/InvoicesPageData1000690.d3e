@@ -1,0 +1,51 @@
+(ComponentTestData InvoicesPageData1000690 {
+    data [
+        (obj {
+        })
+        (user {
+        })
+        (company {
+        })
+        (invoices {
+        })
+        (recentItem {
+        })
+    ]
+    page #InvoicesPage
+    values [
+        (build_children_1_build_children_0_children_1_value {
+        })
+        (build_children_1_build_children_0_children_0_children_5_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_1_build_children_0_children_0_children_7_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+    ]
+    structs [
+        (Invoices1678273898812000 {
+            type #Invoices
+            data [
+                (items {
+                })
+                (errors {
+                })
+                (status {
+                    primitiveValue [
+                        'Success'
+                    ]
+                })
+            ]
+        })
+    ]
+    popups [
+        (_invoicePopup {
+        })
+        (_paymentPopup {
+        })
+    ]
+})

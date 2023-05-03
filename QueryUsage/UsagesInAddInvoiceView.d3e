@@ -1,0 +1,40 @@
+QueryUsage {
+    query [
+        'Query'
+        'getInvoiceById'
+        'AddInvoiceView'
+        'obj_fetchData'
+    ]
+    model Invoice
+    usage [
+        '*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'getCustomers'
+        'AddInvoiceView'
+        'properties_customers_computation'
+    ]
+    struct Customers
+    usage [
+        '*'
+        'items.*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'getItems'
+        'AddInvoiceView'
+        'properties_items_computation'
+    ]
+    struct Items
+    usage [
+        '*'
+        'items.*'
+    ]
+}

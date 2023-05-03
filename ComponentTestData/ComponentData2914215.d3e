@@ -1,0 +1,135 @@
+(ComponentTestData ComponentData2914215 {
+    data [
+        (selected {
+            primitiveValue [
+                '0'
+            ]
+        })
+        (company {
+        })
+        (user {
+        })
+    ]
+    component #ProfileView
+    values [
+        (_companyPopup_build_children_1_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_companyPopup_build_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_companyPopup_build_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Address'
+            ]
+        })
+        (_companyPopup_build_children_1_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Company Name'
+            ]
+        })
+        (_companyPopup_build_children_0_children_1_child_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_companyPopup_build_children_1_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_companyPopup_build_children_1_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_companyPopup_build_children_2_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (_companyPopup_build_children_1_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_companyPopup_build_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_companyPopup_build_children_1_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (_companyPopup_build_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (_companyPopup_build_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Company Address'
+            ]
+        })
+        (_companyPopup_build_children_1_build_children_0_then_data {
+            primitiveValue [
+                'Company Name'
+            ]
+        })
+        (_companyPopup_build_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_companyPopup_build_children_3_value {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+    states [
+        (build_children_0 {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_1_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (_companyPopup_build_children_1_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (_companyPopup_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+    popups [
+        (_companyPopup {
+            model true
+        })
+    ]
+})

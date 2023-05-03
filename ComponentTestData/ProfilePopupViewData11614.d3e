@@ -1,0 +1,32 @@
+(ComponentTestData ProfilePopupViewData11614 {
+    data [
+        (selected {
+            primitiveValue [
+                '0'
+            ]
+        })
+        (company {
+        })
+        (user {
+        })
+    ]
+    component #ProfileView
+    states [
+        (build_children_1_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+        (build_children_0_child {
+            conditionals [
+                ({
+                })
+            ]
+        })
+    ]
+    popups [
+        (_companyPopup {
+        })
+    ]
+})

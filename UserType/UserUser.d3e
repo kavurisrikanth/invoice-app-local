@@ -1,0 +1,147 @@
+(UserType UserUser {
+    name 'UserUser'
+    modelAccess [
+        ({
+            model #AnonymousUser
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #ChangePasswordRequest
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #EmailMessage
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #OneTimePassword
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #PushNotification
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #SMSMessage
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #VerificationData
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #VerificationDataByTokenRequest
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #Company
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #Customer
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #Invoice
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #Item
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #Payment
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #SignupRequest
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #User
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #RecentInvoicesRequest
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #InvoicesRequest
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #ItemsRequest
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #PaymentsRequest
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+        ({
+            model #CustomersRequest
+            allowCreate true
+            allowUpdate true
+            allowDelete true
+        })
+    ]
+    userModel #User
+    loginSettings ({
+        emailField #email
+        passwordField #password
+    })
+    queries [
+        ({
+            query #RecentInvoices
+        })
+        ({
+            query #Invoices
+        })
+        ({
+            query #Items
+        })
+        ({
+            query #Payments
+        })
+        ({
+            query #Customers
+        })
+    ]
+})

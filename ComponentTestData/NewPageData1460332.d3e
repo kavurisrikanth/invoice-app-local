@@ -1,0 +1,113 @@
+(ComponentTestData NewPageData1460332 {
+    data [
+        (company {
+        })
+        (recentCustomer {
+        })
+        (failureMessage {
+            primitiveValue [
+                ''
+            ]
+        })
+        (customers {
+            structValue [
+                #Customers1678347177268000
+            ]
+        })
+    ]
+    page #CustomersPage
+    values [
+        (_addCustomer_build_children_1_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_addCustomer_build_children_1_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Customer Name'
+            ]
+        })
+        (_addCustomer_build_children_1_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (_addCustomer_build_children_1_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (_addCustomer_build_children_1_build_children_0_then_data {
+            primitiveValue [
+                'Customer Name'
+            ]
+        })
+        (_addCustomer_build_children_1_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_build_children_0_children_1_value {
+        })
+        (build_children_1_build_children_0_children_0_children_3_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_2_children_0_children_3_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_2_children_1_value {
+        })
+        (build_children_1_children_0_children_3_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_1_children_1_value {
+        })
+    ]
+    structs [
+        (Customers1678347177268000 {
+            type #Customers
+            data [
+                (items {
+                })
+                (errors {
+                })
+                (status {
+                    primitiveValue [
+                        'Success'
+                    ]
+                })
+            ]
+        })
+    ]
+    states [
+        (_addCustomer_build_children_0 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (_addCustomer_build_children_1_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+    popups [
+        (_addCustomer {
+            model true
+        })
+        (_failureMsg {
+        })
+        (_successMsg {
+        })
+    ]
+})

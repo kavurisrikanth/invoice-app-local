@@ -1,0 +1,37 @@
+(Model InvoiceItem {
+    name 'Invoice Item'
+    package 'invoice.com'
+    path 'Model'
+    properties [
+        (item {
+            name 'Item'
+            type ({
+                model #Item
+            })
+        })
+        (qty {
+            name 'Qty'
+            type ({
+                primitive Integer
+            })
+            defaultValue `1`
+        })
+        (price {
+            name 'Price'
+            type ({
+                primitive Double
+            })
+            defaultValue `item.price`
+        })
+        (total {
+            name 'Total'
+            type ({
+                primitive Double
+            })
+            computed true
+            computation `this.qty * this.price`
+            readType ReadOnly
+        })
+    ]
+    creatable false
+})

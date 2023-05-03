@@ -1,0 +1,14 @@
+(ComponentBoard Boardc471b7fad4a548979e294aa1654aa0d4 {
+    title 'SearchableView Board'
+    canvas #Vaishnavi
+    x 30558
+    y 25000
+    width 764
+    height 1024
+    component #SearchableView
+    theme #invoiceTheme
+    views [
+        #SearchableViewData2346407
+    ]
+    data #SearchableViewData2346407
+})

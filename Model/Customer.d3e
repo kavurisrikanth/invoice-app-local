@@ -1,0 +1,30 @@
+(Model Customer {
+    name 'Customer'
+    package 'invoice.com'
+    path 'Model'
+    master #Company
+    properties [
+        (name {
+            name 'Name'
+            type ({
+                primitive String
+            })
+            required true
+        })
+        (address {
+            name 'Address'
+            type ({
+                primitive String
+            })
+            longText true
+        })
+        (balance {
+            name 'Balance'
+            type ({
+                primitive Double
+            })
+        })
+    ]
+    display `this.name`
+    needCreatedDate true
+})

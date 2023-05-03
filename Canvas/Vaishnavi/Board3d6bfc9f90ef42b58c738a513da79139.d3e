@@ -1,0 +1,14 @@
+(ComponentBoard Board3d6bfc9f90ef42b58c738a513da79139 {
+    title 'DashboardPageBoard'
+    canvas #Vaishnavi
+    x 25133
+    y 22858
+    width 1348
+    height 532
+    theme #invoiceTheme
+    page #DashboardPage
+    views [
+        #DashboardPageData7005
+    ]
+    data #DashboardPageData7005
+})

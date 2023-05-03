@@ -1,0 +1,214 @@
+(ComponentTestData NewPageData1404296 {
+    data [
+        (email {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+    page #ForgotPasswordPage
+    values [
+        (build_children_1_build_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Email'
+            ]
+        })
+        (build_children_1_build_children_2_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_build_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_build_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_build_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Email Address'
+            ]
+        })
+        (build_children_1_build_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_build_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Email'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Email Address'
+            ]
+        })
+        (build_children_0_children_2_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_2_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_2_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Email'
+            ]
+        })
+        (build_children_0_children_2_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_2_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Email Address'
+            ]
+        })
+        (build_children_0_children_2_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_2_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Email Address'
+            ]
+        })
+        (build_children_2_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_2_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Email'
+            ]
+        })
+        (build_children_2_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Email Address'
+            ]
+        })
+        (build_children_1_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Email'
+            ]
+        })
+        (build_children_1_children_2_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_2_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+    states [
+        (build_children_1_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_0_build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_children_2_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_2_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+})

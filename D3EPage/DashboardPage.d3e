@@ -1,0 +1,302 @@
+(D3EPage DashboardPage {
+    name 'Dashboard Page'
+    package 'invoice.com'
+    properties [
+        (recentInvoices {
+            name 'Recent Invoices'
+            type ({
+                struct #RecentInvoices
+            })
+            computed true
+            computation `Query.getRecentInvoices(RecentInvoicesRequest(company: this.company)).await`
+            internal true
+            synchronise true
+        })
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+        (recentItem {
+            name 'RecentItem'
+            type ({
+                model #Invoice
+            })
+            internal true
+        })
+    ]
+    path 'D3EPage'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #padding
+                value '20'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '00000000'
+                    })
+                ]
+            })
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+            ({
+                prop #vscroll
+                value 'true'
+            })
+        ]
+        children [
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
+                    })
+                ]
+                children [
+                    (CRef textView {
+                        name 'TextView'
+                        component #TextView
+                        style #displayHeadingFour
+                        data [
+                            ({
+                                prop #data
+                                value 'Dashboard'
+                            })
+                        ]
+                    })
+                    (CRef addInvoiceBtn {
+                        name 'AddInvoiceBtn'
+                        component #Button
+                        style #primary
+                        child (CRef row2 {
+                            name 'Row2'
+                            component #Row
+                            children [
+                                (CRef iconView {
+                                    name 'IconView'
+                                    component #IconView
+                                    data [
+                                        ({
+                                            prop #icon
+                                            value 'MaterialIcons.add'
+                                        })
+                                        ({
+                                            prop #size
+                                            value '10'
+                                        })
+                                        ({
+                                            prop #color
+                                            value '@c2'
+                                        })
+                                        ({
+                                            prop #margin
+                                            value '0 5 0 0'
+                                        })
+                                    ]
+                                })
+                                (CRef textView2 {
+                                    name 'TextView2'
+                                    component #TextView
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Add Invoice'
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+            (CRef row3 {
+                name 'Row3'
+                component #Row
+                data [
+                    ({
+                        prop #margin
+                        value '10 0'
+                    })
+                ]
+                children [
+                    (CRef invoiceCardView {
+                        name 'InvoiceCardView'
+                        component #CounterView
+                        data [
+                            ({
+                                prop #status
+                                value 'TOTAL INVOICES'
+                            })
+                            ({
+                                prop #msg
+                                value 'Invoices sent'
+                            })
+                            ({
+                                prop #bgColor
+                                value '@c1'
+                            })
+                            ({
+                                prop #invoiceCount
+                                bind true
+                                bindTo `company.totalInvoices.toString()`
+                            })
+                            ({
+                                prop #amount
+                                bind true
+                                bindTo `company.invoiceTotal.toString()`
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                        ]
+                    })
+                    (CRef invoiceCardView2 {
+                        name 'InvoiceCardView2'
+                        component #CounterView
+                        data [
+                            ({
+                                prop #margin
+                                value '0 10'
+                            })
+                            ({
+                                prop #status
+                                value 'PAID INVOICES'
+                            })
+                            ({
+                                prop #msg
+                                value 'Paid by clients'
+                            })
+                            ({
+                                prop #amount
+                                bind true
+                                bindTo `company.invoicePaid.toString()`
+                            })
+                            ({
+                                prop #invoiceCount
+                                bind true
+                                bindTo `company.paidInvoices.toString()`
+                            })
+                            ({
+                                prop #bgColor
+                                value '@c3'
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                        ]
+                    })
+                    (CRef invoiceCardView3 {
+                        name 'InvoiceCardView3'
+                        component #CounterView
+                        data [
+                            ({
+                                prop #status
+                                value 'UNPAID INVOICES'
+                            })
+                            ({
+                                prop #msg
+                                value 'Unpaid by clients'
+                            })
+                            ({
+                                prop #amount
+                                bind true
+                                bindTo `company.invoiceUnpaid.toString()`
+                            })
+                            ({
+                                prop #invoiceCount
+                                bind true
+                                bindTo `company.unpaidInvoices.toString()`
+                            })
+                            ({
+                                prop #bgColor
+                                value '@c3'
+                            })
+                            ({
+                                prop #expand
+                                value 'true'
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef row4 {
+                name 'Row4'
+                component #Row
+            })
+            (CRef textView3 {
+                name 'TextView3'
+                component #TextView
+                style #displayHeadingFour
+                data [
+                    ({
+                        prop #data
+                        value 'Recent Invoices'
+                    })
+                ]
+            })
+            (CRef recentInvoicesView {
+                name 'RecentInvoicesView'
+                component #InvoicesView
+                data [
+                    ({
+                        prop #invoices
+                        bind true
+                        bindTo `recentInvoices?.items??[]`
+                    })
+                ]
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedAddInvoiceButtonHandler {
+            name 'OnPressedAddInvoiceButtonHandler'
+            type OnEvent
+            on #addInvoiceBtn
+            event #onPressed
+            block ```
+                recentItem = Invoice(company : company);
+                showInvoicePopup();
+            ```
+        })
+    ]
+    popups [
+        (invoicePopup {
+            name 'Invoice Popup'
+            component #AddInvoiceView
+            data [
+                ({
+                    prop #obj
+                    bind true
+                    bindTo `recentItem`
+                })
+                ({
+                    prop #height
+                    value '500'
+                })
+                ({
+                    prop #company
+                    bind true
+                    bindTo `this.company`
+                })
+                ({
+                    prop #width
+                    value '600'
+                })
+            ]
+        })
+    ]
+})

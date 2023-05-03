@@ -1,0 +1,14 @@
+(ComponentBoard Board9bd4ea799fe04150ab25e26e4c27eb54 {
+    title 'InvoiceView'
+    canvas #Vaishnavi
+    x 26773
+    y 22810
+    width 1532
+    height 321
+    component #InvoicesView
+    theme #invoiceTheme
+    views [
+        #ComponentData432987
+    ]
+    data #ComponentData432987
+})

@@ -1,0 +1,267 @@
+(ComponentTestData Component2Data1471030 {
+    data [
+        (customer {
+        })
+        (obj {
+            modelValue [
+                #CustomerData
+            ]
+        })
+        (errors {
+        })
+    ]
+    component #AddCustomerView
+    values [
+        (build_children_0_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_0_build_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_0_children_0_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_0_build_children_1_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_0_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_build_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_0_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_0_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_build_children_1_placeHolder {
+            primitiveValue [
+                'Enter Customer Name'
+            ]
+        })
+        (build_children_1_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_build_children_0_value {
+            primitiveValue [
+                'true'
+            ]
+        })
+        (build_children_1_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_build_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_2_build_children_1_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_2_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_build_children_0_then_data {
+            primitiveValue [
+                'Customer Name'
+            ]
+        })
+        (build_children_1_build_children_2_then_children_0_data {
+            primitiveValue [
+                'nameErrors'
+            ]
+        })
+        (build_children_2_build_children_0_then_data {
+            primitiveValue [
+                'Address'
+            ]
+        })
+        (build_children_3_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_build_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_build_children_1_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_4_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_4_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_build_children_1_value {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_build_children_2_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_build_children_0_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_build_children_1_disable {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_3_build_children_1_placeHolder {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_3_build_children_1_obscureText {
+            primitiveValue [
+                'false'
+            ]
+        })
+    ]
+    states [
+        (build_children_0_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_1_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_2_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_4_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_3_build_children_1 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+        (build_children_0 {
+            conditionals [
+                ({
+                    value true
+                })
+            ]
+        })
+    ]
+})

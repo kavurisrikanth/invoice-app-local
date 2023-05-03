@@ -1,0 +1,14 @@
+(ComponentBoard Boardda97eb01da3442d1af386bd1787d5b22 {
+    title 'CompanyDetailsView Board'
+    canvas #Canvas
+    x 25000
+    y 25000
+    width 764
+    height 1024
+    component #CompanyDetailsView
+    theme #invoiceTheme
+    views [
+        #ComponentData1003317
+    ]
+    data #ComponentData1003317
+})

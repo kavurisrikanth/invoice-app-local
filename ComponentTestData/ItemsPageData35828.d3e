@@ -1,0 +1,150 @@
+(ComponentTestData ItemsPageData35828 {
+    data [
+        (user {
+        })
+        (company {
+        })
+        (items {
+            structValue [
+                #Items1678347250517000
+            ]
+        })
+        (recentItem {
+            modelValue [
+                #InvoiceItemData
+            ]
+        })
+        (item {
+            modelValue [
+                #InvoiceItemData
+            ]
+        })
+        (failureMessage {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+    page #ItemsPage
+    values [
+        (build_children_1_children_1_value {
+            modelValue [
+                #InvoiceItemData
+            ]
+        })
+        (build_children_1_children_1_0_children_3_child_build_children_0_child_else_else_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_0_children_2_child_build_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_1_0_children_3_child_build_children_0_child_else_else_else_else_else_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_children_1_0_children_3_child_build_children_0_child_else_else_else_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_0_children_3_child_build_children_0_child_else_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_0_children_3_child_build_children_0_child_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_0_children_3_child_build_children_0_child_else_else_else_else_value {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (build_children_1_children_1_0_children_0_child_data {
+            primitiveValue [
+                'item3'
+            ]
+        })
+        (build_children_1_children_1_0_children_1_child_data {
+            primitiveValue [
+                'desc'
+            ]
+        })
+        (build_children_1_children_1_0_children_3_child_data {
+            primitiveValue [
+                ''
+            ]
+        })
+        (build_children_1_build_children_0_children_1_value {
+        })
+        (build_children_1_build_children_0_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_2_children_1_value {
+        })
+        (build_children_2_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+        (build_children_1_children_0_children_4_child_data {
+            primitiveValue [
+                ' '
+            ]
+        })
+    ]
+    structs [
+        (Items1678347250517000 {
+            type #Items
+            data [
+                (items {
+                })
+                (errors {
+                })
+                (status {
+                    primitiveValue [
+                        'Success'
+                    ]
+                })
+            ]
+        })
+    ]
+    states [
+        (build_children_1_children_1_0_children_3_child_build_children_0 {
+            conditionals [
+                ({
+                })
+                ({
+                })
+                ({
+                })
+                ({
+                })
+                ({
+                })
+                ({
+                })
+            ]
+        })
+    ]
+    popups [
+        (_itemPopup {
+        })
+        (_addItem {
+        })
+        (_successMsg {
+        })
+        (_failureMsg {
+            model true
+        })
+    ]
+})

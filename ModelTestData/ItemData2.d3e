@@ -1,0 +1,28 @@
+(ModelTestData ItemData2 {
+    type #Item
+    aliasName 'Computer'
+    data [
+        (name {
+            primitiveValue [
+                'Computer'
+            ]
+        })
+        (price {
+            primitiveValue [
+                '10000.0'
+            ]
+        })
+        (description {
+            primitiveValue [
+                'an electronic device for storing and processing data'
+            ]
+        })
+        (company {
+            modelValue [
+                #CompanyData
+            ]
+        })
+        (createdDate {
+        })
+    ]
+})

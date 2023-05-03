@@ -1,0 +1,260 @@
+(Widget AddCustomerView {
+    name 'AddCustomerView'
+    package 'invoice.com'
+    category 'UserDefined'
+    properties [
+        (obj {
+            name 'Obj'
+            type ({
+                model #Customer
+            })
+            required true
+            fetchData true
+        })
+        (errors {
+            name 'Errors'
+            collection true
+            type ({
+                primitive String
+            })
+            internal true
+        })
+    ]
+    path 'Component'
+    build (CRef column {
+        name 'Column'
+        component #Column
+        data [
+            ({
+                prop #crossAxisAlignment
+                value 'start'
+            })
+            ({
+                prop #padding
+                value '10'
+            })
+            ({
+                prop #decoration
+                values [
+                    ({
+                        prop #color
+                        value '@c2'
+                    })
+                    ({
+                        prop #border
+                        values [
+                            ({
+                                prop #color
+                                value '00ff0000'
+                            })
+                            ({
+                                prop #width
+                                value '0.0'
+                            })
+                        ]
+                    })
+                    ({
+                        prop #borderRadius
+                        value '3'
+                    })
+                ]
+            })
+        ]
+        children [
+            (CRef textView {
+                name 'TextView'
+                component #TextView
+                style #headlineThree
+                data [
+                    ({
+                        prop #data
+                        value 'Add New Customer'
+                    })
+                ]
+                conditionals [
+                    ({
+                        condition `obj.saveStatus != DBSaveStatus.New`
+                        values [
+                            ({
+                                prop #data
+                                value 'Edit Customer'
+                            })
+                        ]
+                    })
+                ]
+            })
+            (CRef inputFieldWithLabel {
+                name 'InputFieldWithLabel'
+                component #InputFieldWithLabel
+                data [
+                    ({
+                        prop #name
+                        value 'Customer Name'
+                    })
+                    ({
+                        prop #placeHolder
+                        value 'Enter Customer Name'
+                    })
+                    ({
+                        prop #value
+                        bind true
+                        bindTo `obj.name`
+                    })
+                    ({
+                        prop #margin
+                        value '10 0'
+                    })
+                ]
+                twoWayBinding true
+            })
+            (CRef textView2 {
+                name 'TextView2'
+                component #TextView
+                style #nameText
+                data [
+                    ({
+                        prop #data
+                        value 'Address'
+                    })
+                    ({
+                        prop #margin
+                        value '5 0'
+                    })
+                ]
+            })
+            (CRef addresstField {
+                name 'AddresstField'
+                component #InputField
+                style #large
+                data [
+                    ({
+                        prop #value
+                        bind true
+                        bindTo `obj.address`
+                    })
+                    ({
+                        prop #placeHolder
+                        value 'Enter Customer Address'
+                    })
+                    ({
+                        prop #minLines
+                        value '1'
+                    })
+                    ({
+                        prop #maxLines
+                        value '3'
+                    })
+                    ({
+                        prop #style
+                        values [
+                            ({
+                                prop #fontSize
+                                value '14'
+                            })
+                            ({
+                                prop #fontWeight
+                                value 'w600'
+                            })
+                            ({
+                                prop #decoration
+                                value 'none'
+                            })
+                            ({
+                                prop #color
+                                value 'ff184b3e'
+                            })
+                            ({
+                                prop #decorationStyle
+                                value 'solid'
+                            })
+                        ]
+                    })
+                ]
+                twoWayBinding true
+            })
+            (CRef row {
+                name 'Row'
+                component #Row
+                data [
+                    ({
+                        prop #mainAxisAlignment
+                        value 'end'
+                    })
+                    ({
+                        prop #margin
+                        value '10 0 0'
+                    })
+                ]
+                children [
+                    (CRef cancelBtn {
+                        name 'CancelBtn'
+                        component #Button
+                        style #secondary
+                        data [
+                            ({
+                                prop #margin
+                                value '0 5 0 0'
+                            })
+                        ]
+                        child (CRef buttonText {
+                            name 'ButtonText'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    value 'Cancel'
+                                })
+                            ]
+                        })
+                    })
+                    (CRef saveBtn {
+                        name 'SaveBtn'
+                        component #Button
+                        style #primary
+                        child (CRef buttonText {
+                            name 'ButtonText'
+                            component #TextView
+                            data [
+                                ({
+                                    prop #data
+                                    value 'Save'
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+        ]
+    })
+    eventHandlers [
+        (onPressedCancelBtnHandler {
+            name 'onPressedCancelBtnHandler'
+            type OnEvent
+            on #cancelBtn
+            event #onPressed
+            block ```
+                navigator.close();
+            ```
+        })
+        (onPressedSaveBtnHandler {
+            name 'onPressedSaveBtnHandler'
+            type OnEvent
+            on #saveBtn
+            event #onPressed
+            block ```
+                if(this.validate().isEmpty){
+                                saveBtn.disable = true;
+                                Result res = obj.save().await;
+                                saveBtn.disable = false;
+                                if(res.status == Success){
+                                navigator.close();
+                                }else {
+                                errors = res.errors;
+                            }
+                }
+            ```
+        })
+    ]
+    editorFor #Customer
+    editorInput #obj
+})

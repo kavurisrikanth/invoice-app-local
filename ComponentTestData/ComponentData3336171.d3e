@@ -1,0 +1,17 @@
+(ComponentTestData ComponentData3336171 {
+    data [
+        (message {
+            primitiveValue [
+                'You cannot delete the item because the item is already added to the invoice item.'
+            ]
+        })
+    ]
+    component #FailureMsgView
+    values [
+        (build_children_1_data {
+            primitiveValue [
+                'You cannot delete the item because the item is already added to the invoice item.'
+            ]
+        })
+    ]
+})

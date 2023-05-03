@@ -1,0 +1,15 @@
+(DataQuery Payments {
+    name 'Payments'
+    package 'invoice.com'
+    query `Payment.all.where(p => p.company == inputs.company)`
+    inputs [
+        (company {
+            name 'Company'
+            type ({
+                model #Company
+            })
+            required true
+        })
+    ]
+    enableSync true
+})

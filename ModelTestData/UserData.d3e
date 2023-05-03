@@ -1,0 +1,27 @@
+(ModelTestData UserData {
+    type #User
+    aliasName 'UserData'
+    data [
+        (fullName {
+        })
+        (email {
+        })
+        (password {
+        })
+        (company {
+            modelValue [
+                #CompanyData
+            ]
+        })
+        (isActive {
+            primitiveValue [
+                'false'
+            ]
+        })
+        (deviceToken {
+            primitiveValue [
+                ''
+            ]
+        })
+    ]
+})
