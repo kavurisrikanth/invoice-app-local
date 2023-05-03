@@ -46,7 +46,7 @@
             (CRef textView {
                 name 'TextView'
                 component #TextView
-                style #displayHeadingFour
+                style #DisplayHeadingFour
                 data [
                     ({
                         prop #margin
@@ -171,7 +171,7 @@
                                 child (CRef cell {
                                     name 'Cell'
                                     component #TextView
-                                    style #headlineFour
+                                    style #HeadlineFour
                                     data [
                                         ({
                                             prop #textAlign
@@ -193,7 +193,7 @@
                                 child (CRef cell2 {
                                     name 'Cell2'
                                     component #TextView
-                                    style #headlineFour
+                                    style #HeadlineFour
                                     data [
                                         ({
                                             prop #textAlign
@@ -215,7 +215,7 @@
                                 child (CRef cell3 {
                                     name 'Cell3'
                                     component #TextView
-                                    style #headlineFour
+                                    style #HeadlineFour
                                     data [
                                         ({
                                             prop #textAlign
@@ -237,7 +237,7 @@
                                 child (CRef cell4 {
                                     name 'Cell4'
                                     component #TextView
-                                    style #headlineFour
+                                    style #HeadlineFour
                                     data [
                                         ({
                                             prop #textAlign
@@ -259,7 +259,7 @@
                                 child (CRef cell {
                                     name 'Cell'
                                     component #TextView
-                                    style #headlineFour
+                                    style #HeadlineFour
                                     data [
                                         ({
                                             prop #data
@@ -349,7 +349,7 @@
                                     child (CRef cell7 {
                                         name 'Cell7'
                                         component #TextView
-                                        style #headlineFour
+                                        style #HeadlineFour
                                         data [
                                             ({
                                                 prop #textAlign
@@ -372,7 +372,7 @@
                                     child (CRef cell8 {
                                         name 'Cell8'
                                         component #TextView
-                                        style #headlineFour
+                                        style #HeadlineFour
                                         data [
                                             ({
                                                 prop #textAlign
@@ -395,7 +395,7 @@
                                     child (CRef textView2 {
                                         name 'TextView2'
                                         component #TextView
-                                        style #headlineFour
+                                        style #HeadlineFour
                                         data [
                                             ({
                                                 prop #data
@@ -418,7 +418,7 @@
                                     child (CRef textView3 {
                                         name 'TextView3'
                                         component #TextView
-                                        style #headlineFour
+                                        style #HeadlineFour
                                         data [
                                             ({
                                                 prop #data

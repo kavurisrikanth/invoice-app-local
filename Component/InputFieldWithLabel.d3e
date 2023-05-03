@@ -84,7 +84,7 @@
                 then (CRef nameview {
                     name 'Nameview'
                     component #TextView
-                    style #nameText
+                    style #NameText
                     data [
                         ({
                             prop #data

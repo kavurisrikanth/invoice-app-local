@@ -1,0 +1,30 @@
+(Style subText {
+    name 'SubText'
+    component #TextView
+    items [
+        ({
+            values [
+                ({
+                    prop #color
+                    value '@c4'
+                })
+                ({
+                    prop #textAlign
+                    value 'start'
+                })
+                ({
+                    prop #margin
+                    value '5 0 5 0'
+                })
+                ({
+                    prop #fontFamily
+                    value 'Nunito'
+                })
+                ({
+                    prop #fontWeight
+                    value 'bold'
+                })
+            ]
+        })
+    ]
+})

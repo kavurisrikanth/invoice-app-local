@@ -112,7 +112,7 @@
                                 child (CRef buttonText {
                                     name 'ButtonText'
                                     component #TextView
-                                    style #nameText
+                                    style #NameText
                                     data [
                                         ({
                                             prop #data
@@ -142,7 +142,7 @@
                                 child (CRef buttonText2 {
                                     name 'ButtonText2'
                                     component #TextView
-                                    style #nameText
+                                    style #NameText
                                     data [
                                         ({
                                             prop #data
@@ -188,7 +188,7 @@
                                 child (CRef buttonText3 {
                                     name 'ButtonText3'
                                     component #TextView
-                                    style #nameText
+                                    style #NameText
                                     data [
                                         ({
                                             prop #data
@@ -218,7 +218,7 @@
                                 child (CRef buttonText {
                                     name 'ButtonText'
                                     component #TextView
-                                    style #nameText
+                                    style #NameText
                                     data [
                                         ({
                                             prop #data
@@ -248,7 +248,7 @@
                                 child (CRef buttonText {
                                     name 'ButtonText'
                                     component #TextView
-                                    style #nameText
+                                    style #NameText
                                     data [
                                         ({
                                             prop #data

@@ -90,7 +90,7 @@
             (CRef textView {
                 name 'TextView'
                 component #TextView
-                style #headlineThree
+                style #HeadlineThree
                 data [
                     ({
                         prop #data
@@ -215,7 +215,7 @@
             (CRef companyName {
                 name 'CompanyName'
                 component #TextView
-                style #headlineThree
+                style #HeadlineThree
                 data [
                     ({
                         prop #data
@@ -253,7 +253,7 @@
                             (CRef textView3 {
                                 name 'TextView3'
                                 component #TextView
-                                style #nameText
+                                style #NameText
                                 data [
                                     ({
                                         prop #margin
@@ -275,7 +275,7 @@
                             (CRef textView4 {
                                 name 'TextView4'
                                 component #TextView
-                                style #headlineFour
+                                style #HeadlineFour
                                 data [
                                     ({
                                         prop #data
@@ -286,7 +286,7 @@
                             (CRef textView5 {
                                 name 'TextView5'
                                 component #TextView
-                                style #nameText
+                                style #NameText
                                 data [
                                     ({
                                         prop #margin
@@ -363,7 +363,7 @@
                             (CRef textView7 {
                                 name 'TextView7'
                                 component #TextView
-                                style #nameText
+                                style #NameText
                                 data [
                                     ({
                                         prop #data
@@ -432,7 +432,7 @@
             (CRef addButton {
                 name 'AddButton'
                 component #Button
-                style #primary
+                style #Primary
                 data [
                     ({
                         prop #margin
@@ -579,7 +579,7 @@
                                         child (CRef cell {
                                             name 'Cell'
                                             component #TextView
-                                            style #headlineFour
+                                            style #HeadlineFour
                                             data [
                                                 ({
                                                     prop #textAlign
@@ -601,7 +601,7 @@
                                         child (CRef cell2 {
                                             name 'Cell2'
                                             component #TextView
-                                            style #headlineFour
+                                            style #HeadlineFour
                                             data [
                                                 ({
                                                     prop #textAlign
@@ -623,7 +623,7 @@
                                         child (CRef cell3 {
                                             name 'Cell3'
                                             component #TextView
-                                            style #headlineFour
+                                            style #HeadlineFour
                                             data [
                                                 ({
                                                     prop #textAlign
@@ -645,7 +645,7 @@
                                         child (CRef cell4 {
                                             name 'Cell4'
                                             component #TextView
-                                            style #headlineFour
+                                            style #HeadlineFour
                                             data [
                                                 ({
                                                     prop #textAlign
@@ -667,7 +667,7 @@
                                         child (CRef cell5 {
                                             name 'Cell5'
                                             component #TextView
-                                            style #headlineFour
+                                            style #HeadlineFour
                                             data [
                                                 ({
                                                     prop #textAlign
@@ -886,7 +886,7 @@
                     (CRef textView6 {
                         name 'TextView6'
                         component #TextView
-                        style #headlineThree
+                        style #HeadlineThree
                         data [
                             ({
                                 prop #data
@@ -902,7 +902,7 @@
                             (CRef cancelButton {
                                 name 'CancelButton'
                                 component #Button
-                                style #secondary
+                                style #Secondary
                                 data [
                                     ({
                                         prop #margin
@@ -923,7 +923,7 @@
                             (CRef addNewInvoiceBtn {
                                 name 'AddNewInvoiceBtn'
                                 component #Button
-                                style #primary
+                                style #Primary
                                 child (CRef buttonText {
                                     name 'ButtonText'
                                     component #TextView
@@ -987,7 +987,7 @@
             event #onPressed
             block ```
                 InvoiceItem item = InvoiceItem();
-                this.obj.addToItems(item);
+                this.obj.items.add(item);
             ```
         })
         (onPressedCancelButtonHandler {
@@ -1005,7 +1005,7 @@
             on #deleteButton
             event #onPressed
             block ```
-                this.obj.removeFromItems(invItem);
+                this.obj.items.remove(invItem);
             ```
         })
         (onChangedDoubleInputField2Handler {

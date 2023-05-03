@@ -1,0 +1,22 @@
+(Style nameText {
+    name 'Name Text'
+    component #TextView
+    items [
+        ({
+            values [
+                ({
+                    prop #color
+                    value '@c12'
+                })
+                ({
+                    prop #fontWeight
+                    value 'bold'
+                })
+                ({
+                    prop #fontFamily
+                    value 'Nunito'
+                })
+            ]
+        })
+    ]
+})

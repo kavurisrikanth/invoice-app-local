@@ -128,7 +128,7 @@
                     (CRef textView {
                         name 'TextView'
                         component #TextView
-                        style #headlineThree
+                        style #HeadlineThree
                         data [
                             ({
                                 prop #data
@@ -139,7 +139,7 @@
                     (CRef textView2 {
                         name 'TextView2'
                         component #TextView
-                        style #subText
+                        style #SubText
                         data [
                             ({
                                 prop #data
@@ -316,7 +316,7 @@
                             (CRef signupButton {
                                 name 'SignupButton'
                                 component #Button
-                                style #primary
+                                style #Primary
                                 data [
                                     ({
                                         prop #margin
@@ -353,7 +353,7 @@
                             (CRef textView3 {
                                 name 'TextView3'
                                 component #TextView
-                                style #nameText
+                                style #NameText
                                 data [
                                     ({
                                         prop #data
@@ -368,7 +368,7 @@
                             (CRef loginBtn2 {
                                 name 'LoginBtn2'
                                 component #Button
-                                style #success
+                                style #Success
                                 child (CRef buttonText3 {
                                     name 'ButtonText3'
                                     component #TextView

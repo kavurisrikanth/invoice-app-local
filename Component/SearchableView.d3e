@@ -117,7 +117,7 @@
                         (CRef nameview {
                             name 'Nameview'
                             component #TextView
-                            style #nameText
+                            style #NameText
                             data [
                                 ({
                                     prop #data
@@ -136,7 +136,7 @@
                             then (CRef id {
                                 name 'Id'
                                 component #TextView
-                                style #nameText
+                                style #NameText
                                 data [
                                     ({
                                         prop #data
@@ -161,7 +161,7 @@
                     (CRef searchableEmplty {
                         name 'SearchableEmplty'
                         component #InputField
-                        style #default
+                        style #Default
                         data [
                             ({
                                 prop #focusNode
@@ -276,7 +276,7 @@
                             item (CRef id {
                                 name 'Id'
                                 component #TextView
-                                style #error
+                                style #Error
                                 data [
                                     ({
                                         prop #data

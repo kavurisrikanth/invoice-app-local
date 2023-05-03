@@ -84,7 +84,7 @@
                     (CRef textView {
                         name 'TextView'
                         component #TextView
-                        style #headlineFour
+                        style #HeadlineFour
                         data [
                             ({
                                 prop #data
@@ -180,7 +180,7 @@
             (CRef textView2 {
                 name 'TextView2'
                 component #TextView
-                style #subText
+                style #SubText
                 data [
                     ({
                         prop #data
@@ -268,7 +268,7 @@
                     (CRef textView4 {
                         name 'TextView4'
                         component #TextView
-                        style #nameText
+                        style #NameText
                         data [
                             ({
                                 prop #margin

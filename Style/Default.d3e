@@ -151,7 +151,7 @@ Style {
 }
 
 Style {
-    name 'Default'
+    name 'DoubleInputFieldDefault'
     component DoubleInputField
     items [
         {

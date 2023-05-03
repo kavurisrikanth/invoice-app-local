@@ -54,7 +54,7 @@
                     (CRef textView {
                         name 'TextView'
                         component #TextView
-                        style #displayHeadingFour
+                        style #DisplayHeadingFour
                         data [
                             ({
                                 prop #data
@@ -65,7 +65,7 @@
                     (CRef addInvoiceBtn {
                         name 'AddInvoiceBtn'
                         component #Button
-                        style #primary
+                        style #Primary
                         child (CRef row2 {
                             name 'Row2'
                             component #Row

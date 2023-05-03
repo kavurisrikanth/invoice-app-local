@@ -5,5 +5,5 @@ ThemeBoard {
     y 25000
     width 1000
     height 2000
-    theme D3ELight
+    theme InvoiceTheme
 }
