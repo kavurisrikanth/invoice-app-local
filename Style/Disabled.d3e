@@ -1,0 +1,17 @@
+Style {
+    name 'Disabled'
+    component InputField
+    items [
+        {
+            values {
+                height '30.0'
+                backgroundColor '@c14'
+                cornerRadius '2'
+                style {
+                    color '@c13'
+                }
+                disable 'true'
+            }
+        }
+    ]
+}

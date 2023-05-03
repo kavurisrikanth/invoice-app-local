@@ -1,0 +1,45 @@
+Style {
+    name 'Secondary'
+    component Button
+    items [
+        {
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c2'
+                }
+                padding '7'
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c1'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c4'
+                }
+                padding '7'
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c1'
+                }
+            }
+        }
+    ]
+}

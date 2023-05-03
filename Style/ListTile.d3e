@@ -1,0 +1,37 @@
+Style {
+    name 'list Tile'
+    component ListTile
+    items [
+        {
+            selector ':hover'
+            values {
+                decoration {
+                    color '@c17'
+                }
+            }
+        }
+        {
+            selector ':focused'
+            values {
+                decoration {
+                    color '@c3'
+                }
+            }
+        }
+        {
+            selector ':selected'
+            values {
+                decoration {
+                    color '@c1'
+                }
+            }
+        }
+        {
+            values {
+                decoration {
+                    color '@c2'
+                }
+            }
+        }
+    ]
+}

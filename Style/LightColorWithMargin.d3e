@@ -1,0 +1,13 @@
+Style {
+    name 'Light Color With Margin'
+    items [
+        {
+            values {
+                decoration {
+                    color '@c17'
+                }
+                margin '0 8 8 8'
+            }
+        }
+    ]
+}

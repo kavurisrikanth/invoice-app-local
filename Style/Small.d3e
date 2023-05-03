@@ -1,0 +1,16 @@
+Style {
+    name 'Small'
+    component InputField
+    items [
+        {
+            values {
+                height '30.0'
+                backgroundColor '@c2'
+                cornerRadius '2'
+                style {
+                    color '@c13'
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+Style {
+    name 'ScreenBgColor'
+    items [
+        {
+            values {
+                margin '0 8 8 8'
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+Style {
+    name 'Display Heading Two'
+    component TextView
+    items [
+        {
+            values {
+                fontSize '50.0'
+                margin '10 0 10 0'
+            }
+        }
+    ]
+}

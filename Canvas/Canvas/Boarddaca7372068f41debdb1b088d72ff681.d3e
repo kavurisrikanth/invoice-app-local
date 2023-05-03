@@ -1,0 +1,9 @@
+ThemeBoard {
+    title 'D3E Light'
+    canvas Canvas
+    x 27060
+    y 25000
+    width 1000
+    height 2000
+    theme D3ELight
+}

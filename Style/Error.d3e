@@ -1,0 +1,13 @@
+Style {
+    name 'Error'
+    component TextView
+    items [
+        {
+            values {
+                color '@c8'
+                textAlign 'start'
+                margin '5 0 5 0'
+            }
+        }
+    ]
+}

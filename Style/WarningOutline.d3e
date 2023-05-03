@@ -1,0 +1,40 @@
+Style {
+    name 'Warning Outline'
+    component Button
+    items [
+        {
+            values {
+                decoration {
+                    border {
+                        color '@c10'
+                        width '2.0'
+                    }
+                    borderRadius '3'
+                    color '@c2'
+                }
+                textStyle {
+                    color '@c11'
+                }
+                constraints {
+                    minHeight '30'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c11'
+                }
+                textStyle {
+                    color '@c2'
+                }
+            }
+        }
+    ]
+}

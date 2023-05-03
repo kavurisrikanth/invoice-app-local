@@ -1,0 +1,45 @@
+Style {
+    name 'Danger Outline'
+    component Button
+    items [
+        {
+            values {
+                decoration {
+                    border {
+                        color '@c8'
+                        width '2.0'
+                    }
+                    borderRadius '3'
+                    color '@c2'
+                }
+                padding '7'
+                textStyle {
+                    color '@c8'
+                }
+                constraints {
+                    minHeight '30'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                padding '7'
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c9'
+                }
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c2'
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+Style {
+    name 'Label'
+    component TextView
+    items [
+        {
+            values {
+                color '@c13'
+                textAlign 'start'
+                margin '5 0 5 0'
+            }
+        }
+    ]
+}

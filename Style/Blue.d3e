@@ -1,0 +1,12 @@
+Style {
+    name 'Blue'
+    component TextView
+    items [
+        {
+            values {
+                color '@c16'
+                fontSize '13.5'
+            }
+        }
+    ]
+}

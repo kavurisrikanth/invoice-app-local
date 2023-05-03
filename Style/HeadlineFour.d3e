@@ -1,0 +1,12 @@
+Style {
+    name 'headline Four'
+    component TextView
+    items [
+        {
+            values {
+                fontSize '16.0'
+                fontWeight 'bold'
+            }
+        }
+    ]
+}

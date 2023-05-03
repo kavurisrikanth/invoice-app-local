@@ -1,0 +1,45 @@
+Style {
+    name 'Primary'
+    component Button
+    items [
+        {
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c1'
+                }
+                padding '7'
+                textStyle {
+                    color '@c2'
+                }
+                constraints {
+                    minHeight '30'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c3'
+                }
+                padding '7'
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c2'
+                }
+            }
+        }
+    ]
+}

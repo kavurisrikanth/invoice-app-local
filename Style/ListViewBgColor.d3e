@@ -1,0 +1,13 @@
+Style {
+    name 'List View Bg Color'
+    items [
+        {
+            values {
+                decoration {
+                    color '@c17'
+                }
+                margin '0 8 8 8'
+            }
+        }
+    ]
+}

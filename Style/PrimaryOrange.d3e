@@ -1,0 +1,45 @@
+Style {
+    name 'Primary Orange'
+    component Button
+    items [
+        {
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c3'
+                }
+                padding '7'
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c2'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                padding '7'
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c3'
+                }
+                textStyle {
+                    color '@c2'
+                }
+                constraints {
+                    minHeight '30'
+                }
+            }
+        }
+    ]
+}

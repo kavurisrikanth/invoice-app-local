@@ -1,0 +1,12 @@
+Style {
+    name 'Headline Five'
+    component TextView
+    items [
+        {
+            values {
+                fontSize '13.0'
+                fontWeight 'bold'
+            }
+        }
+    ]
+}

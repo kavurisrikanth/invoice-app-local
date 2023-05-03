@@ -1,0 +1,45 @@
+Style {
+    name 'Light Outline'
+    component Button
+    items [
+        {
+            values {
+                decoration {
+                    border {
+                        color '@c14'
+                        width '2.0'
+                    }
+                    borderRadius '3'
+                    color '@c2'
+                }
+                padding '7'
+                textStyle {
+                    color '@c14'
+                }
+                constraints {
+                    minHeight '30'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                padding '7'
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c15'
+                }
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c12'
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+Style {
+    name 'Warning'
+    component Button
+    items [
+        {
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c10'
+                }
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c2'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c11'
+                }
+                textStyle {
+                    color '@c2'
+                }
+            }
+        }
+    ]
+}

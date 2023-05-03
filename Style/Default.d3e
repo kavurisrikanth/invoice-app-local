@@ -1,0 +1,166 @@
+Style {
+    name 'Default'
+    component InputField
+    items [
+        {
+            values {
+                height '40.0'
+                backgroundColor '@c2'
+                cornerRadius '5'
+                style {
+                    color '@c13'
+                }
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component ListTile
+    items [
+        {
+            selector ':hover'
+            values {
+                decoration {
+                    color '@c17'
+                }
+            }
+        }
+        {
+            selector ':focused'
+            values {
+                decoration {
+                    color '@c3'
+                }
+            }
+        }
+        {
+            selector ':selected'
+            values {
+                decoration {
+                    color '@c1'
+                }
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component DropDown
+    items [
+        {
+            values {
+                dropDownDecoration {
+                    border {
+                        color '@c14'
+                        width '2.0'
+                    }
+                    borderRadius '13'
+                }
+                placeHolderColor '@c13'
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component Card
+    items [
+        {
+            values {
+                color '@c17'
+                decoration {
+                    border {
+                        color '@c14'
+                        width '2.0'
+                    }
+                }
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component TabBar
+    items [
+        {
+            values {
+                backgroundColor '@c14'
+                activeColor '@c2'
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component DateField
+    items [
+        {
+            values {
+                height '40.0'
+                cornerRadius '5'
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component TimeField
+    items [
+        {
+            values {
+                height '40.0'
+                cornerRadius '5'
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component DateTimeField
+    items [
+        {
+            values {
+                height '40.0'
+                cornerRadius '5'
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component IntegerInputField
+    items [
+        {
+            values {
+                height '40.0'
+                backgroundColor '@c2'
+                cornerRadius '5'
+                padding '0 0 0 5'
+            }
+        }
+    ]
+}
+
+Style {
+    name 'Default'
+    component DoubleInputField
+    items [
+        {
+            values {
+                height '40.0'
+                backgroundColor '@c2'
+                cornerRadius '5'
+                padding '0 0 0 5'
+            }
+        }
+    ]
+}

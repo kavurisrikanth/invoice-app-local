@@ -1,0 +1,78 @@
+StyleTheme {
+    name 'Invoice Theme'
+    font 'OpenSans'
+    colors [
+        {
+            color '@c1'
+            hexCode 'ff46b4f1'
+        }
+        {
+            color '@c2'
+            hexCode 'ffffffff'
+        }
+        {
+            color '@c3'
+            hexCode 'ff6bc8fc'
+        }
+        {
+            color '@c4'
+            hexCode 'ffdcdcdc'
+        }
+        {
+            color '@c5'
+            hexCode 'ffdcdcdc'
+        }
+        {
+            color '@c6'
+            hexCode 'ff00875a'
+        }
+        {
+            color '@c7'
+            hexCode 'ff25bb89'
+        }
+        {
+            color '@c8'
+            hexCode 'ffe71306'
+        }
+        {
+            color '@c9'
+            hexCode 'fffe766c'
+        }
+        {
+            color '@c10'
+            hexCode 'ffdec150'
+        }
+        {
+            color '@c11'
+            hexCode 'fff1dd91'
+        }
+        {
+            color '@c12'
+            hexCode 'ff000000'
+        }
+        {
+            color '@c13'
+            hexCode 'ff2d2d2d'
+        }
+        {
+            color '@c14'
+            hexCode 'ffdcdcdc'
+        }
+        {
+            color '@c15'
+            hexCode 'fff5f5f5'
+        }
+        {
+            color '@c16'
+            hexCode 'ff0000ff'
+        }
+        {
+            color '@c17'
+            hexCode 'fff3f6f9'
+        }
+        {
+            color '@c18'
+            hexCode 'FF13AED9'
+        }
+    ]
+}

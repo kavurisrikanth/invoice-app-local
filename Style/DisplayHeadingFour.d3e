@@ -1,0 +1,12 @@
+Style {
+    name 'Display Heading Four'
+    component TextView
+    items [
+        {
+            values {
+                fontSize '30.0'
+                margin '10 0 10 0'
+            }
+        }
+    ]
+}

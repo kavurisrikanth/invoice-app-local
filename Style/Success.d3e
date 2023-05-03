@@ -1,0 +1,45 @@
+Style {
+    name 'Success'
+    component Button
+    items [
+        {
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c6'
+                }
+                padding '7'
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c2'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '@c7'
+                }
+                padding '7'
+                constraints {
+                    minHeight '30'
+                }
+                textStyle {
+                    color '@c2'
+                }
+            }
+        }
+    ]
+}

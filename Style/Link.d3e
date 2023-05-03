@@ -1,0 +1,46 @@
+Style {
+    name 'Link'
+    component Button
+    items [
+        {
+            values {
+                textStyle {
+                    color '@c16'
+                }
+                padding '7'
+                constraints {
+                    minHeight '30'
+                }
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '00000000'
+                }
+            }
+        }
+        {
+            selector ':hover'
+            values {
+                padding '7'
+                textStyle {
+                    color '@c16'
+                    decoration 'underline'
+                }
+                decoration {
+                    border {
+                        color '@c18'
+                        width '1.0'
+                    }
+                    borderRadius '3'
+                    color '00000000'
+                }
+                constraints {
+                    minHeight '30'
+                }
+            }
+        }
+    ]
+}

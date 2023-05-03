@@ -5,5 +5,5 @@
     y 25000
     width 1000
     height 2000
-    theme #invoiceTheme
+    theme #InvoiceTheme
 })

@@ -1,0 +1,22 @@
+Style {
+    name 'Dropdown With All Borders'
+    component DropDown
+    items [
+        {
+            values {
+                height '40.0'
+                viewDecoration {
+                    color '@c2'
+                }
+                dropDownDecoration {
+                    border {
+                        color '@c14'
+                        width '1.0'
+                    }
+                    borderRadius '7'
+                }
+                placeHolderColor '@c13'
+            }
+        }
+    ]
+}
