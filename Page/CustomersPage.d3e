@@ -1,6 +1,7 @@
-(D3EPage PaymentsPage {
-    name 'PaymentsPage'
+(Page CustomersPage {
+    name 'CustomersPage'
     package 'invoice.com'
+    category 'UserDefined'
     properties [
         (company {
             name 'Company'
@@ -9,18 +10,31 @@
             })
             required true
         })
-        (payments {
-            name 'Payments'
+        (recentCustomer {
+            name 'RecentCustomer'
             type ({
-                struct #Payments
+                model #Customer
+            })
+            internal true
+        })
+        (failureMessage {
+            name 'Failure Message'
+            type ({
+                primitive String
+            })
+            internal true
+        })
+        (customers {
+            name 'Customers'
+            type ({
+                struct #Customers
             })
             computed true
-            computation `Query.getPayments(PaymentsRequest(company: company)).await`
+            computation `Query.getCustomers(CustomersRequest(company: company)).await`
             internal true
             synchronise true
         })
     ]
-    path 'D3EPage'
     build (CRef column {
         name 'Column'
         component #Column
@@ -30,32 +44,74 @@
                 value 'start'
             })
             ({
-                prop #decoration
-                values [
-                    ({
-                        prop #color
-                        value '00000000'
-                    })
-                ]
-            })
-            ({
                 prop #padding
                 value '20'
             })
         ]
         children [
-            (CRef textView {
-                name 'TextView'
-                component #TextView
-                style #displayHeadingFour
+            (CRef row {
+                name 'Row'
+                component #Row
                 data [
                     ({
-                        prop #margin
-                        value '10 0'
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
                     })
                     ({
-                        prop #data
-                        value 'Payments'
+                        prop #padding
+                        value '0 0 10'
+                    })
+                ]
+                children [
+                    (CRef textView {
+                        name 'TextView'
+                        component #TextView
+                        style #displayHeadingFour
+                        data [
+                            ({
+                                prop #data
+                                value 'Customers'
+                            })
+                        ]
+                    })
+                    (CRef addCustomerBtn {
+                        name 'AddCustomerBtn'
+                        component #Button
+                        style #primary
+                        child (CRef row2 {
+                            name 'Row2'
+                            component #Row
+                            children [
+                                (CRef iconView {
+                                    name 'IconView'
+                                    component #IconView
+                                    data [
+                                        ({
+                                            prop #icon
+                                            value 'MaterialIcons.add'
+                                        })
+                                        ({
+                                            prop #size
+                                            value '10'
+                                        })
+                                        ({
+                                            prop #margin
+                                            value '0 5 0 0'
+                                        })
+                                    ]
+                                })
+                                (CRef textView2 {
+                                    name 'TextView2'
+                                    component #TextView
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Add Customer'
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
                     })
                 ]
             })
@@ -85,14 +141,6 @@
                             ({
                                 prop #columnWidth
                                 value '1.flex'
-                            })
-                            ({
-                                prop #columnWidth
-                                value '1.flex'
-                            })
-                            ({
-                                prop #columnWidth
-                                value '50.fixed'
                             })
                         ]
                     })
@@ -155,7 +203,7 @@
                             })
                             ({
                                 prop #height
-                                value '60'
+                                value '50'
                             })
                             ({
                                 prop #padding
@@ -169,6 +217,12 @@
                                     'table-column'
                                 ]
                                 component #TableCell
+                                data [
+                                    ({
+                                        prop #verticalAlignment
+                                        value 'middle'
+                                    })
+                                ]
                                 child (CRef cell {
                                     name 'Cell'
                                     component #TextView
@@ -191,6 +245,12 @@
                                     'table-column'
                                 ]
                                 component #TableCell
+                                data [
+                                    ({
+                                        prop #verticalAlignment
+                                        value 'middle'
+                                    })
+                                ]
                                 child (CRef cell2 {
                                     name 'Cell2'
                                     component #TextView
@@ -202,7 +262,7 @@
                                         })
                                         ({
                                             prop #data
-                                            value 'Invoice Number'
+                                            value 'Customer Address'
                                         })
                                     ]
                                 })
@@ -213,6 +273,12 @@
                                     'table-column'
                                 ]
                                 component #TableCell
+                                data [
+                                    ({
+                                        prop #verticalAlignment
+                                        value 'middle'
+                                    })
+                                ]
                                 child (CRef cell3 {
                                     name 'Cell3'
                                     component #TextView
@@ -224,7 +290,7 @@
                                         })
                                         ({
                                             prop #data
-                                            value 'Invoice Date'
+                                            value 'Balance'
                                         })
                                     ]
                                 })
@@ -235,73 +301,24 @@
                                     'table-column'
                                 ]
                                 component #TableCell
+                                data [
+                                    ({
+                                        prop #verticalAlignment
+                                        value 'middle'
+                                    })
+                                ]
                                 child (CRef cell4 {
                                     name 'Cell4'
                                     component #TextView
-                                    style #headlineFour
-                                    data [
-                                        ({
-                                            prop #textAlign
-                                            value 'center'
-                                        })
-                                        ({
-                                            prop #data
-                                            value 'Payment Date'
-                                        })
-                                    ]
-                                })
-                            })
-                            (CRef tableCell {
-                                name 'tableCell'
-                                tags [
-                                    'table-column'
-                                ]
-                                component #TableCell
-                                child (CRef cell {
-                                    name 'Cell'
-                                    component #TextView
-                                    style #headlineFour
                                     data [
                                         ({
                                             prop #data
-                                            value 'Amount Paid'
-                                        })
-                                        ({
-                                            prop #fontFamily
-                                            value 'Nunito'
-                                        })
-                                        ({
-                                            prop #fontSize
-                                            value '16'
-                                        })
-                                        ({
-                                            prop #fontWeight
-                                            value 'w700'
+                                            bind true
+                                            bindTo `' '`
                                         })
                                         ({
                                             prop #textAlign
                                             value 'center'
-                                        })
-                                    ]
-                                })
-                            })
-                            (CRef tableCell5 {
-                                name 'tableCell5'
-                                tags [
-                                    'table-column'
-                                ]
-                                component #TableCell
-                                child (CRef cell5 {
-                                    name 'Cell5'
-                                    component #TextView
-                                    data [
-                                        ({
-                                            prop #textAlign
-                                            value 'center'
-                                        })
-                                        ({
-                                            prop #data
-                                            value ' '
                                         })
                                     ]
                                 })
@@ -310,10 +327,10 @@
                     })
                     (CFor forItem {
                         name 'ForItem'
-                        var 'payment'
-                        items `payments?.items??[]`
+                        var 'customer'
+                        items `this.customers?.items??[]`
                         type ({
-                            model #Payment
+                            model #Customer
                         })
                         item (CRef tableRow2 {
                             name 'tableRow2'
@@ -322,10 +339,6 @@
                             ]
                             component #TableRow
                             data [
-                                ({
-                                    prop #height
-                                    value '30'
-                                })
                                 ({
                                     prop #padding
                                     value '5 0'
@@ -347,6 +360,12 @@
                                         'table-column'
                                     ]
                                     component #TableCell
+                                    data [
+                                        ({
+                                            prop #verticalAlignment
+                                            value 'middle'
+                                        })
+                                    ]
                                     child (CRef cell7 {
                                         name 'Cell7'
                                         component #TextView
@@ -359,7 +378,7 @@
                                             ({
                                                 prop #data
                                                 bind true
-                                                bindTo `payment.customer?.name??''`
+                                                bindTo `customer.name`
                                             })
                                         ]
                                     })
@@ -370,6 +389,12 @@
                                         'table-column'
                                     ]
                                     component #TableCell
+                                    data [
+                                        ({
+                                            prop #verticalAlignment
+                                            value 'middle'
+                                        })
+                                    ]
                                     child (CRef cell8 {
                                         name 'Cell8'
                                         component #TextView
@@ -382,7 +407,7 @@
                                             ({
                                                 prop #data
                                                 bind true
-                                                bindTo `payment.invoice.invoiceNo`
+                                                bindTo `customer.address`
                                             })
                                         ]
                                     })
@@ -393,29 +418,12 @@
                                         'table-column'
                                     ]
                                     component #TableCell
-                                    child (CRef textView2 {
-                                        name 'TextView2'
-                                        component #TextView
-                                        style #headlineFour
-                                        data [
-                                            ({
-                                                prop #data
-                                                bind true
-                                                bindTo `payment.invoice.invoiceDate?.toString()??'None'`
-                                            })
-                                            ({
-                                                prop #textAlign
-                                                value 'center'
-                                            })
-                                        ]
-                                    })
-                                })
-                                (CRef tableCell10 {
-                                    name 'tableCell10'
-                                    tags [
-                                        'table-column'
+                                    data [
+                                        ({
+                                            prop #verticalAlignment
+                                            value 'middle'
+                                        })
                                     ]
-                                    component #TableCell
                                     child (CRef textView3 {
                                         name 'TextView3'
                                         component #TextView
@@ -424,7 +432,7 @@
                                             ({
                                                 prop #data
                                                 bind true
-                                                bindTo `payment.createdDate.toString()`
+                                                bindTo `customer.balance.toString()`
                                             })
                                             ({
                                                 prop #textAlign
@@ -433,63 +441,59 @@
                                         ]
                                     })
                                 })
-                                (CRef tableCell {
-                                    name 'tableCell'
+                                (CRef tableCell5 {
+                                    name 'tableCell5'
                                     tags [
                                         'table-column'
                                     ]
                                     component #TableCell
-                                    child (CRef cell {
-                                        name 'Cell'
-                                        component #TextView
+                                    child (CRef row3 {
+                                        name 'Row3'
+                                        component #Row
                                         data [
                                             ({
-                                                prop #data
-                                                bind true
-                                                bindTo `payment.amount.toString()`
-                                            })
-                                            ({
-                                                prop #textAlign
+                                                prop #mainAxisAlignment
                                                 value 'center'
                                             })
-                                            ({
-                                                prop #fontFamily
-                                                value 'Nunito'
+                                        ]
+                                        children [
+                                            (CRef editBtn {
+                                                name 'EditBtn'
+                                                component #Button
+                                                child (CRef iconView2 {
+                                                    name 'IconView2'
+                                                    component #IconView
+                                                    data [
+                                                        ({
+                                                            prop #size
+                                                            value '20'
+                                                        })
+                                                        ({
+                                                            prop #icon
+                                                            value 'MaterialIcons.edit'
+                                                        })
+                                                    ]
+                                                })
                                             })
-                                            ({
-                                                prop #fontSize
-                                                value '16'
-                                            })
-                                            ({
-                                                prop #fontWeight
-                                                value 'w700'
+                                            (CRef deleteBtn {
+                                                name 'DeleteBtn'
+                                                component #Button
+                                                child (CRef iconView4 {
+                                                    name 'IconView4'
+                                                    component #IconView
+                                                    data [
+                                                        ({
+                                                            prop #icon
+                                                            value 'MaterialIcons.delete_outline'
+                                                        })
+                                                        ({
+                                                            prop #size
+                                                            value '20'
+                                                        })
+                                                    ]
+                                                })
                                             })
                                         ]
-                                    })
-                                })
-                                (CRef tableCell11 {
-                                    name 'tableCell11'
-                                    tags [
-                                        'table-column'
-                                    ]
-                                    component #TableCell
-                                    child (CRef deleteBtn {
-                                        name 'DeleteBtn'
-                                        component #Button
-                                        child (CRef iconView2 {
-                                            name 'IconView2'
-                                            component #IconView
-                                            data [
-                                                ({
-                                                    prop #size
-                                                    value '20'
-                                                })
-                                                ({
-                                                    prop #icon
-                                                    value 'MaterialIcons.delete_outline'
-                                                })
-                                            ]
-                                        })
                                     })
                                 })
                             ]
@@ -500,16 +504,89 @@
         ]
     })
     eventHandlers [
+        (onPressedAddCustomerBtnHandler {
+            name 'onPressedAddCustomerBtnHandler'
+            type OnEvent
+            on #addCustomerBtn
+            event #onPressed
+            block ```
+                this.recentCustomer = Customer(company: company);
+                showAddCustomer();
+            ```
+        })
+        (onPressedEditBtnHandler {
+            name 'onPressedEditBtnHandler'
+            type OnEvent
+            on #editBtn
+            event #onPressed
+            block ```
+                this.recentCustomer = customer;
+                showAddCustomer();
+            ```
+        })
         (onPressedDeleteBtnHandler {
             name 'onPressedDeleteBtnHandler'
             type OnEvent
             on #deleteBtn
             event #onPressed
             block ```
-                Result<Payment> d =  payment.delete().await;
-                if (d.status == ResultStatus.Success) {
+                Result<Customer> i = customer.delete().await;
+                if(i.status == Success){
+                    navigator.close();
+                }else {
+                    this.failureMessage = 'You cannot delete the customer. Because the customer is already added to the invoice.';
+                    showFailureMsg(autoClose : true);
                 }
             ```
+        })
+    ]
+    popups [
+        (addCustomer {
+            name 'Add Customer'
+            component #AddCustomerView
+            data [
+                ({
+                    prop #obj
+                    bind true
+                    bindTo `this.recentCustomer`
+                })
+                ({
+                    prop #width
+                    value '600'
+                })
+                ({
+                    prop #height
+                    value '300'
+                })
+            ]
+        })
+        (failureMsg {
+            name 'FailureMsg'
+            component #Container
+            data [
+                ({
+                    prop #height
+                    value '50'
+                })
+                ({
+                    prop #width
+                    value '330'
+                })
+            ]
+        })
+        (successMsg {
+            name 'SuccessMsg'
+            component #SuccessMsgView
+            data [
+                ({
+                    prop #height
+                    value '30'
+                })
+                ({
+                    prop #width
+                    value '130'
+                })
+            ]
         })
     ]
 })

@@ -97,7 +97,6 @@
             internal true
         })
     ]
-    path 'Component'
     build (CRef column {
         name 'Column'
         component #Column

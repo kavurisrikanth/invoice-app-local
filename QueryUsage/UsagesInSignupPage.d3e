@@ -12,3 +12,17 @@ QueryUsage {
         'userObject.company.*'
     ]
 }
+
+QueryUsage {
+    query [
+        'Query'
+        'loginUserUserWithEmailAndPassword'
+        'SignupPage'
+        '_actions'
+    ]
+    struct LoginResult
+    usage [
+        '*'
+        'userObject.*'
+    ]
+}

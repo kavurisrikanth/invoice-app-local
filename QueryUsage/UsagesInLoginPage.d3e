@@ -26,3 +26,30 @@ QueryUsage {
         'userObject.*'
     ]
 }
+
+QueryUsage {
+    query [
+        'Query'
+        'currentUser'
+        'LoginPage'
+        '_actions'
+    ]
+    model BaseUser
+    usage [
+        '*'
+    ]
+}
+
+QueryUsage {
+    query [
+        'Query'
+        'loginUserUserWithEmailAndPassword'
+        'LoginPage'
+        '_actions'
+    ]
+    struct LoginResult
+    usage [
+        '*'
+        'userObject.*'
+    ]
+}

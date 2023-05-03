@@ -22,7 +22,6 @@
             })
         })
     ]
-    path 'Component'
     build (CRef id {
         name 'Id'
         component #ListView

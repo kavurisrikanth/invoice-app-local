@@ -64,7 +64,6 @@
             })
         })
     ]
-    path 'Component'
     build (CRef id {
         name 'Id'
         component #Column

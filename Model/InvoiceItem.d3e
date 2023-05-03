@@ -1,7 +1,6 @@
 (Model InvoiceItem {
     name 'Invoice Item'
     package 'invoice.com'
-    path 'Model'
     properties [
         (item {
             name 'Item'

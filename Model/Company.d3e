@@ -1,7 +1,6 @@
 (Model Company {
     name 'Company'
     package 'invoice.com'
-    path 'Model'
     properties [
         (name {
             name 'Name'

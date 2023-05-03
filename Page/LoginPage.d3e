@@ -1,37 +1,52 @@
-(D3EPage SignupPage {
-    name 'SignupPage'
+(Page LoginPage {
+    name 'LoginPage'
     package 'invoice.com'
     category 'UserDefined'
     properties [
-        (confirmPassword {
-            name 'Confirm Password'
+        (email {
+            name 'Email'
             type ({
                 primitive String
             })
             internal true
         })
-        (obj {
-            name 'Obj'
+        (emailError {
+            name 'Email Error'
             type ({
-                model #SignupRequest
+                primitive String
             })
-            computed true
-            computation `SignupRequest()`
             internal true
         })
-        (signupError {
-            name 'Signup Error'
+        (loginError {
+            name 'Login Error'
+            type ({
+                primitive String
+            })
+            internal true
+        })
+        (password {
+            name 'Password'
+            type ({
+                primitive String
+            })
+            internal true
+        })
+        (passwordError {
+            name 'Password Error'
             type ({
                 primitive String
             })
             internal true
         })
     ]
-    path 'D3EPage'
     build (CRef column {
         name 'Column'
         component #Column
         data [
+            ({
+                prop #padding
+                value '15'
+            })
             ({
                 prop #decoration
                 values [
@@ -41,10 +56,6 @@
                     })
                 ]
             })
-            ({
-                prop #padding
-                value '15'
-            })
         ]
         children [
             (CRef row {
@@ -52,12 +63,12 @@
                 component #Row
                 data [
                     ({
-                        prop #mainAxisAlignment
-                        value 'spaceBetween'
+                        prop #margin
+                        value '0 0 20'
                     })
                     ({
-                        prop #margin
-                        value '0 0 10'
+                        prop #mainAxisAlignment
+                        value 'spaceBetween'
                     })
                 ]
                 children [
@@ -83,8 +94,8 @@
                             })
                         ]
                     })
-                    (CRef loginBtn {
-                        name 'LoginBtn'
+                    (CRef signupBtn {
+                        name 'SignupBtn'
                         component #Button
                         child (CRef buttonText {
                             name 'ButtonText'
@@ -92,15 +103,15 @@
                             data [
                                 ({
                                     prop #data
-                                    value 'Log In'
+                                    value 'Sign Up'
                                 })
                             ]
                         })
                     })
                 ]
             })
-            (CRef column2 {
-                name 'Column2'
+            (CRef column4 {
+                name 'Column4'
                 component #Column
                 data [
                     ({
@@ -121,30 +132,39 @@
                         ]
                     })
                     ({
-                        prop #width
-                        value '550'
+                        prop #mainAxisSize
+                        value 'min'
+                    })
+                    ({
+                        prop #constraints
+                        values [
+                            ({
+                                prop #maxWidth
+                                value '550'
+                            })
+                        ]
                     })
                 ]
                 children [
-                    (CRef textView {
-                        name 'TextView'
+                    (CRef textView5 {
+                        name 'TextView5'
                         component #TextView
                         style #headlineThree
                         data [
                             ({
                                 prop #data
-                                value 'Sign up'
+                                value 'Log in'
                             })
                         ]
                     })
-                    (CRef textView2 {
-                        name 'TextView2'
+                    (CRef textView6 {
+                        name 'TextView6'
                         component #TextView
                         style #subText
                         data [
                             ({
                                 prop #data
-                                value 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+                                value 'Welcome to Simple invoice app'
                             })
                             ({
                                 prop #softWrap
@@ -152,33 +172,8 @@
                             })
                         ]
                     })
-                    (CRef inputFieldWithLabel4 {
-                        name 'InputFieldWithLabel4'
-                        component #InputFieldWithLabel
-                        data [
-                            ({
-                                prop #placeHolder
-                                value 'Enter Full Name'
-                            })
-                            ({
-                                prop #value
-                                bind true
-                                bindTo `obj.fullName`
-                            })
-                            ({
-                                prop #errors
-                                bind true
-                                bindTo `fullNameErrors`
-                            })
-                            ({
-                                prop #name
-                                value 'Full Name'
-                            })
-                        ]
-                        twoWayBinding true
-                    })
-                    (CRef inputFieldWithLabel {
-                        name 'InputFieldWithLabel'
+                    (CRef inputFieldWithLabel3 {
+                        name 'InputFieldWithLabel3'
                         component #InputFieldWithLabel
                         data [
                             ({
@@ -187,27 +182,23 @@
                             })
                             ({
                                 prop #placeHolder
-                                value 'Enter Email Address'
+                                value 'Enter Email Addresss'
                             })
                             ({
                                 prop #value
                                 bind true
-                                bindTo `obj.email`
+                                bindTo `email`
                             })
                             ({
                                 prop #errors
                                 bind true
-                                bindTo `emailErrors`
-                            })
-                            ({
-                                prop #margin
-                                value '10 0'
+                                bindTo `[emailError]`
                             })
                         ]
                         twoWayBinding true
                     })
-                    (CRef inputFieldWithLabel2 {
-                        name 'InputFieldWithLabel2'
+                    (CRef inputFieldWithLabel4 {
+                        name 'InputFieldWithLabel4'
                         component #InputFieldWithLabel
                         data [
                             ({
@@ -220,17 +211,17 @@
                             })
                             ({
                                 prop #margin
-                                value '0'
+                                value '10 0'
                             })
                             ({
                                 prop #value
                                 bind true
-                                bindTo `obj.password`
+                                bindTo `this.password`
                             })
                             ({
                                 prop #errors
                                 bind true
-                                bindTo `passwordErrors`
+                                bindTo `[passwordError]`
                             })
                             ({
                                 prop #obscureText
@@ -239,97 +230,97 @@
                         ]
                         twoWayBinding true
                     })
-                    (CRef inputFieldWithLabel5 {
-                        name 'InputFieldWithLabel5'
-                        component #InputFieldWithLabel
+                    (CRef row5 {
+                        name 'Row5'
+                        component #Row
                         data [
                             ({
-                                prop #name
-                                value 'Confirm Password'
+                                prop #mainAxisAlignment
+                                value 'end'
                             })
-                            ({
-                                prop #value
-                                bind true
-                                bindTo `this.confirmPassword`
+                        ]
+                        children [
+                            (CRef forgotPasswordBtn2 {
+                                name 'ForgotPasswordBtn2'
+                                component #Button
+                                style #success
+                                child (CRef buttonText5 {
+                                    name 'ButtonText5'
+                                    component #TextView
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Forgot Password'
+                                        })
+                                    ]
+                                })
                             })
-                            ({
-                                prop #placeHolder
-                                value 'Enter Password'
-                            })
+                        ]
+                    })
+                    (CRef row6 {
+                        name 'Row6'
+                        component #Row
+                        data [
                             ({
                                 prop #margin
                                 value '10 0'
                             })
-                            ({
-                                prop #obscureText
-                                value 'true'
-                            })
                         ]
-                        twoWayBinding true
-                    })
-                    (CIf ifItem {
-                        name 'IfItem'
-                        condition `obj.password != this.confirmPassword`
-                        then (CRef textView5 {
-                            name 'TextView5'
-                            component #TextView
-                            data [
-                                ({
-                                    prop #data
-                                    value 'You are entering the wrong password.'
-                                })
-                                ({
-                                    prop #color
-                                    value '@c8'
-                                })
-                            ]
-                        })
-                    })
-                    (CRef inputFieldWithLabel3 {
-                        name 'InputFieldWithLabel3'
-                        component #InputFieldWithLabel
-                        data [
-                            ({
-                                prop #name
-                                value 'Company Name'
-                            })
-                            ({
-                                prop #placeHolder
-                                value 'Enter Company Name'
-                            })
-                            ({
-                                prop #value
-                                bind true
-                                bindTo `obj.companyName`
-                            })
-                            ({
-                                prop #errors
-                                bind true
-                                bindTo `companyNameErrors`
-                            })
-                        ]
-                        twoWayBinding true
-                    })
-                    (CRef row2 {
-                        name 'Row2'
-                        component #Row
                         children [
-                            (CRef signupButton {
-                                name 'SignupButton'
+                            (CRef loginBtn2 {
+                                name 'LoginBtn2'
                                 component #Button
                                 style #primary
                                 data [
-                                    ({
-                                        prop #margin
-                                        value '10 0'
-                                    })
                                     ({
                                         prop #expand
                                         value 'true'
                                     })
                                 ]
-                                child (CRef buttonText2 {
-                                    name 'ButtonText2'
+                                child (CRef buttonText6 {
+                                    name 'ButtonText6'
+                                    component #TextView
+                                    data [
+                                        ({
+                                            prop #data
+                                            value 'Log in'
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
+                    })
+                    (CRef row7 {
+                        name 'Row7'
+                        component #Row
+                        data [
+                            ({
+                                prop #mainAxisAlignment
+                                value 'center'
+                            })
+                        ]
+                        children [
+                            (CRef textView7 {
+                                name 'TextView7'
+                                component #TextView
+                                style #nameText
+                                data [
+                                    ({
+                                        prop #data
+                                        value 'Don\'t have an account?'
+                                    })
+                                    ({
+                                        prop #margin
+                                        value '0 5 0 0'
+                                    })
+                                ]
+                            })
+                            (CRef signupBtn3 {
+                                name 'SignupBtn3'
+                                component #Button
+                                style #success
+                                child (CRef buttonText7 {
+                                    name 'ButtonText7'
                                     component #TextView
                                     data [
                                         ({
@@ -341,56 +332,14 @@
                             })
                         ]
                     })
-                    (CRef row3 {
-                        name 'Row3'
-                        component #Row
-                        data [
-                            ({
-                                prop #mainAxisAlignment
-                                value 'center'
-                            })
-                        ]
-                        children [
-                            (CRef textView3 {
-                                name 'TextView3'
-                                component #TextView
-                                style #nameText
-                                data [
-                                    ({
-                                        prop #data
-                                        value 'Already Have an Account?'
-                                    })
-                                    ({
-                                        prop #margin
-                                        value '0 5 0 0'
-                                    })
-                                ]
-                            })
-                            (CRef loginBtn2 {
-                                name 'LoginBtn2'
-                                component #Button
-                                style #success
-                                child (CRef buttonText3 {
-                                    name 'ButtonText3'
-                                    component #TextView
-                                    data [
-                                        ({
-                                            prop #data
-                                            value 'Log In'
-                                        })
-                                    ]
-                                })
-                            })
-                        ]
-                    })
-                    (CRef textView4 {
-                        name 'TextView4'
+                    (CRef textView8 {
+                        name 'TextView8'
                         component #TextView
                         data [
                             ({
                                 prop #data
                                 bind true
-                                bindTo `signupError`
+                                bindTo `loginError`
                             })
                             ({
                                 prop #color
@@ -403,13 +352,23 @@
         ]
     })
     eventHandlers [
-        (onPressedLoginBtnHandler {
-            name 'onPressedLoginBtnHandler'
+        (onPressedSignupBtnHandler {
+            name 'onPressedSignupBtnHandler'
             type OnEvent
-            on #loginBtn
+            on #signupBtn
             event #onPressed
             block ```
-                navigator.pushLoginPage();
+                navigator.pushSignupPage();
+            ```
+        })
+        (onInit {
+            name 'OnInit'
+            block ```
+                BaseUser baseUser = Query.currentUser().await;
+                if(baseUser != null){
+                    User user = baseUser as User;
+                    navigator.pushHomePage(user: user, company: user.company);
+                }
             ```
         })
         (onPressedLoginBtn2Handler {
@@ -418,36 +377,43 @@
             on #loginBtn2
             event #onPressed
             block ```
-                navigator.pushLoginPage();
-            ```
-        })
-        (onPressedSignupButtonHandler {
-            name 'onPressedSignupButtonHandler'
-            type OnEvent
-            on #signupButton
-            event #onPressed
-            block ```
-                if(this.validate().isEmpty){
-                    Result res= obj.save().await;
-                    if(res.status==Success){
-                        LoginResult loginResult = Query.loginUserUserWithEmailAndPassword(
-                            email: obj.email,
-                            password: obj.password,
-                        ).await;
-                        if(loginResult.success ){
-                            User user = loginResult.userObject as User;
-                            navigator.pushHomePage(user: user, company : user.company);
-                        }
-                        else{
-                            this.signupError=loginResult.failureMessage;
-                        }
+                 if (email.isEmpty) {
+                  this.emailError = 'UserName Cannot be Empty';
+                }
+                if (password.isEmpty){
+                 this.passwordError = 'Password Cannot be Empty';
+                }
+                if(email.isNotEmpty && password.isNotEmpty){
+                    LoginResult loginResult = Query.loginUserUserWithEmailAndPassword(
+                        email: email,
+                        password: password,
+                    ).await;
+                    if(loginResult.success ){
+                    User user = loginResult.userObject as User;
+                    navigator.pushHomePage(user:user, company: user.company);
                     }else{
-                        this.signupError =res.errors.toString();
+                        this.loginError=loginResult.failureMessage;
                     }
                 }
             ```
         })
+        (onPressedSignupBtn3Handler {
+            name 'onPressedSignupBtn3Handler'
+            type OnEvent
+            on #signupBtn3
+            event #onPressed
+            block ```
+                navigator.pushSignupPage();
+            ```
+        })
+        (onPressedForgotPasswordBtn2Handler {
+            name 'onPressedForgotPasswordBtn2Handler'
+            type OnEvent
+            on #forgotPasswordBtn2
+            event #onPressed
+            block ```
+                navigator.pushForgotPasswordPage();
+            ```
+        })
     ]
-    editorFor #SignupRequest
-    editorInput #obj
 })

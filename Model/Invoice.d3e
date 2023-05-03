@@ -1,7 +1,6 @@
 (Model Invoice {
     name 'Invoice'
     package 'invoice.com'
-    path 'Model'
     master #Company
     properties [
         (customer {

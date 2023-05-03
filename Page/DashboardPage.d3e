@@ -1,4 +1,4 @@
-(D3EPage DashboardPage {
+(Page DashboardPage {
     name 'Dashboard Page'
     package 'invoice.com'
     properties [
@@ -27,7 +27,6 @@
             internal true
         })
     ]
-    path 'D3EPage'
     build (CRef column {
         name 'Column'
         component #Column

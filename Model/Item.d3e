@@ -1,7 +1,6 @@
 (Model Item {
     name 'Item'
     package 'invoice.com'
-    path 'Model'
     master #Company
     properties [
         (name {

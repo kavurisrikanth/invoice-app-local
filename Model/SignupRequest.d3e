@@ -1,7 +1,6 @@
 (Model SignupRequest {
     name 'Signup Request'
     package 'invoice.com'
-    path 'Model'
     properties [
         (fullName {
             name 'Full Name'
