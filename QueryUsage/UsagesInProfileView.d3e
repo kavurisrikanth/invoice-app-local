@@ -3,7 +3,7 @@ QueryUsage {
         'Query'
         'logout'
         'ProfileView'
-        'eventHandlers_onPressedLogoutButtonHandler_block'
+        '_actions'
     ]
     usage [
         '*'
@@ -15,7 +15,7 @@ QueryUsage {
         'Query'
         'logout'
         'ProfileView'
-        '_actions'
+        'eventHandlers_onPressedLogoutButtonHandler_block'
     ]
     usage [
         '*'
