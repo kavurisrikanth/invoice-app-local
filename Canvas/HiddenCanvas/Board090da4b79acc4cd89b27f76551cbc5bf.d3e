@@ -1,0 +1,10 @@
+WidgetBoard {
+    title 'LoginPage'
+    canvas HiddenCanvas
+    x 25000
+    y 25000
+    width 500
+    height 1000
+    theme InvoiceTheme
+    page LoginPage
+}

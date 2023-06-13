@@ -33,6 +33,7 @@
         (OnCreate {
             name 'On Create'
             block ```
+                // Test comment 2
                 this.invoice.paid += this.amount;
             ```
         })

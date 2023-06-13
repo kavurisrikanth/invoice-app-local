@@ -1,0 +1,4 @@
+ArtBoard {
+    title 'ReuseBoard'
+    canvas HiddenCanvas
+}

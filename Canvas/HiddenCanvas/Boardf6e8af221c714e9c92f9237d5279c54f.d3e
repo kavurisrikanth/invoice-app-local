@@ -1,0 +1,4 @@
+ArtBoard {
+    title 'PasteBoard'
+    canvas HiddenCanvas
+}

@@ -1,0 +1,4 @@
+PageRunConfig {
+    name 'id'
+    page LoginPage
+}

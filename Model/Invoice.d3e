@@ -59,6 +59,7 @@
         (OnCreate {
             name 'On Create'
             block ```
+                // Test comment
                 this.company.invoiceTotal += this.total;
                 this.company.invoiceUnpaid += this.total;
                 this.company.totalInvoices += 1;
